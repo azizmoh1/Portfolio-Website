@@ -310,3 +310,33 @@ main {
     display: flex;
   }
 }
+
+
+.email-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.copy-btn {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 0.3rem 0.65rem;
+  font: inherit;
+  font-size: 0.84rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.copy-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.copy-btn.copied {
+  background: rgba(67, 217, 184, 0.2);
+  border-color: rgba(67, 217, 184, 0.7);
+}

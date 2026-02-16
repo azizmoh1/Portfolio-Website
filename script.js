@@ -26,3 +26,28 @@ const observer = new IntersectionObserver(
 );
 
 reveals.forEach(el => observer.observe(el));
+
+
+const copyEmailBtn = document.getElementById('copy-email-btn');
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener('click', async () => {
+    const email = copyEmailBtn.dataset.email;
+    const original = copyEmailBtn.textContent;
+
+    try {
+      await navigator.clipboard.writeText(email);
+      copyEmailBtn.textContent = 'Copied!';
+      copyEmailBtn.classList.add('copied');
+
+      setTimeout(() => {
+        copyEmailBtn.textContent = original;
+        copyEmailBtn.classList.remove('copied');
+      }, 1500);
+    } catch (err) {
+      copyEmailBtn.textContent = 'Copy failed';
+      setTimeout(() => {
+        copyEmailBtn.textContent = original;
+      }, 1500);
+    }
+  });
+}
