@@ -345,3 +345,12 @@ main {
     display: flex;
   }
 }
+
+
+.project-meta {
+  margin: 0.6rem 0 0.5rem;
+}
+
+.project-points li + li {
+  margin-top: 0.45rem;
+}
