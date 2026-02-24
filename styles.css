@@ -219,6 +219,16 @@ main {
   box-shadow: var(--shadow);
 }
 
+
+
+.project-image {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #9aaebe;
+  margin-bottom: 1rem;
+  display: block;
+}
+
 .project-image-placeholder {
   min-height: 170px;
   display: grid;
