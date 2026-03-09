@@ -462,12 +462,18 @@ main {
 @media (max-width: 980px) {
   .project-grid,
   .skills-layout,
-  .two-col {
+  .repo-grid,
+  .two-col,
+  .featured-project {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 760px) {
+  .resume-embed {
+    min-height: 420px;
+  }
+
   .menu-toggle {
     display: inline-block;
   }
@@ -488,4 +494,89 @@ main {
   .nav-links.open {
     display: flex;
   }
+}
+
+
+.tech-grid {
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(to right, rgba(106, 156, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(106, 156, 255, 0.08) 1px, transparent 1px);
+  background-size: 34px 34px;
+  z-index: -3;
+  pointer-events: none;
+}
+
+.cad-lines {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.35;
+  background:
+    linear-gradient(25deg, transparent 49.3%, rgba(77, 208, 225, 0.24) 49.5%, transparent 49.7%) 0 0/380px 380px,
+    linear-gradient(-25deg, transparent 49.3%, rgba(106, 156, 255, 0.2) 49.5%, transparent 49.7%) 0 0/420px 420px;
+}
+
+.featured-project {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1rem;
+  border-color: #355779;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.featured-image {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #4a6b8d;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  cursor: zoom-in;
+}
+
+.featured-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.repo-card {
+  min-height: 180px;
+}
+
+.repo-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8rem;
+  gap: 0.6rem;
+}
+
+.repo-star {
+  font-size: 0.84rem;
+  color: #bcd5ea;
+}
+
+.resume-embed-wrap {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.resume-embed {
+  width: 100%;
+  min-height: 640px;
+  border: 0;
+}
+
+.resume-actions {
+  margin-top: 1rem;
 }

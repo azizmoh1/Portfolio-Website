@@ -133,3 +133,39 @@ if (copyEmailBtn) {
     }
   });
 }
+
+
+// Latest GitHub repositories (lightweight client-side fetch)
+(async function loadLatestRepos() {
+  const grid = document.getElementById('repo-grid');
+  if (!grid) return;
+
+  try {
+    const response = await fetch('https://api.github.com/users/azizmoh1/repos?sort=updated&per_page=6');
+    if (!response.ok) throw new Error('GitHub fetch failed');
+    const repos = await response.json();
+
+    const filtered = repos.filter(repo => !repo.fork).slice(0, 6);
+    if (!filtered.length) {
+      grid.innerHTML = '<article class="card repo-card slide-up visible"><p>No public repositories found yet.</p></article>';
+      return;
+    }
+
+    grid.innerHTML = filtered
+      .map(
+        repo => `
+        <article class="card repo-card slide-up visible">
+          <h3>${repo.name}</h3>
+          <p>${repo.description ? repo.description : 'No description provided yet.'}</p>
+          <div class="repo-meta">
+            <span class="repo-star">Stars: ${repo.stargazers_count}</span>
+            <a class="text-link" href="${repo.html_url}" target="_blank" rel="noopener noreferrer">View Repository</a>
+          </div>
+        </article>
+      `
+      )
+      .join('');
+  } catch (error) {
+    grid.innerHTML = '<article class="card repo-card slide-up visible"><p>Unable to load repositories right now.</p></article>';
+  }
+})();

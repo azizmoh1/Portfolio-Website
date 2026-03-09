@@ -15,6 +15,8 @@
   <body>
     <div class="ambient ambient-1"></div>
     <div class="ambient ambient-2"></div>
+    <div class="tech-grid"></div>
+    <div class="cad-lines" aria-hidden="true"></div>
 
     <header class="site-header">
       <nav class="nav container">
@@ -49,6 +51,22 @@
             <a class="btn btn-secondary" href="resume.docx" download>Download Resume</a>
           </div>
         </div>
+      </section>
+
+      <section id="featured" class="section container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Featured</p>
+          <h2>Featured Engineering Project</h2>
+        </div>
+        <article class="card featured-project slide-up">
+          <img class="featured-image" src="truss-analysis.png" alt="Featured truss project image" data-modal-img data-caption="Featured: Truss Design & Computational Analysis" />
+          <div class="featured-content">
+            <h3>Truss Design & Computational Analysis Competition</h3>
+            <p>High-impact structural optimization project combining computational statics, force balancing, and iterative geometry refinement to maximize load efficiency.</p>
+            <p><strong>Tools Used:</strong> MATLAB, Statics Analysis, Optimization</p>
+            <a class="btn btn-primary" href="project-truss.html">Read Full Case Study</a>
+          </div>
+        </article>
       </section>
 
       <section id="projects" class="section container reveal">
@@ -111,6 +129,18 @@
         </div>
       </section>
 
+      <section id="github" class="section container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">GitHub</p>
+          <h2>Latest Repositories</h2>
+        </div>
+        <div id="repo-grid" class="repo-grid">
+          <article class="card repo-card slide-up">
+            <p>Loading repositories...</p>
+          </article>
+        </div>
+      </section>
+
       <section id="skills" class="section container reveal">
         <div class="section-heading">
           <p class="eyebrow">Skills</p>
@@ -165,11 +195,15 @@
       <section id="resume" class="section container reveal">
         <div class="section-heading">
           <p class="eyebrow">Resume</p>
-          <h2>Download Resume</h2>
+          <h2>Resume Viewer</h2>
         </div>
         <article class="card resume-card slide-up">
-          <p>Latest resume with project, coursework, and technical experience.</p>
-          <a class="btn btn-primary" href="resume.docx" download>Download Resume</a>
+          <div class="resume-embed-wrap">
+            <iframe class="resume-embed" src="resume.pdf" title="Aziz Mohammad Resume PDF"></iframe>
+          </div>
+          <div class="resume-actions">
+            <a class="btn btn-primary" href="resume.pdf" download>Download Resume (PDF)</a>
+          </div>
         </article>
       </section>
 
