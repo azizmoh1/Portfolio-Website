@@ -73,3 +73,18 @@ if (copyEmailBtn) {
     }
   });
 }
+
+
+// Smooth scroll for hero in-page buttons
+document.querySelectorAll('.hero-actions a[href^="#"]').forEach(link => {
+  link.addEventListener('click', event => {
+    const target = link.getAttribute('href');
+    if (!target || target === '#') return;
+
+    const el = document.querySelector(target);
+    if (!el) return;
+
+    event.preventDefault();
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});

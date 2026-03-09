@@ -146,11 +146,39 @@ main {
 }
 
 .hero {
-  padding: 3.2rem 0 1.6rem;
+  position: relative;
+  padding: 5.5rem 0 3.2rem;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 1rem 0 auto;
+  height: 320px;
+  border-radius: 24px;
+  background: linear-gradient(120deg, rgba(31, 54, 74, 0.22), rgba(230, 106, 0, 0.18), rgba(31, 54, 74, 0.22));
+  background-size: 240% 240%;
+  animation: gradientShift 12s ease infinite;
+  z-index: -1;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-subtitle {
+  margin: 0 auto 1rem;
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.02em;
 }
 
 .hero-text {
   max-width: 70ch;
+  margin: 0.35rem auto;
 }
 
 .eyebrow {
@@ -175,6 +203,10 @@ main {
   flex-wrap: wrap;
   gap: 0.8rem;
   margin-top: 1rem;
+}
+
+.hero-actions {
+  justify-content: center;
 }
 
 .btn {
@@ -388,4 +420,46 @@ main {
 
 .project-card h3 {
   margin-top: 0.1rem;
+}
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f141c;
+    --surface: #171f29;
+    --ink: #e6edf6;
+    --muted: #b2c0cf;
+    --line: #2c3a49;
+    --steel: #d3deeb;
+    --shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  .site-header {
+    background: rgba(15, 20, 28, 0.86);
+  }
+
+  .btn-secondary,
+  .copy-btn,
+  .menu-toggle {
+    background: #1a2431;
+    color: var(--ink);
+  }
+
+  .project-image-placeholder,
+  .tag {
+    background: rgba(255, 255, 255, 0.03);
+  }
 }
