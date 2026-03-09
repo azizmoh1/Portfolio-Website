@@ -464,7 +464,11 @@ main {
   .skills-layout,
   .repo-grid,
   .two-col,
-  .featured-project {
+  .featured-project,
+  .case-hero,
+  .meta-grid,
+  .gallery-grid,
+  .full-gallery {
     grid-template-columns: 1fr;
   }
 }
@@ -579,4 +583,65 @@ main {
 
 .resume-actions {
   margin-top: 1rem;
+}
+
+
+.case-study-page {
+  padding-top: 1rem;
+}
+
+.case-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.case-hero-content {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.2rem;
+}
+
+.case-hero-visual .project-image {
+  min-height: 320px;
+}
+
+.case-meta-inline {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.4rem 0 0.8rem;
+  color: #c7d8e8;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.formula-block {
+  margin: 0.8rem 0;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #39516d;
+  border-radius: 10px;
+  background: rgba(77, 208, 225, 0.06);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 0.8rem;
+}
+
+.full-gallery {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.lessons-callout {
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(90deg, rgba(77, 208, 225, 0.08), rgba(255, 255, 255, 0.02));
 }

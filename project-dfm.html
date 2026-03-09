@@ -3,25 +3,222 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced Rapid Prototyping & DFM | Aziz Mohammad</title>
+    <title>3D Printed Fidget Toy | ME 347 CAD Case Study | Aziz Mohammad</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header"><nav class="nav container"><a class="logo" href="index.html#projects">Back</a><ul class="nav-links"><li><a href="#overview">Overview</a></li><li><a href="#problem">Problem</a></li><li><a href="#process">Process</a></li><li><a href="#gallery">CAD Renders</a></li><li><a href="#results">Results</a></li><li><a href="#lessons">Lessons</a></li></ul></nav></header>
-    <main class="container">
-      <section class="hero reveal"><div class="hero-inner"><h1>Advanced Rapid Prototyping & DFM Case Study</h1><p class="hero-subtitle">In Progress | Product Design + Manufacturing</p><img class="project-image" src="dfm-prototype.svg" alt="DFM project hero" data-modal-img data-caption="DFM-driven prototype concept" /></div></section>
-      <section id="overview" class="section reveal"><div class="card"><h2>Project Overview</h2><p>Designing and prototyping a novel portable tool for students, balancing functionality, ergonomics, and mass-production readiness with DFM constraints.</p></div></section>
-      <section id="problem" class="section reveal"><div class="card"><h2>Problem Statement</h2><p>Create a compact, interactive, support-free print design with moving/deforming features while maintaining manufacturability and low material waste.</p></div></section>
-      <section id="process" class="section reveal"><div class="card"><h2>Design Process</h2><ul class="clean-list project-points"><li>Conducted market and patent review for design differentiation.</li><li>Built DFM-optimized CAD assembly in SolidWorks with print-in-place tolerance planning.</li><li>Iterated physical prototypes and refined functional hand-feel at UIC Makerspace.</li></ul></div></section>
-      <section id="gallery" class="section reveal"><div class="card"><h2>CAD Renders / Prototype Views</h2><div class="project-grid"><img class="project-image" src="dfm-prototype.svg" alt="Assembly render" data-modal-img data-caption="SolidWorks assembly concept" /><img class="project-image" src="dfm-prototype.svg" alt="Prototype render" data-modal-img data-caption="Prototype view and DFM geometry" /></div></div></section>
-      <section class="section reveal"><div class="card"><h2>Tools Used</h2><div class="badge-wrap"><span class="badge">SolidWorks</span><span class="badge">FDM Printing</span><span class="badge">DFM</span><span class="badge">Patent Search</span></div></div></section>
-      <section id="results" class="section reveal"><div class="card"><h2>Key Results</h2><ul class="clean-list project-points"><li>Status: In Development</li><li>Current Milestone: Functional CAD assembly and prototype loop established</li><li>Deliverables: Design brief, technical package, lightning talk, summary report</li></ul></div></section>
-      <section id="lessons" class="section reveal"><div class="card"><h2>Lessons Learned</h2><p>Early DFM planning significantly reduces rework in prototyping and improves design quality before full-scale manufacturing decisions.</p></div></section>
+    <div class="tech-grid"></div>
+    <div class="cad-lines" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="logo" href="index.html#projects">Back</a>
+        <button class="menu-toggle" aria-label="Toggle menu">Menu</button>
+        <ul class="nav-links">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#methodology">Methodology</a></li>
+          <li><a href="#kinematics">Kinematics</a></li>
+          <li><a href="#dfm">DFM</a></li>
+          <li><a href="#validation">Validation</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#lessons">Lessons</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container case-study-page">
+      <section class="case-hero reveal" id="overview">
+        <div class="case-hero-content">
+          <p class="eyebrow">Featured CAD Case Study</p>
+          <h1>3D Printed Fidget Toy</h1>
+          <div class="case-meta-inline">
+            <span><strong>Course:</strong> ME 347 - Computer-Aided Design</span>
+            <span><strong>Design Environment:</strong> SolidWorks (ANSI Inch)</span>
+            <span><strong>Manufacturing Target:</strong> FDM (Fused Deposition Modeling) 3D Printing</span>
+          </div>
+          <p>
+            This project involved designing a portable 3D printed fidget toy using a parametric CAD workflow in SolidWorks.
+            The device was engineered as a compact mechanical mechanism while satisfying strict design-for-manufacturing constraints for FDM printing.
+            Standardized gear components were generated using the SolidWorks Toolbox and integrated into a fully constrained assembly environment.
+            The final design demonstrates how theoretical gear geometry, parametric constraints, and additive manufacturing considerations can be combined into a functional mechanical device.
+          </p>
+        </div>
+        <div class="case-hero-visual">
+          <img class="project-image" src="solidworks-ss.png" alt="3D Printed Fidget Toy CAD assembly" data-modal-img data-caption="3D Printed Fidget Toy - SolidWorks Assembly" />
+        </div>
+      </section>
+
+      <section class="section reveal" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <h2 id="overview-title">Project Overview</h2>
+        </div>
+        <div class="meta-grid">
+          <article class="card slide-up">
+            <h3>Project Type</h3>
+            <p>Mechanical CAD Design / Rapid Prototyping</p>
+          </article>
+          <article class="card slide-up">
+            <h3>Tools Used</h3>
+            <div class="badge-wrap">
+              <span class="badge">SolidWorks</span>
+              <span class="badge">SolidWorks Toolbox</span>
+              <span class="badge">FDM 3D Printing</span>
+            </div>
+          </article>
+          <article class="card slide-up">
+            <h3>Focus Areas</h3>
+            <div class="badge-wrap">
+              <span class="badge">Parametric Modeling</span>
+              <span class="badge">Mechanical Assemblies</span>
+              <span class="badge">Design for Manufacturing</span>
+            </div>
+          </article>
+          <article class="card slide-up">
+            <h3>Outcome</h3>
+            <p>Fully functional pocket-sized fidget toy designed for additive manufacturing.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="methodology" class="section reveal">
+        <div class="card">
+          <h2>Hybrid CAD Modeling Strategy</h2>
+          <p>
+            The assembly was created using a hybrid workflow combining Bottom-Up and Assembly-Driven design approaches.
+            Individual components such as the sun gear, planet gears, and housing were first generated as discrete parts using the SolidWorks Toolbox.
+            These components were then integrated into a parametric assembly environment where constraints and interference resolution were applied.
+          </p>
+
+          <h3>Gear Generation</h3>
+          <p>
+            Involute gears were generated with SolidWorks Toolbox rather than manually sketching tooth profiles.
+            This ensured mathematically accurate involute geometry and consistent engagement behavior.
+          </p>
+          <div class="formula-block">
+            <p><strong>Diametral Pitch (DP):</strong> 24</p>
+            <p><strong>Pressure Angle:</strong> 20deg</p>
+            <p><strong>Tooth Count:</strong> Sun 14 | Planet 14 | Ring 42</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="kinematics" class="section reveal">
+        <div class="card">
+          <h2>Parametric Constraints and Gear Kinematics</h2>
+          <p>
+            The gear assembly depends on precise center distances and tangency between pitch circles.
+            Center distance was enforced parametrically to preserve mesh quality and rotational consistency.
+          </p>
+
+          <div class="formula-block">
+            <p><strong>Center Distance Formula:</strong> C = (Ns + Np) / (2 x DP)</p>
+            <p>Using Ns = 14, Np = 14, DP = 24</p>
+            <p><strong>Center Distance = 0.5833 inches</strong></p>
+          </div>
+
+          <p>This distance constrained relative sun/planet axis placement in the assembly.</p>
+          <ul class="clean-list project-points">
+            <li>Concentric mates for shaft alignment</li>
+            <li>Coincident mates for planar positioning</li>
+            <li>Mechanical Gear Mates to enforce the 4:1 velocity ratio in SolidWorks motion</li>
+          </ul>
+          <div class="gallery-grid">
+            <img class="project-image" src="solidworks-ss.png" alt="Gear relationships in CAD" data-modal-img data-caption="Gear relationships and center distance constraints" />
+            <img class="project-image" src="dfm-prototype.svg" alt="Constraint relationship placeholder" data-modal-img data-caption="Constraint and kinematic relationship view" />
+          </div>
+        </div>
+      </section>
+
+      <section id="dfm" class="section reveal">
+        <div class="card">
+          <h2>Design for Additive Manufacturing</h2>
+          <p>
+            Ideal CAD geometry was adjusted to account for real-world FDM process behavior and tolerance stacking.
+          </p>
+
+          <h3>Lateral Backlash Compensation</h3>
+          <p>
+            The Move Face command was used to offset tooth flanks by -0.005 inches.
+            This reduced tooth thickness intentionally, creating physical backlash and preventing binding caused by over-extrusion.
+          </p>
+
+          <h3>Clearance Fits</h3>
+          <p>
+            Rotating shafts were given 0.015 inches diametrical clearance to produce running fits rather than interference fits.
+            This enabled smooth post-print motion without extensive post-processing.
+          </p>
+
+          <div class="gallery-grid">
+            <img class="project-image" src="dfm-prototype.svg" alt="Prototype placeholder" data-modal-img data-caption="Prototype placeholder" />
+            <img class="project-image" src="dfm-prototype.svg" alt="Manufacturing adjustments placeholder" data-modal-img data-caption="Manufacturing tolerance adjustment placeholder" />
+          </div>
+        </div>
+      </section>
+
+      <section id="validation" class="section reveal">
+        <div class="card">
+          <h2>CAD Verification and Assembly Analysis</h2>
+          <p>SolidWorks evaluation tools were used to validate assembly integrity before fabrication.</p>
+          <ul class="clean-list project-points">
+            <li><strong>Interference Detection:</strong> identified and removed overlapping geometry between gear teeth.</li>
+            <li><strong>Section View Analysis:</strong> verified axial spacing and internal clearances.</li>
+          </ul>
+          <p>These checks reduced risk and improved confidence in first-pass print functionality.</p>
+        </div>
+      </section>
+
+      <section id="results" class="section reveal">
+        <div class="card">
+          <h2>Results</h2>
+          <p>
+            The completed CAD assembly demonstrates a compact mechanical fidget toy balancing theoretical gear geometry with practical additive manufacturing tolerances.
+            The final model combines standardized Toolbox components with custom parametric adjustments to achieve smooth rotational motion in a 3D printed mechanism.
+          </p>
+          <div class="gallery-grid">
+            <img class="project-image" src="solidworks-ss.png" alt="Final CAD render" data-modal-img data-caption="Final CAD render" />
+            <img class="project-image" src="dfm-prototype.svg" alt="Exploded assembly placeholder" data-modal-img data-caption="Exploded assembly view placeholder" />
+            <img class="project-image" src="dfm-prototype.svg" alt="Prototype photo placeholder" data-modal-img data-caption="Prototype photo placeholder" />
+            <img class="project-image" src="dfm-prototype.svg" alt="Animated gear rotation placeholder" data-modal-img data-caption="Animated gear rotation GIF placeholder" />
+          </div>
+        </div>
+      </section>
+
+      <section id="lessons" class="section reveal">
+        <div class="card lessons-callout">
+          <h2>Lessons Learned</h2>
+          <ul class="clean-list project-points">
+            <li>Parametric constraints are critical to robust mechanical assemblies.</li>
+            <li>Theoretical gear geometry must be adapted for manufacturable, real-world behavior.</li>
+            <li>FDM-specific tolerance compensation should be designed into the CAD model early.</li>
+            <li>SolidWorks evaluation tools are essential for pre-fabrication validation.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="gallery" class="section reveal">
+        <div class="section-heading">
+          <h2>Image Gallery</h2>
+        </div>
+        <div class="gallery-grid full-gallery">
+          <img class="project-image" src="solidworks-ss.png" alt="Full assembly render" data-modal-img data-caption="Full assembly render" />
+          <img class="project-image" src="dfm-prototype.svg" alt="Exploded view" data-modal-img data-caption="Exploded view placeholder" />
+          <img class="project-image" src="dfm-prototype.svg" alt="Section view" data-modal-img data-caption="Section view placeholder" />
+          <img class="project-image" src="dfm-prototype.svg" alt="Gear mesh detail" data-modal-img data-caption="Gear mesh detail placeholder" />
+          <img class="project-image" src="dfm-prototype.svg" alt="Prototype photo" data-modal-img data-caption="Prototype photo placeholder" />
+        </div>
+      </section>
     </main>
-    <div class="image-modal" data-modal hidden><button class="modal-close" type="button" aria-label="Close image preview">Close</button><img class="modal-image" src="" alt="Project preview" /><p class="modal-caption"></p></div>
+
+    <div class="image-modal" data-modal hidden>
+      <button class="modal-close" type="button" aria-label="Close image preview">Close</button>
+      <img class="modal-image" src="" alt="Project preview" />
+      <p class="modal-caption"></p>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
