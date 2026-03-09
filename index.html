@@ -7,14 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Teko:wght@500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
+    <div class="ambient ambient-1"></div>
+    <div class="ambient ambient-2"></div>
 
     <header class="site-header">
       <nav class="nav container">
@@ -23,7 +23,9 @@
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills & Certs</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -35,12 +37,12 @@
           <h1>Aziz Mohammad</h1>
           <p class="hero-subtitle">Mechanical Engineering Student | CAD | Mechanical Design | Prototyping</p>
           <p class="hero-text">
-            I am a junior undergraduate mechanical engineering student focused on turning ideas into
-            practical, manufacturable solutions.
+            I am a junior undergraduate mechanical engineering student focused on creating practical,
+            manufacturable solutions through computational and design-driven workflows.
           </p>
           <p class="hero-text">
-            My work combines analytical thinking, CAD-driven design, and rapid prototyping to solve
-            real engineering problems efficiently.
+            My projects combine mechanical fundamentals, CAD, simulation, and prototyping to solve
+            engineering problems with measurable outcomes.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">View Projects</a>
@@ -52,128 +54,123 @@
       <section id="projects" class="section container reveal">
         <div class="section-heading">
           <p class="eyebrow">Projects</p>
-          <h2>Featured Engineering Work</h2>
+          <h2>Engineering Project Gallery</h2>
         </div>
-        <div class="grid two-col">
-          <article class="card project-card">
-            <img
-              class="project-image"
-              src="truss-analysis.png"
-              alt="Truss analysis simulation screenshot"
-            />
-            <h3>Truss Design & Computational Analysis Competition</h3>
-            <p>
-              Developed a computational truss analysis tool for a design competition focused on
-              maximizing efficiency (maximum load / total member length).
-            </p>
-            <p class="project-meta">
-              <strong>Role:</strong> Lead Designer & Programmer<br />
-              <strong>Tools:</strong> MATLAB, Statics Analysis, Truss Optimization
-            </p>
-            <ul class="clean-list project-points">
-              <li><strong>Maximum Load:</strong> 1,580,561 lbs</li>
-              <li><strong>Efficiency Number:</strong> 1620</li>
-              <li><strong>Geometry:</strong> 21 nodes, 48 elements</li>
-            </ul>
+        <div class="project-grid">
+          <article class="card project-card slide-up">
+            <img class="project-image" src="truss-analysis.png" alt="Truss analysis simulation" data-modal-img data-caption="Truss Design & Computational Analysis" />
+            <p class="status-pill">Completed</p>
+            <h3>Truss Design & Computational Analysis</h3>
+            <p>Computational statics model for truss optimization with quantified performance metrics.</p>
             <div class="tag-list">
               <span class="tag">MATLAB</span>
               <span class="tag">Statics</span>
               <span class="tag">Optimization</span>
             </div>
+            <a class="text-link" href="project-truss.html">View Engineering Case Study</a>
           </article>
 
-          <article class="card project-card">
+          <article class="card project-card slide-up">
+            <img class="project-image" src="thermal-sim.svg" alt="Thermal management simulation concept" data-modal-img data-caption="Active Thermal Management Simulation" />
             <p class="status-pill">In Progress</p>
             <h3>Active Thermal Management Simulation</h3>
-            <p>
-              Building a software-based thermal control model for an EV battery pack/high-performance
-              motor using a drive-cycle heat source and cooling logic.
-            </p>
-            <p class="project-meta">
-              <strong>Focus:</strong> Thermodynamics + Controls<br />
-              <strong>Planned Stack:</strong> MATLAB/Simulink, Simscape, Control Logic
-            </p>
-            <ul class="clean-list project-points">
-              <li><strong>Goal:</strong> Keep motor/battery temperatures within a safe operating band</li>
-              <li><strong>Engineering Task:</strong> fan/pump actuation strategy based on thermal response</li>
-              <li><strong>Why It Matters:</strong> simulation-first system design without requiring a physical lab</li>
-            </ul>
+            <p>Thermal controls simulation for EV battery/motor cooling under variable drive-cycle loads.</p>
             <div class="tag-list">
               <span class="tag">Thermodynamics</span>
               <span class="tag">Controls</span>
               <span class="tag">Simulink</span>
             </div>
+            <a class="text-link" href="project-thermal.html">View Engineering Case Study</a>
           </article>
 
-          <article class="card project-card">
+          <article class="card project-card slide-up">
+            <img class="project-image" src="dfm-prototype.svg" alt="DFM prototype concept" data-modal-img data-caption="Advanced Rapid Prototyping & DFM" />
             <p class="status-pill">In Progress</p>
-            <h3>Advanced Rapid Prototyping & DFM Case Study</h3>
-            <p>
-              Designing a portable, student-focused tool with a full DFM workflow from market/patent
-              research through CAD, prototyping, and manufacturing validation.
-            </p>
-            <p class="project-meta">
-              <strong>Focus:</strong> Product Design + Manufacturing<br />
-              <strong>Tools:</strong> SolidWorks, FDM Prototyping, Makerspace Validation
-            </p>
-            <ul class="clean-list project-points">
-              <li><strong>Constraints:</strong> ergonomic, pocketable, lightweight, and mechanically interactive</li>
-              <li><strong>DFM Strategy:</strong> print-in-place tolerances and support-free geometry for FDM</li>
-              <li><strong>Deliverables:</strong> design brief, engineering package, technical pitch, final report</li>
-            </ul>
+            <h3>Advanced Rapid Prototyping & DFM</h3>
+            <p>Portable product concept built through patent research, DFM-driven CAD, and prototype validation.</p>
             <div class="tag-list">
               <span class="tag">SolidWorks</span>
               <span class="tag">DFM</span>
-              <span class="tag">Rapid Prototyping</span>
+              <span class="tag">3D Printing</span>
             </div>
+            <a class="text-link" href="project-dfm.html">View Engineering Case Study</a>
           </article>
 
-          <article class="card project-card">
+          <article class="card project-card slide-up">
+            <img class="project-image" src="f1-analytics.svg" alt="Formula 1 analytics concept" data-modal-img data-caption="Predictive Analytics for Formula 1" />
             <p class="status-pill">In Progress</p>
             <h3>Predictive Analytics for Formula 1 Race Dynamics</h3>
-            <p>
-              Developing an ML-driven pipeline to predict race outcomes by combining historical results
-              with telemetry features like tire degradation, pit strategy, and circuit behavior.
-            </p>
-            <p class="project-meta">
-              <strong>Current Phase:</strong> Data Engineering & Feature Selection<br />
-              <strong>Tools:</strong> Python, FastF1 API, Random Forest/Gradient Boosting (planned)
-            </p>
-            <ul class="clean-list project-points">
-              <li><strong>Data Work:</strong> multi-season extraction, cleaning, and feature construction</li>
-              <li><strong>Model Objective:</strong> finishing-position prediction from pace + reliability signals</li>
-              <li><strong>Engineering Value:</strong> translating high-fidelity data into race strategy insights</li>
-            </ul>
+            <p>Data pipeline and ML modeling for race performance prediction using telemetry and strategy features.</p>
             <div class="tag-list">
               <span class="tag">Python</span>
               <span class="tag">Machine Learning</span>
-              <span class="tag">Motorsport Analytics</span>
+              <span class="tag">Telemetry</span>
             </div>
+            <a class="text-link" href="project-f1.html">View Engineering Case Study</a>
           </article>
         </div>
       </section>
 
       <section id="skills" class="section container reveal">
         <div class="section-heading">
-          <p class="eyebrow">Skills & Certifications</p>
-          <h2>Technical Toolkit</h2>
+          <p class="eyebrow">Skills</p>
+          <h2>Technical Skills</h2>
         </div>
-        <div class="grid two-col">
-          <article class="card">
-            <h3>Skills</h3>
-            <ul class="clean-list">
-              <li><strong>Technical Skills:</strong> Creo, SolidWorks, MATLAB</li>
-            </ul>
+        <div class="skills-layout">
+          <article class="card skill-group slide-up">
+            <h3>Engineering</h3>
+            <div class="badge-wrap">
+              <span class="badge">Mechanical Design</span>
+              <span class="badge">SolidWorks</span>
+              <span class="badge">Creo</span>
+              <span class="badge">3D Printing</span>
+              <span class="badge">Engineering Analysis</span>
+            </div>
           </article>
+          <article class="card skill-group slide-up">
+            <h3>Programming</h3>
+            <div class="badge-wrap">
+              <span class="badge">MATLAB</span>
+              <span class="badge">Python</span>
+              <span class="badge">Data Processing</span>
+              <span class="badge">Simulation Logic</span>
+            </div>
+          </article>
+          <article class="card skill-group slide-up">
+            <h3>Tools</h3>
+            <div class="badge-wrap">
+              <span class="badge">Simulink</span>
+              <span class="badge">Git/GitHub</span>
+              <span class="badge">FastF1 API</span>
+              <span class="badge">UIC Makerspace</span>
+            </div>
+          </article>
+        </div>
+      </section>
 
-          <article class="card">
-            <h3>Certifications/Courses</h3>
-            <ul class="clean-list">
-              <li>Harvard University - CS50 (In Progress)</li>
-              <li>Kaplan - FE Mechanical Exam Review Program (In Progress)</li>
-            </ul>
-          </article>
+      <section id="about" class="section container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>Engineering Focus</h2>
         </div>
+        <article class="card about-card slide-up">
+          <p>
+            I am currently pursuing mechanical engineering with a project focus on analysis-driven
+            design, thermal systems, and rapid prototyping. I enjoy taking systems from concept to
+            structured validation through simulation, CAD, and measurable testing workflows.
+          </p>
+        </article>
+      </section>
+
+      <section id="resume" class="section container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Resume</p>
+          <h2>Download Resume</h2>
+        </div>
+        <article class="card resume-card slide-up">
+          <p>Latest resume with project, coursework, and technical experience.</p>
+          <a class="btn btn-primary" href="resume.docx" download>Download Resume</a>
+        </article>
       </section>
 
       <section id="contact" class="section container reveal">
@@ -181,25 +178,23 @@
           <p class="eyebrow">Contact</p>
           <h2>Let Us Connect</h2>
         </div>
-        <article class="card contact-card">
+        <article class="card contact-card slide-up">
           <div class="contact-links">
-            <a
-              class="btn btn-secondary"
-              href="https://www.linkedin.com/in/aziz-m-a90aa526a"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn</a
-            >
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/aziz-m-a90aa526a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
           <p class="email-row">
             <strong>Email:</strong> <span id="email-text">azizm0304@gmail.com</span>
-            <button type="button" class="copy-btn" id="copy-email-btn" data-email="azizm0304@gmail.com">
-              Copy Email
-            </button>
+            <button type="button" class="copy-btn" id="copy-email-btn" data-email="azizm0304@gmail.com">Copy Email</button>
           </p>
         </article>
       </section>
     </main>
+
+    <div class="image-modal" data-modal hidden>
+      <button class="modal-close" type="button" aria-label="Close image preview">Close</button>
+      <img class="modal-image" src="" alt="Project preview" />
+      <p class="modal-caption"></p>
+    </div>
 
     <footer class="site-footer">
       <p>&copy; <span id="year"></span> Aziz Mohammad</p>

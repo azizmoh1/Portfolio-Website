@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#201522"/>
+      <stop offset="100%" stop-color="#3c2340"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g3)"/>
+  <rect x="140" y="150" width="1000" height="420" rx="18" fill="none" stroke="#4dd0e1" stroke-width="3"/>
+  <text x="640" y="330" text-anchor="middle" fill="#f1e7f3" font-size="54" font-family="Arial">Formula 1 Predictive Analytics</text>
+  <text x="640" y="390" text-anchor="middle" fill="#ceb9d1" font-size="30" font-family="Arial">Telemetry + Machine Learning (In Progress)</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#18202e"/>
+      <stop offset="100%" stop-color="#2f4258"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g2)"/>
+  <rect x="160" y="150" width="960" height="420" rx="18" fill="none" stroke="#6a9cff" stroke-width="3"/>
+  <text x="640" y="330" text-anchor="middle" fill="#dbe8f5" font-size="54" font-family="Arial">Rapid Prototyping & DFM</text>
+  <text x="640" y="390" text-anchor="middle" fill="#a8bdd3" font-size="30" font-family="Arial">Design for Manufacturing Case Study</text>
+</svg>

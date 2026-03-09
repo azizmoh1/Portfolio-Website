@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Active Thermal Management Simulation | Aziz Mohammad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header"><nav class="nav container"><a class="logo" href="index.html#projects">Back</a><ul class="nav-links"><li><a href="#overview">Overview</a></li><li><a href="#problem">Problem</a></li><li><a href="#process">Process</a></li><li><a href="#gallery">CAD Renders</a></li><li><a href="#results">Results</a></li><li><a href="#lessons">Lessons</a></li></ul></nav></header>
+    <main class="container">
+      <section class="hero reveal"><div class="hero-inner"><h1>Active Thermal Management Simulation</h1><p class="hero-subtitle">In Progress | Thermodynamics + Controls</p><img class="project-image" src="thermal-sim.svg" alt="Thermal simulation hero" data-modal-img data-caption="Thermal management concept" /></div></section>
+      <section id="overview" class="section reveal"><div class="card"><h2>Project Overview</h2><p>Building a simulation-driven thermal control model for EV battery or motor systems to maintain safe operating temperatures under variable duty cycles.</p></div></section>
+      <section id="problem" class="section reveal"><div class="card"><h2>Problem Statement</h2><p>Thermal loads vary dynamically with drive behavior; the system must detect and respond quickly to avoid overheating while minimizing unnecessary cooling power.</p></div></section>
+      <section id="process" class="section reveal"><div class="card"><h2>Design Process</h2><ul class="clean-list project-points"><li>Model heat generation from drive cycle input.</li><li>Implement fan/pump control logic based on temperature thresholds and hysteresis.</li><li>Evaluate system response for stability and control efficiency.</li></ul></div></section>
+      <section id="gallery" class="section reveal"><div class="card"><h2>CAD Renders / Diagrams</h2><div class="project-grid"><img class="project-image" src="thermal-sim.svg" alt="Thermal block diagram" data-modal-img data-caption="Thermal block diagram" /><img class="project-image" src="thermal-sim.svg" alt="Cooling control loop" data-modal-img data-caption="Cooling control loop concept" /></div></div></section>
+      <section class="section reveal"><div class="card"><h2>Tools Used</h2><div class="badge-wrap"><span class="badge">MATLAB</span><span class="badge">Simulink</span><span class="badge">Simscape</span><span class="badge">Control Logic</span></div></div></section>
+      <section id="results" class="section reveal"><div class="card"><h2>Key Results</h2><ul class="clean-list project-points"><li>Status: In Development</li><li>Current Milestone: Baseline thermal model + control architecture</li><li>Target: Stable thermal band under aggressive load cycles</li></ul></div></section>
+      <section id="lessons" class="section reveal"><div class="card"><h2>Lessons Learned</h2><p>Thermal behavior is highly sensitive to control thresholds; simulation-first development helps de-risk actuator strategy before hardware integration.</p></div></section>
+    </main>
+    <div class="image-modal" data-modal hidden><button class="modal-close" type="button" aria-label="Close image preview">Close</button><img class="modal-image" src="" alt="Project preview" /><p class="modal-caption"></p></div>
+    <script src="script.js"></script>
+  </body>
+</html>

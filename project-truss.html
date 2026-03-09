@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truss Design & Computational Analysis | Aziz Mohammad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="logo" href="index.html#projects">Back</a>
+        <ul class="nav-links">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#problem">Problem</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#gallery">CAD Renders</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#lessons">Lessons</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero reveal">
+        <div class="hero-inner">
+          <h1>Truss Design & Computational Analysis Competition</h1>
+          <p class="hero-subtitle">MATLAB | Statics | Optimization</p>
+          <img class="project-image" src="truss-analysis.png" alt="Truss analysis hero" data-modal-img data-caption="Truss simulation output" />
+        </div>
+      </section>
+
+      <section id="overview" class="section reveal"><div class="card"><h2>Project Overview</h2><p>Developed a computational solver and visualization workflow to evaluate truss internal forces and optimize structure efficiency for competition scoring.</p></div></section>
+      <section id="problem" class="section reveal"><div class="card"><h2>Problem Statement</h2><p>Design a truss that maximizes load capacity while minimizing total member length, under strict statics and failure constraints.</p></div></section>
+      <section id="process" class="section reveal"><div class="card"><h2>Design Process</h2><ul class="clean-list project-points"><li>Built force resolution logic for all members in one analysis loop.</li><li>Defined boundary conditions and support constraints for stability.</li><li>Iteratively refined node/member layout to reduce redundancy and improve central load paths.</li></ul></div></section>
+
+      <section id="gallery" class="section reveal">
+        <div class="card">
+          <h2>CAD Renders / Analysis Visuals</h2>
+          <div class="project-grid">
+            <img class="project-image" src="truss-analysis.png" alt="Stress view" data-modal-img data-caption="Stress view and efficiency metrics" />
+            <img class="project-image" src="truss-analysis.png" alt="Failure state" data-modal-img data-caption="Failure-state visualization" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal"><div class="card"><h2>Tools Used</h2><div class="badge-wrap"><span class="badge">MATLAB</span><span class="badge">Statics Analysis</span><span class="badge">Optimization</span><span class="badge">Data Visualization</span></div></div></section>
+      <section id="results" class="section reveal"><div class="card"><h2>Key Results</h2><ul class="clean-list project-points"><li>Maximum Load: 1,580,561 lbs</li><li>Efficiency Number: 1620</li><li>Geometry: 21 nodes, 48 elements</li></ul></div></section>
+      <section id="lessons" class="section reveal"><div class="card"><h2>Lessons Learned</h2><p>Systematic iteration and data-driven geometry updates produced better structural performance than ad-hoc adjustments, especially at high-stress center members.</p></div></section>
+    </main>
+
+    <div class="image-modal" data-modal hidden>
+      <button class="modal-close" type="button" aria-label="Close image preview">Close</button>
+      <img class="modal-image" src="" alt="Project preview" />
+      <p class="modal-caption"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

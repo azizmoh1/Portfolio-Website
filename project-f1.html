@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predictive Analytics for Formula 1 | Aziz Mohammad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header"><nav class="nav container"><a class="logo" href="index.html#projects">Back</a><ul class="nav-links"><li><a href="#overview">Overview</a></li><li><a href="#problem">Problem</a></li><li><a href="#process">Process</a></li><li><a href="#gallery">CAD Renders</a></li><li><a href="#results">Results</a></li><li><a href="#lessons">Lessons</a></li></ul></nav></header>
+    <main class="container">
+      <section class="hero reveal"><div class="hero-inner"><h1>Predictive Analytics for Formula 1 Race Dynamics</h1><p class="hero-subtitle">In Progress | Data Engineering & Feature Selection</p><img class="project-image" src="f1-analytics.svg" alt="F1 analytics hero" data-modal-img data-caption="F1 telemetry analytics concept" /></div></section>
+      <section id="overview" class="section reveal"><div class="card"><h2>Project Overview</h2><p>Developing a machine-learning pipeline to forecast race outcomes by combining historical data with telemetry-driven performance indicators.</p></div></section>
+      <section id="problem" class="section reveal"><div class="card"><h2>Problem Statement</h2><p>Race outcomes depend on interacting variables (pace, tire wear, reliability, strategy); the challenge is extracting robust predictive signals from noisy, multi-source data.</p></div></section>
+      <section id="process" class="section reveal"><div class="card"><h2>Design Process</h2><ul class="clean-list project-points"><li>Extracting and cleaning telemetry with FastF1 API across multiple seasons.</li><li>Engineering features for degradation curves, pit strategy, and circuit behavior.</li><li>Planning predictive baselines with Random Forest / Gradient Boosting regressors.</li></ul></div></section>
+      <section id="gallery" class="section reveal"><div class="card"><h2>Diagrams / Prototype Views</h2><div class="project-grid"><img class="project-image" src="f1-analytics.svg" alt="Data pipeline diagram" data-modal-img data-caption="Telemetry data pipeline concept" /><img class="project-image" src="f1-analytics.svg" alt="Model feature flow" data-modal-img data-caption="Model feature flow" /></div></div></section>
+      <section class="section reveal"><div class="card"><h2>Tools Used</h2><div class="badge-wrap"><span class="badge">Python</span><span class="badge">FastF1 API</span><span class="badge">Pandas</span><span class="badge">Scikit-learn</span></div></div></section>
+      <section id="results" class="section reveal"><div class="card"><h2>Key Results</h2><ul class="clean-list project-points"><li>Status: In Development</li><li>Current Milestone: Data ingestion + feature baseline established</li><li>Next Milestone: Model training and evaluation across circuits</li></ul></div></section>
+      <section id="lessons" class="section reveal"><div class="card"><h2>Lessons Learned</h2><p>Accurate predictive engineering models depend as much on disciplined data preparation as on algorithm selection.</p></div></section>
+    </main>
+    <div class="image-modal" data-modal hidden><button class="modal-close" type="button" aria-label="Close image preview">Close</button><img class="modal-image" src="" alt="Project preview" /><p class="modal-caption"></p></div>
+    <script src="script.js"></script>
+  </body>
+</html>
