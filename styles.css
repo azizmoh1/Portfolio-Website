@@ -272,7 +272,7 @@ main {
   margin-bottom: 0.85rem;
   display: block;
   object-fit: contain;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
   background: rgba(8, 14, 20, 0.55);
   cursor: zoom-in;
 }
@@ -536,7 +536,7 @@ main {
   border-radius: 12px;
   border: 1px solid #4a6b8d;
   object-fit: contain;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
   background: rgba(8, 14, 20, 0.55);
   cursor: zoom-in;
 }
