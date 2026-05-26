@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Scythe — Aziz Mohammad</title>
+    <meta name="description" content="Decorative cantilever traffic signal pole designed for Chicago intersections. SolidWorks CAD + ANSYS FEA. Min safety factor 4.6." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ── Navigation ── -->
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="logo" href="index.html">Aziz <span>Mohammad</span></a>
+        <button class="menu-toggle" aria-label="Toggle menu">Menu</button>
+        <ul class="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#resume">Resume</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="case-study-page">
+      <div class="container">
+
+        <a class="back-link" href="index.html#projects">← Back to Projects</a>
+
+        <!-- ── Hero ── -->
+        <div class="case-hero reveal">
+          <div class="case-hero-content">
+            <p class="eyebrow">ME 347 · Spring 2026 · Structural Design</p>
+            <h1 style="font-size: clamp(2rem, 5vw, 3.2rem);">The Scythe</h1>
+            <p style="font-size:1.05rem; color: var(--ink-soft); font-weight:500; margin-bottom:0.5rem;">
+              Decorative Cantilever Traffic Signal Pole
+            </p>
+            <div class="case-meta-inline">
+              <span>📍 Chicago Intersection · 1933 World's Fair Centennial</span>
+              <span>🔧 SolidWorks · ANSYS Mechanical 2025 R1</span>
+              <span>📐 26 ft span · 3 luminaires · 3 traffic signs</span>
+              <span>🌬️ Design wind: 95.7 mph</span>
+            </div>
+            <div class="tag-list" style="margin-bottom:1rem;">
+              <span class="tag">SolidWorks</span>
+              <span class="tag">ANSYS FEA</span>
+              <span class="tag">Static Structural</span>
+              <span class="tag">Stainless Steel</span>
+              <span class="tag">Cantilever Design</span>
+            </div>
+            <span class="project-tile-status status-completed" style="display:inline-block;">Completed — May 2026</span>
+          </div>
+          <div class="case-hero-visual">
+            <img
+              class="project-image"
+              src="scythepics/solidworks-render.png"
+              alt="The Scythe SolidWorks render"
+              data-modal-img
+              data-caption="The Scythe — Final SolidWorks Model"
+            />
+          </div>
+        </div>
+
+        <!-- ── Key Results ── -->
+        <div class="result-grid reveal">
+          <div class="result-stat">
+            <span class="stat-value">4.6</span>
+            <span class="stat-label">Min Safety Factor</span>
+          </div>
+          <div class="result-stat">
+            <span class="stat-value">45 mm</span>
+            <span class="stat-label">Max Tip Deflection</span>
+          </div>
+          <div class="result-stat">
+            <span class="stat-value">$11,885</span>
+            <span class="stat-label">Stainless Steel Cost</span>
+          </div>
+        </div>
+
+        <hr class="section-divider" style="margin: 2rem 0;" />
+
+        <!-- ── Introduction ── -->
+        <section class="section" style="padding: 2.5rem 0;">
+          <div class="section-heading">
+            <p class="eyebrow">Overview</p>
+            <h2>Introduction</h2>
+          </div>
+          <div class="card slide-up" style="max-width: 860px;">
+            <p>
+              This project required designing a decorative cantilever traffic signal pole for Chicago
+              intersections, commemorating the centennial of the 1933 World's Fair. The pole needed to
+              span a 26-foot road, support three 60-pound luminaires and three traffic signs, and survive
+              wind speeds exceeding 95.7 mph — all while maintaining 18 feet of clearance and a factor
+              of safety above 2.
+            </p>
+            <p style="margin-top:0.8rem;">
+              The final design is called <strong style="color:var(--ink);">"The Scythe"</strong> — named for
+              its sweeping curved arm that arcs out from the pole and holds all six required fixtures.
+              The goal was to meet every constraint without overcomplicating the design. Efficiency and
+              reliability were the priority, but aesthetics still mattered given the World's Fair context
+              and the public-facing nature of the structure.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Design Objectives ── -->
+        <section class="section" style="padding: 2.5rem 0;">
+          <div class="section-heading">
+            <p class="eyebrow">Requirements</p>
+            <h2>Design Objectives</h2>
+          </div>
+          <div class="meta-grid">
+            <article class="card slide-up">
+              <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.75rem;">Structural Constraints</h3>
+              <ul style="padding-left:1.2rem; margin:0;">
+                <li>Span 26-foot road clearance</li>
+                <li>18 ft minimum overhead clearance</li>
+                <li>Factor of safety ≥ 2 under all loads</li>
+                <li>Survive 95.7 mph wind loading</li>
+                <li>Support 3 × 60 lb luminaires</li>
+                <li>Support 3 × 5 lb traffic signs</li>
+              </ul>
+            </article>
+            <article class="card slide-up">
+              <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.75rem;">Design Goals</h3>
+              <ul style="padding-left:1.2rem; margin:0;">
+                <li>Cost-effective material selection</li>
+                <li>Durable in Chicago climate conditions</li>
+                <li>Lightweight and material-optimized</li>
+                <li>Aesthetically fitting for a landmark city</li>
+                <li>Environmentally considerate</li>
+                <li>Manufacturable and installable</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- ── Design Process ── -->
+        <section class="section" style="padding: 2.5rem 0;">
+          <div class="section-heading">
+            <p class="eyebrow">Ideation</p>
+            <h2>Design Process & Iterations</h2>
+          </div>
+
+          <div class="card slide-up" style="max-width:860px; margin-bottom:1.5rem;">
+            <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.6rem;">Three Initial Concepts (4/6)</h3>
+            <p>
+              Three concepts were sketched on April 6th. <strong style="color:var(--ink);">Sketch 1</strong> was a symmetric
+              truss with hanging luminaires and a wide flared base — wind load complications and excess material
+              ruled it out. <strong style="color:var(--ink);">Sketch 3</strong> was efficient but too generic,
+              similar to standard municipal poles. <strong style="color:var(--ink);">Sketch 2</strong> —
+              a curved arch mast arm — was selected for its balance of structural promise and visual
+              distinctiveness fitting of the World's Fair context.
+            </p>
+          </div>
+
+          <!-- Sketch photos -->
+          <div class="gallery-grid slide-up" style="max-width:860px; grid-template-columns: repeat(3, 1fr);">
+            <img src="scythepics/photo1.jpg" alt="Milestone 1 Sketches — Concepts 1, 2, 3" data-modal-img data-caption="4/6 — Initial Concepts: Sketches 1, 2, 3" />
+            <img src="scythepics/photo2.jpg" alt="4/22 Sketch 2 Improved — with dimensions and reinforcing plates" data-modal-img data-caption="4/22 — Sketch 2 Improved: dimensions, reinforcing plates, wiring cutouts" />
+            <img src="scythepics/photo3.jpg" alt="4/23 New curve design" data-modal-img data-caption="4/23 — New simplified curve geometry (led to final scythe form)" />
+          </div>
+
+          <div class="card slide-up" style="max-width:860px; margin-top:1.5rem;">
+            <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.6rem;">Revision 1 (4/22) — Sketch 2 Improved</h3>
+            <p>
+              The first SolidWorks build proved overly complex and material-heavy. Peer review flagged excess
+              weight and wasted geometry. A revised version was developed with specific improvements: reduce
+              overall material, use more effective material placement, incorporate <strong style="color:var(--ink);">
+              four reinforcing plates</strong> at stress concentration zones, and add <strong style="color:var(--ink);">
+              two wiring cutouts</strong> in the pole for electrical access. Dimensions were formalized — pole
+              standing ~24 ft tall with a square base plate for four anchor bolts.
+            </p>
+          </div>
+
+          <div class="card slide-up" style="max-width:860px; margin-top:1rem;">
+            <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.6rem;">Revision 2 (4/23) — New Curve Geometry</h3>
+            <p>
+              The previous arch geometry couldn't be translated cleanly into SolidWorks without errors.
+              Rather than continuing to patch a flawed foundation, the geometry was scrapped entirely in
+              favor of a simpler single-curve form — a sweeping arc rising from the pole and curving outward
+              over the road. This became the scythe shape that carried through to the final design after
+              four additional CAD revisions refining the lattice members and resolving rebuild issues.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Final Design ── -->
+        <section class="section" style="padding: 2.5rem 0;">
+          <div class="section-heading">
+            <p class="eyebrow">Final Model</p>
+            <h2>Final Design</h2>
+          </div>
+
+          <div class="gallery-grid slide-up" style="max-width:900px; grid-template-columns: 1fr 1fr;">
+            <img
+              src="scythepics/solidworks-render.png"
+              alt="SolidWorks 3D render of The Scythe"
+              data-modal-img
+              data-caption="Final Design — SolidWorks 3D Render"
+            />
+            <img
+              src="scythepics/solidworks-drawing.png"
+              alt="SolidWorks engineering drawing"
+              data-modal-img
+              data-caption="Final Design — SolidWorks Engineering Drawing"
+            />
+          </div>
+
+          <div class="card slide-up" style="max-width:860px; margin-top:1.5rem;">
+            <p>
+              The final model features a vertical pole with a square base plate designed for four anchor bolts,
+              two wiring cutouts along the pole body, and a latticed mast arm composed of curved members
+              connected by cross bracing. The lattice configuration distributes load along the arm effectively
+              while giving the structure its distinctive scythe-like appearance. All six required fixtures —
+              three luminaires and three signs — are mounted along the arm and pole as specified.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── FEA ── -->
+        <section class="section" style="padding: 2.5rem 0;">
+          <div class="section-heading">
+            <p class="eyebrow">Analysis</p>
+            <h2>Finite Element Analysis</h2>
+          </div>
+
+          <div class="card slide-up" style="max-width:860px; margin-bottom:1.5rem;">
+            <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.6rem;">Setup & Boundary Conditions</h3>
+            <p>
+              Static structural analysis was performed in ANSYS Mechanical 2025 R1. The geometry was imported
+              as a STEP file from SolidWorks with structural steel assigned as the material. A fixed support
+              was applied at the base of the pole simulating the anchor bolt connection to the cast-in-place
+              concrete pedestal.
+            </p>
+            <p style="margin-top:0.7rem;">
+              Loads applied: standard earth gravity, three luminaire point forces at 60 lbs each, three sign
+              forces at 5 lbs each, wind pressure calculated at 95.7 mph, and additional mounting point forces —
+              totaling seven force inputs alongside the applied pressure.
+            </p>
+          </div>
+
+          <div class="card slide-up" style="max-width:860px; margin-bottom:1.5rem;">
+            <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.6rem;">Mesh</h3>
+            <p>
+              Tet10 tetrahedral elements with adaptive sizing, resolution 4, slow transition, fine span angle
+              center. Bounding box diagonal: 10.27 m. Min edge length: 5.68×10⁻⁵ m. Average surface area:
+              0.13457 m². Two warnings were noted (model length unit change, potential mesh object loss)
+              — neither affected the validity of results.
+            </p>
+            <div class="formula-block">
+              Element Type: Tet10 · Adaptive Sizing: On · Resolution: 4<br>
+              Mesh Quality: Element Quality · Min: 1.43×10⁻² · Majority range: 0.75–0.88
+            </div>
+          </div>
+
+          <!-- FEA images -->
+          <div class="gallery-grid slide-up" style="max-width:900px; grid-template-columns: repeat(3, 1fr);">
+            <img
+              src="scythepics/ansys-safety-factor.png"
+              alt="ANSYS Safety Factor result"
+              data-modal-img
+              data-caption="ANSYS — Safety Factor (Min: 4.6116, Max: 15)"
+            />
+            <img
+              src="scythepics/ansys-deformation.png"
+              alt="ANSYS Total Deformation result"
+              data-modal-img
+              data-caption="ANSYS — Total Deformation (Max: 0.045227 m at arm tip)"
+            />
+            <img
+              src="scythepics/ansys-mesh.png"
+              alt="ANSYS Mesh setup"
+              data-modal-img
+              data-caption="ANSYS — Mesh Setup & Element Quality Histogram"
+            />
+          </div>
+
+          <!-- Results callout -->
+          <div class="result-grid reveal" style="margin-top:1.5rem; max-width:860px;">
+            <div class="result-stat">
+              <span class="stat-value">4.61</span>
+              <span class="stat-label">Min Safety Factor (base)</span>
+            </div>
+            <div class="result-stat">
+              <span class="stat-value">15</span>
+              <span class="stat-label">Max Safety Factor</span>
+            </div>
+            <div class="result-stat">
+              <span class="stat-value">45.2 mm</span>
+              <span class="stat-label">Max Tip Deformation</span>
+            </div>
+          </div>
+
+          <div class="card slide-up lessons-callout" style="max-width:860px; margin-top:1.5rem;">
+            <p>
+              <strong style="color:var(--ink);">Results:</strong> The minimum safety factor of 4.6116 occurs
+              at the base of the pole where bending stress is highest — more than double the required minimum
+              of 2. The average safety factor across the structure was 14.955. Maximum deformation of 0.045227 m
+              (45.2 mm) occurs at the tip of the mast arm, within acceptable deflection limits. These results
+              confirm the design meets all structural requirements under the specified loading conditions.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Material & Cost ── -->
+        <section class="section" style="padding: 2.5rem 0;">
+          <div class="section-heading">
+            <p class="eyebrow">Materials</p>
+            <h2>Material Selection & Cost</h2>
+          </div>
+          <div class="meta-grid">
+            <article class="card slide-up" style="border-color: rgba(59,130,246,0.35);">
+              <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.6rem;">✓ Stainless Steel (Selected)</h3>
+              <div class="formula-block">Cost: $11,885 · Weight: 8.985 metric tons</div>
+              <p style="margin-top:0.6rem;">
+                Lower cost, superior corrosion resistance for Chicago's harsh climate, durability score of 8.
+                Better long-term value for a municipal infrastructure application.
+              </p>
+            </article>
+            <article class="card slide-up">
+              <h3 style="font-size:1rem; color:var(--muted); margin-bottom:0.6rem;">Aluminum (Evaluated)</h3>
+              <div class="formula-block">Cost: $17,026 · Weight: 3.090 metric tons</div>
+              <p style="margin-top:0.6rem;">
+                ~65% lighter but $5,141 more expensive. Both materials produced an identical design metric
+                score of 2 — no clear structural advantage justified the cost premium.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ── Reflection ── -->
+        <section class="section" style="padding: 2.5rem 0;">
+          <div class="section-heading">
+            <p class="eyebrow">Takeaways</p>
+            <h2>Challenges & Reflection</h2>
+          </div>
+          <div class="card slide-up lessons-callout" style="max-width:860px;">
+            <p>
+              The biggest challenge was CAD modeling — translating sketch concepts into clean, error-free
+              SolidWorks geometry took far more iteration than expected. The original arch design created
+              intersecting surfaces that couldn't be properly constrained. The right call was to simplify
+              the geometry entirely rather than keep patching a flawed foundation, which produced a cleaner,
+              lighter, and structurally superior final design.
+            </p>
+            <p style="margin-top:0.75rem;">
+              Balancing material reduction with structural performance was an ongoing challenge throughout.
+              Early iterations were heavier than necessary, but cutting too much risked dropping below the
+              safety factor threshold. This was managed through iterative FEA runs — trimming geometry where
+              safety factors were highest and preserving material where stresses were concentrated,
+              particularly at the base of the pole.
+            </p>
+            <p style="margin-top:0.75rem;">
+              The project reinforced a core engineering lesson: what looks simple on paper often requires
+              multiple complete restarts before arriving at something workable. The iterative nature of design
+              isn't a sign of failure — it's the process.
+            </p>
+          </div>
+        </section>
+
+        <div style="padding: 1rem 0 2rem;">
+          <a class="btn btn-secondary" href="index.html#projects">← Back to All Projects</a>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ── Image Modal ── -->
+    <div class="image-modal" data-modal hidden>
+      <button class="modal-close" type="button" aria-label="Close">✕ Close</button>
+      <img class="modal-image" src="" alt="Project preview" />
+      <p class="modal-caption"></p>
+    </div>
+
+    <!-- ── Footer ── -->
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Aziz Mohammad</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
