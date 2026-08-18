@@ -3,24 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aziz Mohammad — Mechanical Engineer</title>
-    <meta name="description" content="Aziz Mohammad — Mechanical Engineering student specializing in CAD, FEA, and data-driven design." />
+    <title>Aziz Mohammad | Mechanical Engineering Portfolio</title>
+    <meta name="description" content="Mechanical engineering portfolio for Aziz Mohammad, focused on CAD, mechanical systems, hydronic pump packages, FEA, and computational design." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
-    <!-- ── Navigation ── -->
     <header class="site-header">
       <nav class="nav container">
         <a class="logo" href="#home">Aziz <span>Mohammad</span></a>
         <button class="menu-toggle" aria-label="Toggle menu">Menu</button>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
+          <li><a href="#featured">Featured</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#resume">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -28,74 +28,114 @@
     </header>
 
     <main>
-
-      <!-- ── Hero ── -->
-      <section id="home" class="hero reveal">
-        <div class="container">
-          <div class="hero-inner">
-            <span class="hero-badge">Mechanical Engineering Student</span>
-            <h1>Designing systems<br><span>that hold up.</span></h1>
-            <p class="hero-subtitle">CAD · Structural Analysis · Data-Driven Engineering</p>
+      <section id="home" class="home-hero reveal">
+        <div class="container hero-shell">
+          <div class="hero-copy">
+            <p class="eyebrow">Mechanical Engineering Portfolio</p>
+            <h1>Building practical systems from CAD sketches to real equipment layouts.</h1>
+            <p class="hero-subtitle">Junior Mechanical Engineering Student</p>
             <p class="hero-text">
-              I'm a junior mechanical engineering student who turns ideas into tested, manufacturable designs.
-              From parametric SolidWorks models to ANSYS FEA and Python-based analytics — I build things with purpose.
+              I like projects where the model has to survive contact with reality: pumps, skids, brackets, gears, loads, tolerances, and the occasional stubborn CAD mate.
+              My work combines mechanical design, systems thinking, analysis, and documentation so ideas can become usable engineering outputs.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#projects">View Projects</a>
-              <a class="btn btn-secondary" href="#about">About Me</a>
+              <a class="btn btn-primary" href="#featured">Start with Internship Work</a>
+              <a class="btn btn-secondary" href="#projects">View All Projects</a>
             </div>
+          </div>
+
+          <div class="hero-visual-stack" aria-label="Portfolio highlights">
+            <article class="orbit-card orbit-card-main">
+              <span>Current Focus</span>
+              <strong>Mechanical systems + product development</strong>
+              <p>Hydronic pump packages, CAD design, FEA, and data-supported engineering decisions.</p>
+            </article>
+            <article class="orbit-card orbit-card-small top-card">
+              <span>CAD</span>
+              <strong>SolidWorks / Creo</strong>
+            </article>
+            <article class="orbit-card orbit-card-small bottom-card">
+              <span>Analysis</span>
+              <strong>ANSYS / MATLAB / Python</strong>
+            </article>
           </div>
         </div>
       </section>
 
-      <hr class="section-divider" />
+      <section class="metric-band container reveal" aria-label="Portfolio focus areas">
+        <div><strong>30-230 ton</strong><span>hydronic package range studied</span></div>
+        <div><strong>4.6 min FOS</strong><span>validated in structural FEA project</span></div>
+        <div><strong>1620 efficiency</strong><span>truss optimization result</span></div>
+        <div><strong>CAD + systems</strong><span>the lane I am building toward</span></div>
+      </section>
 
-      <!-- ── Featured Project ── -->
       <section id="featured" class="section container reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Featured Work</p>
-          <h2>Featured Project</h2>
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Featured Internship Work</p>
+            <h2>Standardized Hydronic Pump Package Development</h2>
+          </div>
+          <p>
+            A real product-development case study from my systems design internship: packaged pumps, VFDs, tanks, documentation, configuration data, and repeatable mechanical layouts.
+          </p>
         </div>
-        <article class="card featured-project slide-up">
-          <img
-            class="featured-image"
-            src="scythepics/solidworks-render.png"
-            alt="The Scythe — decorative cantilever traffic signal pole SolidWorks render"
-            data-modal-img
-            data-caption="The Scythe — Cantilever Traffic Signal Pole"
-          />
-          <div class="featured-content">
-            <p class="eyebrow">SolidWorks · ANSYS FEA · Structural Design</p>
-            <h3>The Scythe — Decorative Traffic Signal Pole</h3>
-            <p>
-              A cantilever traffic signal pole designed for Chicago intersections commemorating the 1933 World's Fair.
-              Spans 26 ft, supports 3 luminaires + 3 signs, survives 95.7 mph winds, with a minimum safety factor of 4.6.
-            </p>
-            <p><strong>Tools:</strong> SolidWorks, ANSYS Mechanical, Static Structural FEA</p>
-            <a class="btn btn-primary" href="project-scythe.html">Read Full Case Study</a>
 
+        <article class="feature-split card slide-up">
+          <div class="feature-media">
+            <img src="internship-assets/full-package-render.png" alt="Hydronic pump package render for chiller system" data-modal-img data-caption="Standardized hydronic pump package render" />
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Wilo USA Internship | HVAC / Hydronics</p>
+            <h3>Not just a CAD model - a scalable package platform.</h3>
+            <p>
+              I contributed to the development and standardization of hydronic pump package configurations for Daikin AGZ chiller systems, supporting repeatable layouts across multiple capacities.
+            </p>
+            <div class="badge-wrap">
+              <span class="badge">Pump Skids</span>
+              <span class="badge">VFD Integration</span>
+              <span class="badge">BOM Support</span>
+              <span class="badge">Package Layouts</span>
+              <span class="badge">Costing Documentation</span>
+            </div>
+            <a class="btn btn-primary" href="project-internship.html">Read Internship Case Study</a>
           </div>
         </article>
       </section>
 
-      <hr class="section-divider" />
-
-      <!-- ── Projects ── -->
       <section id="projects" class="section container reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Projects</p>
-          <h2>Engineering Projects</h2>
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Project Gallery</p>
+            <h2>Engineering Workbench</h2>
+          </div>
+          <p>Each project is framed around what employers care about: problem, tools, process, results, and what I learned.</p>
         </div>
-        <div class="project-grid">
 
+        <div class="project-grid project-grid-redesign">
+          <a class="project-tile project-tile-wide slide-up" href="project-internship.html">
+            <img src="internship-assets/full-package-render.png" alt="Standardized Hydronic Pump Package" />
+            <div class="project-tile-overlay">
+              <div class="project-tile-body">
+                <span class="project-tile-status status-completed">Internship Project</span>
+                <h3>Standardized Hydronic Pump Package Development</h3>
+                <p>Commercial HVAC product-development support for repeatable chiller pump skid configurations.</p>
+                <div class="project-tile-tags">
+                  <span class="tag">HVAC</span>
+                  <span class="tag">Hydronics</span>
+                  <span class="tag">Product Standardization</span>
+                </div>
+                <span class="tile-link">View Case Study</span>
+              </div>
+            </div>
+          </a>
 
-          <!-- The Scythe -->
           <a class="project-tile slide-up" href="project-scythe.html">
-            <img src="scythepics/solidworks-render.png" alt="The Scythe — Traffic Signal Pole" />
+            <img src="scythepics/solidworks-render.png" alt="The Scythe Traffic Signal Pole" />
             <div class="project-tile-overlay">
               <div class="project-tile-body">
                 <span class="project-tile-status status-completed">Completed</span>
-                <h3>The Scythe — Cantilever Traffic Signal Pole</h3>
+                <h3>The Scythe - Cantilever Traffic Signal Pole</h3>
+                <p>Decorative structural pole validated through ANSYS static structural FEA.</p>
                 <div class="project-tile-tags">
                   <span class="tag">SolidWorks</span>
                   <span class="tag">ANSYS FEA</span>
@@ -106,30 +146,13 @@
             </div>
           </a>
 
-          <!-- Internship Pump Package -->
-          <a class="project-tile slide-up" href="project-internship.html">
-            <img src="internship-assets/pump-package-hero.png" alt="Chiller Pump Package Systems Integration" />
-            <div class="project-tile-overlay">
-              <div class="project-tile-body">
-                <span class="project-tile-status status-completed">Internship Project</span>
-                <h3>Chiller Pump Package Systems Integration</h3>
-                <div class="project-tile-tags">
-                  <span class="tag">HVAC</span>
-                  <span class="tag">Pump Systems</span>
-                  <span class="tag">Technical Documentation</span>
-                </div>
-                <span class="tile-link">View Case Study</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- 3D Printed Fidget Toy -->
           <a class="project-tile slide-up" href="project-dfm.html">
             <img src="3DPFGTOYpics/real-gears.jpg" alt="3D Printed Fidget Toy" />
             <div class="project-tile-overlay">
               <div class="project-tile-body">
                 <span class="project-tile-status status-completed">Completed</span>
                 <h3>3D Printed Fidget Toy</h3>
+                <p>Parametric gear assembly designed for FDM manufacturing and smooth rotational motion.</p>
                 <div class="project-tile-tags">
                   <span class="tag">SolidWorks</span>
                   <span class="tag">DFM</span>
@@ -140,13 +163,13 @@
             </div>
           </a>
 
-          <!-- Truss -->
           <a class="project-tile slide-up" href="project-truss.html">
-            <img src="trusspics/truss-analysis.png" alt="Truss Design & Analysis" />
+            <img src="trusspics/truss-analysis.png" alt="Truss Design and Analysis" />
             <div class="project-tile-overlay">
               <div class="project-tile-body">
                 <span class="project-tile-status status-completed">Completed</span>
                 <h3>Truss Design & Computational Analysis</h3>
+                <p>MATLAB-based statics tool for truss optimization and force visualization.</p>
                 <div class="project-tile-tags">
                   <span class="tag">MATLAB</span>
                   <span class="tag">Statics</span>
@@ -157,13 +180,13 @@
             </div>
           </a>
 
-          <!-- F1 Analytics -->
           <a class="project-tile slide-up" href="project-f1.html">
             <img src="F1pic.jpg" alt="Formula 1 Race Analytics" />
             <div class="project-tile-overlay">
               <div class="project-tile-body">
                 <span class="project-tile-status status-in-progress">In Progress</span>
                 <h3>Predictive Analytics for Formula 1 Race Dynamics</h3>
+                <p>Telemetry and machine-learning project connecting vehicle dynamics to race strategy.</p>
                 <div class="project-tile-tags">
                   <span class="tag">Python</span>
                   <span class="tag">Machine Learning</span>
@@ -173,38 +196,45 @@
               </div>
             </div>
           </a>
-
         </div>
       </section>
 
-      <hr class="section-divider" />
-
-      <!-- ── Skills ── -->
       <section id="skills" class="section container reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Skills</p>
-          <h2>Technical Skills</h2>
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Skills</p>
+            <h2>Engineering Toolkit</h2>
+          </div>
+          <p>Tools are useful, but the real goal is turning them into decisions: what to design, how to validate it, and how to explain it clearly.</p>
         </div>
-        <div class="skills-layout">
 
+        <div class="skills-layout toolkit-layout">
           <article class="card skill-group slide-up">
-            <h3>Engineering</h3>
+            <h3>CAD & Mechanical Design</h3>
             <div class="badge-wrap">
-              <span class="badge">Mechanical Design</span>
               <span class="badge">SolidWorks</span>
               <span class="badge">Creo</span>
-              <span class="badge">ANSYS</span>
-              <span class="badge">FEA</span>
+              <span class="badge">Mechanical Design</span>
+              <span class="badge">Assemblies</span>
+              <span class="badge">Design for Manufacturing</span>
               <span class="badge">3D Printing</span>
-              <span class="badge">Engineering Analysis</span>
+            </div>
+          </article>
+
+          <article class="card skill-group slide-up">
+            <h3>Systems & Analysis</h3>
+            <div class="badge-wrap">
               <span class="badge">HVAC Systems</span>
               <span class="badge">Pump Package Layout</span>
+              <span class="badge">Hydronic Systems</span>
+              <span class="badge">ANSYS FEA</span>
+              <span class="badge">Engineering Analysis</span>
               <span class="badge">Technical Documentation</span>
             </div>
           </article>
 
           <article class="card skill-group slide-up">
-            <h3>Programming</h3>
+            <h3>Programming & Data</h3>
             <div class="badge-wrap">
               <span class="badge">MATLAB</span>
               <span class="badge">Python</span>
@@ -215,76 +245,41 @@
           </article>
 
           <article class="card skill-group slide-up">
-            <h3>Courses & Certs</h3>
+            <h3>Courses & Development</h3>
             <div class="badge-wrap">
               <span class="badge">Harvard CS50x</span>
               <span class="badge">Kaplan FE Mechanical Review</span>
+              <span class="badge">Pumps + Hydronics</span>
+              <span class="badge">Chillers + Heat Transfer</span>
             </div>
           </article>
-
         </div>
       </section>
 
-      <hr class="section-divider" />
-
-      <!-- ── About ── -->
       <section id="about" class="section container reveal">
-        <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2>About Me</h2>
-        </div>
-        <div class="about-grid">
-
-          <article class="card about-info-card slide-up">
-            <h3>Aziz Mohammad</h3>
-            <p class="role-label">Junior · Mechanical Engineering</p>
-            <div class="about-stat-row">
-              <div class="about-stat">
-                <span>🎓</span><span>Mechanical Engineering Student</span>
-              </div>
-              <div class="about-stat">
-                <span>📍</span><span>United States</span>
-              </div>
-              <div class="about-stat">
-                <span>🔧</span><span>CAD · FEA · Data Analysis</span>
-              </div>
-              <div class="about-stat">
-                <span>📧</span><span>azizm0304@gmail.com</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card about-bio-card slide-up">
+        <div class="about-redesign card slide-up">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2>How I Approach Engineering Work</h2>
+          </div>
+          <div>
             <p>
-              I'm a junior mechanical engineering student with a hands-on approach to design and analysis.
-              My work spans parametric CAD in SolidWorks and Creo, finite element analysis in ANSYS,
-              and computational modeling in MATLAB and Python. I care about the details — tolerances,
-              material selection, manufacturing constraints — the things that separate a sketch from
-              something that actually works.
+              I am a junior mechanical engineering student who learns best by building, testing, and explaining. I am drawn to work where CAD, physical constraints, and system-level thinking all meet in the same problem.
             </p>
             <p>
-              Recent projects include designing a decorative cantilever traffic signal pole for Chicago
-              intersections, validated through ANSYS static structural FEA with a minimum safety factor
-              of 4.6, and a computational truss optimization study in MATLAB. I'm also building a
-              predictive analytics pipeline for Formula 1 race dynamics using Python and machine learning.
+              Right now I am especially interested in mechanical systems, product development, HVAC/hydronics, CAD automation, and data-supported engineering workflows. I want my portfolio to show not only what I made, but how I think through tradeoffs.
             </p>
-            <p>
-              I'm currently preparing for the FE exam and actively looking for internship opportunities
-              where I can contribute to real engineering problems. If you want to talk design, analysis,
-              or anything engineering — reach out.
-            </p>
-          </article>
-
+          </div>
         </div>
       </section>
 
-      <hr class="section-divider" />
-
-      <!-- ── Resume ── -->
       <section id="resume" class="section container reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Resume</p>
-          <h2>Resume</h2>
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Resume</p>
+            <h2>Resume</h2>
+          </div>
+          <p>Embedded here for quick review, with a download option if an employer wants the PDF.</p>
         </div>
         <article class="card resume-card slide-up">
           <div class="resume-embed-wrap">
@@ -296,36 +291,31 @@
         </article>
       </section>
 
-      <hr class="section-divider" />
-
-      <!-- ── Contact ── -->
       <section id="contact" class="section container reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2>Get in Touch</h2>
-        </div>
-        <article class="card contact-card slide-up">
-          <div class="contact-links">
-            <a class="btn btn-primary" href="https://www.linkedin.com/in/aziz-m-a90aa526a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <article class="contact-redesign card slide-up">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Let's talk engineering.</h2>
+            <p>If something here connects with your team's work, I'd be glad to talk.</p>
           </div>
-          <p class="email-row">
-            <strong>Email:</strong>
-            <span id="email-text">azizm0304@gmail.com</span>
-            <button type="button" class="copy-btn" id="copy-email-btn" data-email="azizm0304@gmail.com">Copy</button>
-          </p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="https://www.linkedin.com/in/aziz-m-a90aa526a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <p class="email-row">
+              <strong>Email:</strong>
+              <span id="email-text">azizm0304@gmail.com</span>
+              <button type="button" class="copy-btn" id="copy-email-btn" data-email="azizm0304@gmail.com">Copy</button>
+            </p>
+          </div>
         </article>
       </section>
-
     </main>
 
-    <!-- ── Image Modal ── -->
     <div class="image-modal" data-modal hidden>
-      <button class="modal-close" type="button" aria-label="Close">✕ Close</button>
+      <button class="modal-close" type="button" aria-label="Close">Close</button>
       <img class="modal-image" src="" alt="Project preview" />
       <p class="modal-caption"></p>
     </div>
 
-    <!-- ── Footer ── -->
     <footer class="site-footer">
       <p>&copy; <span id="year"></span> Aziz Mohammad</p>
     </footer>
