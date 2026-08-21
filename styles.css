@@ -1828,3 +1828,76 @@ html[data-theme="light"] .resume-embed-wrap {
     min-height: 220px;
   }
 }
+
+
+/* hero clean override */
+.hero-clean {
+  min-height: calc(100vh - 66px);
+  display: grid;
+  align-items: center;
+  padding: 8rem 0 6rem;
+}
+
+.hero-clean::after {
+  content: "";
+}
+
+.hero-clean-shell {
+  max-width: 900px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-clean-shell h1 {
+  max-width: none;
+  font-size: clamp(4.2rem, 13vw, 10rem);
+  letter-spacing: -0.06em;
+  line-height: 0.9;
+  margin: 0.7rem 0 1rem;
+}
+
+.hero-clean-shell .hero-subtitle {
+  color: var(--accent);
+  font-family: "Rajdhani", sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.2rem;
+}
+
+.hero-clean-shell .hero-kicker {
+  justify-content: center;
+}
+
+.hero-intro {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--ink-soft);
+}
+
+.hero-clean-actions {
+  justify-content: center;
+}
+
+@media (max-width: 760px) {
+  .hero-clean {
+    min-height: auto;
+    padding: 6rem 0 4rem;
+  }
+
+  .hero-clean-shell {
+    text-align: left;
+  }
+
+  .hero-clean-shell .hero-kicker,
+  .hero-clean-actions {
+    justify-content: flex-start;
+  }
+}
+
+
+.hero-label {
+  margin-bottom: 0.75rem;
+}
