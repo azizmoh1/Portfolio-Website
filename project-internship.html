@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Standardized Hydronic Pump Package Development | Aziz Mohammad</title>
-    <meta name="description" content="Internship engineering case study by Aziz Mohammad covering standardized hydronic pump package development for Daikin AGZ chiller systems." />
+    <title>Modular Hydronic Pump Package Platform | Aziz Mohammad</title>
+    <meta name="description" content="Internship engineering case study by Aziz Mohammad covering a modular hydronic pump package platform for commercial chiller systems." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -17,11 +17,12 @@
         <button class="menu-toggle" aria-label="Toggle menu">Menu</button>
         <ul class="nav-links">
           <li><a href="#overview">Overview</a></li>
-          <li><a href="#objectives">Objectives</a></li>
-          <li><a href="#system">System</a></li>
-          <li><a href="#workflow">Workflow</a></li>
+          <li><a href="#context">Context</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#scaling">Scaling</a></li>
+          <li><a href="#process">Process</a></li>
           <li><a href="#visuals">Visuals</a></li>
-          <li><a href="#lessons">Lessons</a></li>
+          <li><a href="#impact">Impact</a></li>
         </ul>
       </nav>
     </header>
@@ -29,174 +30,237 @@
     <main class="container case-study-page internship-page">
       <section id="overview" class="intern-hero reveal">
         <div class="intern-hero-copy">
-          <p class="eyebrow">Systems Design Engineering Internship | Wilo USA</p>
-          <h1>Standardized Hydronic Pump Package Development for Daikin AGZ Chillers</h1>
+          <p class="eyebrow">Systems Design Engineering Internship</p>
+          <h1>Modular Hydronic Pump Package Platform for Commercial Chillers</h1>
           <p class="hero-text">
-            During my internship, I contributed to the development, organization, and standardization of a modular hydronic pump package family intended to integrate with Daikin AGZ air-cooled chiller systems.
-            The goal was to support repeatable package designs across multiple chiller capacities while simplifying engineering, sales, manufacturing, quoting, and future product expansion.
+            I helped develop a ground-up modular product line of commercial hydronic pump skids, transforming custom one-off engineering into a standardized platform spanning 20+ capacity tiers. The project connected mechanical product design, hydronic systems, equipment packaging, BOM engineering, configuration management, and cost-modeling support into one repeatable workflow.
           </p>
           <div class="case-meta-inline intern-meta">
-            <span><strong>Project Type:</strong> Commercial HVAC / hydronic pump skid product family development</span>
-            <span><strong>Capacity Range:</strong> standardized package family spanning roughly 30-230 tons</span>
-            <span><strong>Role:</strong> Systems Design Intern - mechanical design support, BOM/configuration management, costing support, and package standardization support</span>
+            <span><strong>Role:</strong> Systems Design Engineering Intern</span>
+            <span><strong>Platform Scope:</strong> standardized modular product family covering 30 to 230 tons across 20+ configurations</span>
+            <span><strong>Core Disciplines:</strong> Mechanical Product Design, Hydronic Systems, Equipment Packaging, Configuration Management, BOM Engineering</span>
+            <span><strong>Tools:</strong> SolidWorks 3D assemblies, 2D drawings, configurations, and Microsoft Excel dynamic matrices</span>
           </div>
         </div>
         <div class="intern-hero-media">
-          <img src="internship-assets/full-package-render.png" alt="Hydronic pump package and chiller render" data-modal-img data-caption="Full standardized hydronic pump package render" />
+          <img src="internship-assets/full-package-render.png" alt="Modular hydronic pump package render attached to chiller platform" data-modal-img data-caption="Modular hydronic pump package platform" />
         </div>
       </section>
 
       <section class="intern-summary-grid reveal" aria-label="Internship project highlights">
         <article class="card slide-up">
-          <span class="mini-label">Core Problem</span>
-          <h3>Turn custom layouts into a repeatable product platform.</h3>
-          <p>Rather than treating each pump skid as a one-off configuration, the project focused on standardizing package architecture across capacities and operating requirements.</p>
+          <span class="mini-label">One-line pitch</span>
+          <h3>From one-off skid designs to a configurable product platform.</h3>
+          <p>Instead of treating each chiller installation as a fresh custom engineering job, the project created repeatable configurations that could be selected, documented, quoted, and expanded more efficiently.</p>
         </article>
         <article class="card slide-up">
-          <span class="mini-label">Engineering Scope</span>
-          <h3>Pumps, tanks, VFDs, piping, controls, and documentation.</h3>
-          <p>Each package combined mechanical, hydraulic, electrical, structural, and commercial considerations into one skid-mounted solution.</p>
+          <span class="mini-label">Technical focus</span>
+          <h3>Pumps, VFDs, tanks, piping, water quality, and skid structure.</h3>
+          <p>The package consolidated chilled-water circulation, air/dirt separation, thermal buffering, water treatment provisions, electrical power, and frame integration.</p>
         </article>
         <article class="card slide-up">
-          <span class="mini-label">Portfolio Value</span>
-          <h3>Real systems thinking, not just a model screenshot.</h3>
-          <p>This project shows exposure to product development, configuration data, drawing interpretation, and the practical constraints behind packaged mechanical equipment.</p>
+          <span class="mini-label">Why it matters</span>
+          <h3>Engineering work that affects design speed and product repeatability.</h3>
+          <p>The strongest value was not a single CAD drawing; it was helping build a platform that reduces repetitive drafting, supports faster quoting, and improves consistency.</p>
         </article>
       </section>
 
-      <section id="objectives" class="section reveal">
+      <section id="context" class="section reveal">
         <div class="section-heading split-heading">
           <div>
-            <p class="eyebrow">Engineering Objectives</p>
-            <h2>What the Package Had to Do</h2>
+            <p class="eyebrow">Engineering Context</p>
+            <h2>The Problem: Custom Engineering Bottlenecks</h2>
           </div>
-          <p>The project was about making future work easier: fewer one-off decisions, clearer documentation, and a scalable path for package variants.</p>
+          <p>Commercial skid deployments can become slow when every chiller package requires custom drafting, component selection, documentation, and quote support.</p>
         </div>
-
-        <div class="objective-grid">
-          <article class="objective-card slide-up"><strong>01</strong><span>Develop standardized pump skid configurations for multiple chiller tonnage ranges.</span></article>
-          <article class="objective-card slide-up"><strong>02</strong><span>Create repeatable package designs that could scale across product variants.</span></article>
-          <article class="objective-card slide-up"><strong>03</strong><span>Standardize component selections across the product family.</span></article>
-          <article class="objective-card slide-up"><strong>04</strong><span>Organize package costing information for quoting support.</span></article>
-          <article class="objective-card slide-up"><strong>05</strong><span>Improve consistency across drawings, submittals, data tables, and package definitions.</span></article>
-          <article class="objective-card slide-up"><strong>06</strong><span>Integrate hydronic system equipment into a unified skid-mounted solution.</span></article>
+        <div class="challenge-grid">
+          <article class="card slide-up">
+            <h3>Custom job pressure</h3>
+            <p>Previous deployments required one-off engineering and CAD drafting for unique chiller installations, creating long design cycles and slower quote response times.</p>
+          </article>
+          <article class="card slide-up">
+            <h3>Standardization objective</h3>
+            <p>The goal was to transition from custom jobs to a repeatable product family that unified mechanical packaging, component selection, documentation, and generalized cost modeling.</p>
+          </article>
+          <article class="card slide-up">
+            <h3>Integrated package scope</h3>
+            <p>The platform was designed as a turnkey skid that could bolt directly into air-cooled chiller frames while consolidating the core hydronic support equipment.</p>
+          </article>
         </div>
       </section>
 
-      <section id="system" class="section reveal">
+      <section id="architecture" class="section reveal">
         <div class="section-heading split-heading">
           <div>
-            <p class="eyebrow">System Architecture</p>
-            <h2>Major Subsystems Included</h2>
+            <p class="eyebrow">Subsystem Architecture</p>
+            <h2>What the Platform Had to Integrate</h2>
           </div>
-          <p>A good package layout has to think beyond the pump. It needs hydraulic performance, maintainability, electrical coordination, manufacturability, and clean documentation.</p>
+          <p>The package had to behave like one coordinated mechanical product, even though it combined fluid, electrical, thermal, structural, and documentation requirements.</p>
         </div>
 
         <div class="system-board card slide-up">
-          <img src="internship-assets/system-plan-render.png" alt="Top view of chiller pump package" data-modal-img data-caption="Top view of hydronic package layout" />
+          <img src="internship-assets/system-plan-render.png" alt="Top view of modular hydronic pump package" data-modal-img data-caption="Top view of modular hydronic pump package" />
           <div class="system-list">
-            <div><strong>Hydronic Pumps</strong><span>Wilo pump selections and configurations across multiple tonnage ranges.</span></div>
-            <div><strong>Motors</strong><span>Motor selections spanning approximately 1 HP to 5 HP with 1150 RPM and 1750 RPM configurations.</span></div>
-            <div><strong>VFDs</strong><span>Variable frequency drive selections matched to pump and motor requirements.</span></div>
-            <div><strong>Tanks</strong><span>Expansion tank and buffer tank families organized by capacity and system need.</span></div>
-            <div><strong>Water Quality</strong><span>Air/dirt separation, side-stream filtration, and chemical shot feeder provisions.</span></div>
-            <div><strong>Skid Features</strong><span>Frame integration, rigging points, pipe insulation, optional heat tracing, and chiller-frame interface.</span></div>
+            <div><strong>Hydronic Pumps</strong><span>Wilo VIL and IL-HE series inline centrifugal pump selections for chilled-water circulation across small, medium, and large capacity tiers.</span></div>
+            <div><strong>Motors & Drives</strong><span>1 HP to 5 HP motors at 1150 RPM and 1750 RPM paired with standardized VFD string-code logic for variable-speed flow regulation.</span></div>
+            <div><strong>Thermal Buffering</strong><span>CBT buffer vessels spanning 200, 300, 400, 500, 600, 700, 850, 1040, and 1200 gallon model families.</span></div>
+            <div><strong>Pressure Control</strong><span>Closed-loop expansion tanks ranging from 23, 37, 53, to 79 gallons for hydronic pressure stabilization.</span></div>
+            <div><strong>Water Quality</strong><span>Air and dirt separators, chemical shot feeder provisions, and side-stream filtration to support loop cleanliness.</span></div>
+            <div><strong>Fluid Manifolds</strong><span>5-inch grooved supply/return headers, dual Y-strainers, check valves, and butterfly isolation valves for serviceable flow paths.</span></div>
+            <div><strong>Electrical Package</strong><span>Single-point power panel, VFD signal cabling, and branch circuit protection for centralized pump motor control.</span></div>
+            <div><strong>Structural Frame</strong><span>Heavy-duty skid base, lifting points, frame bolt patterns, and chiller chassis interface planning.</span></div>
           </div>
         </div>
       </section>
 
-      <section id="workflow" class="section reveal">
+      <section id="scaling" class="section reveal">
         <div class="section-heading split-heading">
           <div>
-            <p class="eyebrow">Workflow</p>
-            <h2>From Equipment Data to Standardized Packages</h2>
+            <p class="eyebrow">Capacity Scaling</p>
+            <h2>Product Family Matrix</h2>
           </div>
-          <p>My work sat in the practical middle: understanding the mechanical package, organizing the configuration information, and helping the project become easier to repeat.</p>
+          <p>The project scaled the same platform logic across three capacity families while changing pumps, motors, VFDs, expansion vessels, buffer tanks, and frame requirements.</p>
+        </div>
+
+        <div class="capacity-grid">
+          <article class="capacity-card card slide-up">
+            <span>30-60 tons</span>
+            <h3>Small Packages</h3>
+            <p>Lower-horsepower pumps, compact expansion vessels, 200-300 gallon buffer tank families, and a simplified frame envelope.</p>
+          </article>
+          <article class="capacity-card card slide-up">
+            <span>70-150 tons</span>
+            <h3>Mid-Range Packages</h3>
+            <p>Intermediate pump selections, 37-53 gallon expansion tank ranges, 400-850 gallon buffer tank families, and standardized VFD drive matching.</p>
+          </article>
+          <article class="capacity-card card slide-up">
+            <span>160-230 tons</span>
+            <h3>Large Packages</h3>
+            <p>Higher-capacity pump pairs, 79 gallon expansion tanks, 1040-1200 gallon buffer tanks, 5-inch grooved headers, and integrated single-point power.</p>
+          </article>
+        </div>
+
+        <article class="card data-flow-card slide-up">
+          <p class="eyebrow">Configuration Matrix Logic</p>
+          <h3>Chiller tonnage became the main configuration driver.</h3>
+          <div class="data-flow">
+            <span>Chiller Tonnage</span>
+            <span>Pump Selection</span>
+            <span>Motor Spec</span>
+            <span>VFD String Code</span>
+            <span>Expansion Vessel</span>
+            <span>Thermal Buffer Tank</span>
+            <span>Water Quality Scope</span>
+            <span>BOM + Budgetary Cost Rollup</span>
+          </div>
+        </article>
+      </section>
+
+      <section id="process" class="section reveal">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Engineering Execution</p>
+            <h2>Detailed Process</h2>
+          </div>
+          <p>My work sat in the practical middle: understand the mechanical package, organize the configuration information, and help make the product family easier to repeat.</p>
         </div>
 
         <div class="workflow-grid">
-          <article class="workflow-step card slide-up">
-            <span>Step 01</span>
-            <h3>Study the package architecture</h3>
-            <p>Reviewed package layouts, drawing views, and component callouts to understand how the chiller, skid, pumps, tanks, valves, piping, VFDs, and controls fit together.</p>
-          </article>
-          <article class="workflow-step card slide-up">
-            <span>Step 02</span>
-            <h3>Connect components to system function</h3>
-            <p>Mapped the purpose of each subsystem so the package could be explained as an engineered solution, not just a collection of parts on a base frame.</p>
-          </article>
-          <article class="workflow-step card slide-up">
-            <span>Step 03</span>
-            <h3>Support configuration organization</h3>
-            <p>Helped structure package information around repeated selections, capacity ranges, VFD string-code data, and the documentation needed for quoting or future variants.</p>
-          </article>
-          <article class="workflow-step card slide-up">
-            <span>Step 04</span>
-            <h3>Communicate the system clearly</h3>
-            <p>Translated drawings and technical data into a clear project narrative that connects mechanical design work to manufacturability, deployment, and business value.</p>
-          </article>
+          <article class="workflow-step card slide-up"><span>Step 01</span><h3>Requirements Definition</h3><p>Extracted performance criteria, interface envelopes, and capacity ranges from customer and equipment specifications.</p></article>
+          <article class="workflow-step card slide-up"><span>Step 02</span><h3>System Layout & Sizing</h3><p>Mapped cooling load tiers to pump selections, motor/VFD requirements, buffer tank needs, expansion volumes, and separator flow thresholds.</p></article>
+          <article class="workflow-step card slide-up"><span>Step 03</span><h3>SolidWorks Modeling</h3><p>Supported master CAD assemblies with skid structure, grooved piping networks, insulation solids, and electrical routing considerations.</p></article>
+          <article class="workflow-step card slide-up"><span>Step 04</span><h3>Manufacturing & Field Coordination</h3><p>Considered dual-pump isolation loops, lifting points, service access, and bolt-pattern coordination with the chiller frame.</p></article>
+          <article class="workflow-step card slide-up"><span>Step 05</span><h3>Engineering Data Automation</h3><p>Helped organize dynamic configuration spreadsheets linking mechanical sizing rules to BOM generation and generalized cost tracking.</p></article>
+          <article class="workflow-step card slide-up"><span>Step 06</span><h3>Technical Documentation</h3><p>Supported general arrangement drawing logic, 3D model exports, datasheet organization, and configuration submittal structure.</p></article>
         </div>
       </section>
 
       <section class="section reveal">
-        <article class="card technical-callout slide-up">
-          <p class="eyebrow">Personal Engineering Takeaway</p>
-          <h2>My biggest lesson: standardization is a design problem.</h2>
-          <p>
-            Before this project, it would have been easy to think of CAD as the center of the work. The internship showed me that real product development also depends on repeatable data, clean documentation, supplier/component coordination, service access, and package definitions that other teams can actually use.
-          </p>
-        </article>
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Challenges & Solutions</p>
+            <h2>Where the Engineering Got Interesting</h2>
+          </div>
+        </div>
+        <div class="challenge-grid">
+          <article class="card slide-up">
+            <h3>Packaging high-capacity components</h3>
+            <p>Large configurations required buffer tanks up to 1200 gallons and dual-pump layouts inside strict width and height envelopes.</p>
+            <p><strong>Solution:</strong> Used isometric spatial planning to organize equipment placement, route grooved headers, and preserve service access without exceeding base boundaries.</p>
+          </article>
+          <article class="card slide-up">
+            <h3>Eliminating redundant one-off engineering</h3>
+            <p>Custom skid quoting required repetitive manual design work and non-standardized data management.</p>
+            <p><strong>Solution:</strong> Built platform logic around tonnage-driven selections, component models, hardware part numbers, and budgetary cost columns.</p>
+          </article>
+          <article class="card slide-up">
+            <h3>Coordinating multiple disciplines</h3>
+            <p>Fluid piping, VFD controls, power routing, insulation, water quality hardware, and structural constraints could conflict physically.</p>
+            <p><strong>Solution:</strong> Treated insulation boundaries, conduit paths, and equipment access as real packaging constraints instead of afterthoughts.</p>
+          </article>
+        </div>
       </section>
 
       <section id="visuals" class="section reveal">
         <div class="section-heading split-heading">
           <div>
             <p class="eyebrow">Project Visuals</p>
-            <h2>System, Subsystem, and Documentation Views</h2>
+            <h2>System, Subsystem, and Layout Views</h2>
           </div>
-          <p>These visuals show the project at multiple scales: full package layout, pump skid details, and tank/piping areas. Internal pricing, configuration tables, and proprietary document pages are intentionally omitted.</p>
+          <p>These visuals show the work at multiple scales: full package layout, pump skid details, tank/piping areas, general arrangement drawings, and documentation snapshots from the final internship materials.</p>
         </div>
 
         <div class="visual-grid visual-grid-large">
-          <figure class="visual-card wide slide-up">
-            <img src="internship-assets/full-package-render.png" alt="Full hydronic pump package render" data-modal-img data-caption="Full hydronic pump package render" />
-            <figcaption>Full package render showing chiller, pump skid area, tank hardware, and support base.</figcaption>
-          </figure>
-          <figure class="visual-card slide-up">
-            <img src="internship-assets/pump-skid-render-a.png" alt="Pump and motor skid render" data-modal-img data-caption="Pump and motor skid render" />
-            <figcaption>Pump/motor skid layout with base frame and serviceable component arrangement.</figcaption>
-          </figure>
-          <figure class="visual-card slide-up">
-            <img src="internship-assets/pump-skid-render-b.png" alt="Alternate pump skid render" data-modal-img data-caption="Alternate pump skid render" />
-            <figcaption>Alternate view highlighting pump, motor, coupling area, and mounting strategy.</figcaption>
-          </figure>
-          <figure class="visual-card slide-up">
-            <img src="internship-assets/tank-subsystem-render.png" alt="Tank and piping subsystem render" data-modal-img data-caption="Tank and piping subsystem render" />
-            <figcaption>Tank, pump, piping, and control hardware packaged into a serviceable skid zone.</figcaption>
-          </figure>
-          <figure class="visual-card slide-up">
-            <img src="internship-assets/system-side-render.png" alt="Side view of full package" data-modal-img data-caption="Side view of full package" />
-            <figcaption>Side view showing relative placement of chiller, package piping, and tank equipment.</figcaption>
-          </figure>
-          <figure class="visual-card slide-up">
-            <img src="internship-assets/system-plan-render.png" alt="Plan view of hydronic package" data-modal-img data-caption="Plan view of hydronic package" />
-            <figcaption>Plan-oriented package view showing equipment relationships without exposing internal documentation tables.</figcaption>
-          </figure>
+          <figure class="visual-card wide slide-up"><img src="internship-assets/full-package-render.png" alt="Full modular hydronic pump package render" data-modal-img data-caption="Full modular hydronic pump package render" /><figcaption>Full package render showing chiller interface, skid equipment, tank hardware, and support base.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/pump-skid-render-a.png" alt="Pump and motor skid render" data-modal-img data-caption="Pump and motor skid render" /><figcaption>Pump and motor skid layout with base frame, serviceable mounting, and inlet/outlet geometry.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/pump-skid-render-b.png" alt="Alternate pump skid render" data-modal-img data-caption="Alternate pump skid render" /><figcaption>Alternate pump skid view highlighting pump casing, motor, coupling area, and mounting strategy.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/tank-subsystem-render.png" alt="Tank and piping subsystem render" data-modal-img data-caption="Tank and piping subsystem render" /><figcaption>Tank, piping, control hardware, and skid zone packaged for access and field serviceability.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/system-side-render.png" alt="Side view of hydronic package" data-modal-img data-caption="Side view of hydronic package" /><figcaption>Side view showing the relationship between chiller frame, package piping, and tank equipment.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/system-plan-render.png" alt="Plan view of hydronic package" data-modal-img data-caption="Plan view of hydronic package" /><figcaption>Plan view showing equipment relationships and footprint organization across the package.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/pump-package-hero.png" alt="Close-up pump package subsystem render" data-modal-img data-caption="Close-up pump package subsystem render" /><figcaption>Close-up of package hardware, piping loops, and tank area used to communicate subsystem layout.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/package-side.png" alt="Package side rendering" data-modal-img data-caption="Package side rendering" /><figcaption>Side rendering used to evaluate relative equipment height, frame position, and service envelope.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/package-plan.png" alt="Package plan rendering" data-modal-img data-caption="Package plan rendering" /><figcaption>Top layout view showing pump package geometry, chiller footprint, and equipment placement.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/package-drawing.png" alt="General arrangement drawing view" data-modal-img data-caption="General arrangement drawing view" /><figcaption>General arrangement view included as a high-level layout reference for dimensions and component callouts.</figcaption></figure>
+          <figure class="visual-card wide slide-up"><img src="internship-assets/package-drawing-color.png" alt="Color general arrangement drawing with component callouts" data-modal-img data-caption="Color general arrangement drawing with component callouts" /><figcaption>Color drawing sheet showing plan, side, and isometric views with component callouts and dimensional package envelope.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/pdf-full-system-side.png" alt="Rendered side view from internship presentation" data-modal-img data-caption="Rendered side view from internship presentation" /><figcaption>Presentation render showing the chiller and pump package relationship from the side.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/pdf-plan-layout.png" alt="Rendered top layout from internship presentation" data-modal-img data-caption="Rendered top layout from internship presentation" /><figcaption>Top layout view used to communicate plan footprint and package organization.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/pdf-tank-piping-subsystem.png" alt="Tank and piping subsystem presentation render" data-modal-img data-caption="Tank and piping subsystem presentation render" /><figcaption>Tank, piping, separator, and electrical/control hardware packaged around access and service constraints.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/pdf-chiller-integration.png" alt="Chiller integration render with piping and tank hardware" data-modal-img data-caption="Chiller integration render with piping and tank hardware" /><figcaption>Integration view showing how the support equipment connects around the chiller frame and skid base.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/pdf-pump-skid-detail-a.png" alt="Pump skid detail render from SolidWorks" data-modal-img data-caption="Pump skid detail render from SolidWorks" /><figcaption>Pump skid detail showing pump, motor, coupling, frame members, and lifting/bolt-hole features.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/pdf-pump-skid-detail-b.png" alt="Alternate pump skid detail render" data-modal-img data-caption="Alternate pump skid detail render" /><figcaption>Alternate pump and motor package view highlighting mounting arrangement and serviceable geometry.</figcaption></figure>
+          <figure class="visual-card slide-up"><img src="internship-assets/pdf-full-system-perspective.png" alt="Full system perspective render" data-modal-img data-caption="Full system perspective render" /><figcaption>Full perspective render showing the complete platform architecture and equipment zoning.</figcaption></figure>
+          <figure class="visual-card wide slide-up"><img src="internship-assets/configuration-documentation-snapshot.png" alt="Configuration documentation snapshot" data-modal-img data-caption="Configuration documentation snapshot" /><figcaption>Configuration documentation snapshot showing how component selections and status tracking were organized into repeatable package data.</figcaption></figure>
+          <figure class="visual-card wide slide-up"><img src="internship-assets/documentation-board.png" alt="Compiled documentation board with drawing and render views" data-modal-img data-caption="Compiled documentation board with drawing and render views" /><figcaption>Compiled documentation board connecting drawing views, render views, and subsystem perspectives into one communication package.</figcaption></figure>
         </div>
       </section>
 
-      <section id="lessons" class="section reveal">
+      <section id="impact" class="section reveal">
         <div class="section-heading split-heading">
           <div>
-            <p class="eyebrow">Lessons Learned</p>
-            <h2>What I Took From the Internship</h2>
+            <p class="eyebrow">Results & Impact</p>
+            <h2>What the Platform Improved</h2>
           </div>
         </div>
-        <div class="lessons-grid">
-          <article class="card slide-up"><h3>Mechanical systems need context.</h3><p>A pump selection only makes sense when connected to the tank, piping, controls, service access, frame, and customer-facing documentation.</p></article>
-          <article class="card slide-up"><h3>Documentation is engineering.</h3><p>Clear drawings, organized tables, and consistent naming reduce friction for sales, manufacturing, quoting, and future design work.</p></article>
-          <article class="card slide-up"><h3>Product thinking matters.</h3><p>The strongest engineering solution is often the one that can be repeated, maintained, and expanded without reinventing the system every time.</p></article>
+        <div class="result-grid impact-grid">
+          <article class="result-stat slide-up"><span class="stat-value">20+</span><span class="stat-label">system variants</span></article>
+          <article class="result-stat slide-up"><span class="stat-value">30-230T</span><span class="stat-label">capacity range</span></article>
+          <article class="result-stat slide-up"><span class="stat-value">1-5 HP</span><span class="stat-label">motor range</span></article>
         </div>
+        <div class="lessons-grid">
+          <article class="card slide-up"><h3>Platform standardization</h3><p>Supported a modular family across 20+ variants instead of treating each skid as a blank-sheet custom job.</p></article>
+          <article class="card slide-up"><h3>Quoting acceleration</h3><p>Configuration logic and BOM/cost rollups helped reduce repetitive quote-support work for sales and application engineering.</p></article>
+          <article class="card slide-up"><h3>Manufacturing repeatability</h3><p>Fixed package logic, standard hardware, and organized drawing/model assets supported repeatable production and field fit-up.</p></article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <article class="card technical-callout slide-up">
+          <p class="eyebrow">Personal Engineering Takeaway</p>
+          <h2>Standardization is a design problem.</h2>
+          <p>
+            This project changed how I think about engineering output. A strong CAD model matters, but a useful product platform also needs repeatable data, clean documentation, serviceable layouts, supplier/component coordination, and configuration logic that other teams can actually use.
+          </p>
+        </article>
       </section>
     </main>
 

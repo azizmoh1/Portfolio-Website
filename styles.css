@@ -1312,6 +1312,71 @@ body::before {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.challenge-grid,
+.capacity-grid,
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.capacity-card > span {
+  display: inline-block;
+  color: var(--heat);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.65rem;
+}
+
+.data-flow-card {
+  margin-top: 1rem;
+}
+
+.data-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.data-flow span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.7rem 0.8rem;
+  background: rgba(78, 205, 196, 0.07);
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+  text-align: center;
+}
+
+.visual-card img[src*="configuration-documentation-snapshot"],
+.visual-card img[src*="documentation-board"],
+.visual-card img[src*="package-drawing-color"] {
+  aspect-ratio: 16 / 10;
+  background: #f7f9fb;
+}
+
+@media (max-width: 1100px) {
+  .challenge-grid,
+  .capacity-grid,
+  .impact-grid,
+  .data-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .challenge-grid,
+  .capacity-grid,
+  .impact-grid,
+  .data-flow {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 1100px) {
   .hero-shell,
   .feature-split,
