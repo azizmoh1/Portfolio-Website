@@ -5,7 +5,11 @@ const rootEl = document.documentElement;
 
 const setTheme = theme => {
   rootEl.dataset.theme = theme;
-  localStorage.setItem('portfolio-theme', theme);
+  try {
+    localStorage.setItem('portfolio-theme', theme);
+  } catch {
+    // Theme still changes for the current page even if storage is blocked.
+  }
   if (themeToggle) {
     const isLight = theme === 'light';
     themeToggle.setAttribute('aria-pressed', String(isLight));
@@ -14,7 +18,12 @@ const setTheme = theme => {
   if (themeText) themeText.textContent = theme === 'light' ? 'Light' : 'Dark';
 };
 
-const savedTheme = localStorage.getItem('portfolio-theme');
+let savedTheme = null;
+try {
+  savedTheme = localStorage.getItem('portfolio-theme');
+} catch {
+  savedTheme = null;
+}
 const preferredTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
 setTheme(savedTheme || preferredTheme);
 

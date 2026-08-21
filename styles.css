@@ -1785,3 +1785,46 @@ html[data-theme="light"] .resume-embed-wrap {
     min-height: 300px;
   }
 }
+
+
+/* Internship visual gallery failsafe */
+.internship-visual-gallery .visual-card,
+.internship-visual-gallery .visual-card.slide-up {
+  opacity: 1;
+  transform: none;
+}
+
+.internship-visual-gallery .visual-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.internship-visual-gallery .visual-card img {
+  min-height: 260px;
+  background: #f8f7f1;
+}
+
+.visual-open-link {
+  display: inline-flex;
+  align-self: flex-start;
+  margin: auto 1rem 1rem;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.84rem;
+  text-decoration: none;
+}
+
+.visual-open-link::after {
+  content: " ->";
+}
+
+.visual-open-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .internship-visual-gallery .visual-card img {
+    min-height: 220px;
+  }
+}
