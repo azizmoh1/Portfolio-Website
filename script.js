@@ -124,7 +124,7 @@ if (modal && modalImage && modalCaption && modalClose) {
     const trigger = event.target.closest('[data-modal-img]');
     if (!trigger) return;
 
-    const src = trigger.getAttribute('src');
+    const src = trigger.getAttribute('data-full-src') || trigger.getAttribute('src');
     const caption = trigger.getAttribute('data-caption') || trigger.getAttribute('alt') || '';
     if (!src) return;
 
