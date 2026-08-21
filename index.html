@@ -1,10 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aziz Mohammad | Mechanical Engineering Portfolio</title>
-    <meta name="description" content="Mechanical engineering portfolio for Aziz Mohammad, focused on CAD, mechanical systems, hydronic pump packages, FEA, and computational design." />
+    <meta name="description" content="Aziz Mohammad is a junior mechanical engineering student focused on CAD, mechanical design, prototyping, hydronic systems, FEA, and engineering analysis." />
+    <meta name="author" content="Aziz Mohammad" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://azizmoh1.github.io/Portfolio-Website/" />
+    <meta property="og:title" content="Aziz Mohammad | Mechanical Engineering Portfolio" />
+    <meta property="og:description" content="Mechanical engineering portfolio featuring CAD case studies, internship product-development work, FEA, MATLAB analysis, and prototyping projects." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://azizmoh1.github.io/Portfolio-Website/" />
+    <meta property="og:image" content="https://azizmoh1.github.io/Portfolio-Website/internship-assets/full-package-render.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aziz Mohammad | Mechanical Engineering Portfolio" />
+    <meta name="twitter:description" content="CAD, mechanical design, hydronic systems, FEA, MATLAB analysis, and prototyping case studies." />
+    <meta name="twitter:image" content="https://azizmoh1.github.io/Portfolio-Website/internship-assets/full-package-render.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -14,7 +26,13 @@
     <header class="site-header">
       <nav class="nav container">
         <a class="logo" href="#home">Aziz <span>Mohammad</span></a>
-        <button class="menu-toggle" aria-label="Toggle menu">Menu</button>
+        <div class="nav-controls">
+          <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true">◐</span>
+            <span class="theme-text">Theme</span>
+          </button>
+          <button class="menu-toggle" aria-label="Toggle menu">Menu</button>
+        </div>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#featured">Featured</a></li>
@@ -31,7 +49,7 @@
       <section id="home" class="home-hero reveal">
         <div class="container hero-shell">
           <div class="hero-copy">
-            <p class="eyebrow">Mechanical Engineering Portfolio</p>
+            <p class="eyebrow hero-kicker"><span>Available for engineering internships</span><span>CAD + Systems + Analysis</span></p>
             <h1>Building practical systems from CAD sketches to real equipment layouts.</h1>
             <p class="hero-subtitle">Junior Mechanical Engineering Student</p>
             <p class="hero-text">
@@ -41,6 +59,11 @@
             <div class="hero-actions">
               <a class="btn btn-primary" href="#featured">Start with Internship Work</a>
               <a class="btn btn-secondary" href="#projects">View All Projects</a>
+            </div>
+            <div class="hero-proof-strip" aria-label="Engineering proof points">
+              <span><strong data-count="20" data-suffix="+">0</strong> package variants</span>
+              <span><strong data-count="230" data-prefix="30-" data-suffix="T">0</strong> chiller range</span>
+              <span><strong data-count="4.6" data-decimals="1">0</strong> minimum FOS</span>
             </div>
           </div>
 
@@ -63,9 +86,9 @@
       </section>
 
       <section class="metric-band container reveal" aria-label="Portfolio focus areas">
-        <div><strong>30-230 ton</strong><span>hydronic package range studied</span></div>
-        <div><strong>4.6 min FOS</strong><span>validated in structural FEA project</span></div>
-        <div><strong>1620 efficiency</strong><span>truss optimization result</span></div>
+        <div><strong data-count="230" data-prefix="30-" data-suffix=" ton">0</strong><span>hydronic package range studied</span></div>
+        <div><strong data-count="4.6" data-decimals="1" data-suffix=" min FOS">0</strong><span>validated in structural FEA project</span></div>
+        <div><strong data-count="1620">0</strong><span>truss optimization result</span></div>
         <div><strong>CAD + systems</strong><span>the lane I am building toward</span></div>
       </section>
 
@@ -90,6 +113,12 @@
             <p>
               I contributed to a modular product family for commercial chiller pump packages, supporting repeatable layouts, component selection logic, BOM organization, and generalized cost-modeling workflows across 20+ configurations.
             </p>
+            <div class="impact-mini-grid" aria-label="Featured project impact">
+              <span><strong>Situation</strong>Custom pump package work created repeated engineering effort.</span>
+              <span><strong>Task</strong>Help standardize layouts, data, and documentation.</span>
+              <span><strong>Action</strong>Supported CAD assemblies, BOM logic, and configuration matrices.</span>
+              <span><strong>Result</strong>Platform coverage across 30-230 ton capacity tiers.</span>
+            </div>
             <div class="badge-wrap">
               <span class="badge">Pump Skids</span>
               <span class="badge">VFD Integration</span>
@@ -98,6 +127,23 @@
               <span class="badge">Costing Documentation</span>
             </div>
             <a class="btn btn-primary" href="project-internship.html">Read Internship Case Study</a>
+          </div>
+        </article>
+
+        <article class="compare-card card slide-up" aria-label="CAD render to documentation comparison">
+          <div class="compare-copy">
+            <p class="eyebrow">CAD Showcase</p>
+            <h3>From model view to engineering communication.</h3>
+            <p>Drag the slider to compare the clean SolidWorks render against the drawing/documentation view used to communicate dimensions, component callouts, and package layout.</p>
+          </div>
+          <div class="image-compare" data-compare style="--position: 55%;">
+            <img class="compare-image compare-base" src="internship-assets/package-drawing-color.png" alt="Hydronic pump package drawing and callout sheet" />
+            <div class="compare-overlay">
+              <img class="compare-image" src="internship-assets/full-package-render.png" alt="Hydronic pump package CAD render" />
+            </div>
+            <input class="compare-range" type="range" min="0" max="100" value="55" aria-label="Compare CAD render and drawing view" />
+            <span class="compare-label compare-label-left">CAD Render</span>
+            <span class="compare-label compare-label-right">Drawing View</span>
           </div>
         </article>
       </section>
@@ -111,8 +157,17 @@
           <p>Each project is framed around what employers care about: problem, tools, process, results, and what I learned.</p>
         </div>
 
+        <div class="filter-bar" aria-label="Filter projects by discipline">
+          <button class="filter-btn active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="cad-dfm">CAD / DFM</button>
+          <button class="filter-btn" type="button" data-filter="fea-structural">FEA / Structural</button>
+          <button class="filter-btn" type="button" data-filter="fluids-thermal">Fluids / Thermal</button>
+          <button class="filter-btn" type="button" data-filter="code-simulation">Code / Simulation</button>
+          <button class="filter-btn" type="button" data-filter="team-projects">Team / Internship</button>
+        </div>
+
         <div class="project-grid project-grid-redesign">
-          <a class="project-tile project-tile-wide slide-up" href="project-internship.html">
+          <a class="project-tile project-tile-wide slide-up" href="project-internship.html" data-tags="cad-dfm fluids-thermal team-projects">
             <img src="internship-assets/full-package-render.png" alt="Standardized Hydronic Pump Package" />
             <div class="project-tile-overlay">
               <div class="project-tile-body">
@@ -129,7 +184,7 @@
             </div>
           </a>
 
-          <a class="project-tile slide-up" href="project-scythe.html">
+          <a class="project-tile slide-up" href="project-scythe.html" data-tags="cad-dfm fea-structural">
             <img src="scythepics/solidworks-render.png" alt="The Scythe Traffic Signal Pole" />
             <div class="project-tile-overlay">
               <div class="project-tile-body">
@@ -146,7 +201,7 @@
             </div>
           </a>
 
-          <a class="project-tile slide-up" href="project-dfm.html">
+          <a class="project-tile slide-up" href="project-dfm.html" data-tags="cad-dfm">
             <img src="3DPFGTOYpics/real-gears.jpg" alt="3D Printed Fidget Toy" />
             <div class="project-tile-overlay">
               <div class="project-tile-body">
@@ -163,7 +218,7 @@
             </div>
           </a>
 
-          <a class="project-tile slide-up" href="project-truss.html">
+          <a class="project-tile slide-up" href="project-truss.html" data-tags="fea-structural code-simulation">
             <img src="trusspics/truss-analysis.png" alt="Truss Design and Analysis" />
             <div class="project-tile-overlay">
               <div class="project-tile-body">
@@ -180,7 +235,7 @@
             </div>
           </a>
 
-          <a class="project-tile slide-up" href="project-f1.html">
+          <a class="project-tile slide-up" href="project-f1.html" data-tags="code-simulation team-projects">
             <img src="F1pic.jpg" alt="Formula 1 Race Analytics" />
             <div class="project-tile-overlay">
               <div class="project-tile-body">
@@ -196,6 +251,34 @@
               </div>
             </div>
           </a>
+        </div>
+      </section>
+
+
+      <section id="teams" class="section container reveal">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Research & Team Projects</p>
+            <h2>Work I Am Building Around</h2>
+          </div>
+          <p>These are the hands-on areas I want recruiters to notice: product development, drivetrain thinking, analysis, and prototype-focused design.</p>
+        </div>
+        <div class="team-grid">
+          <article class="card team-card slide-up">
+            <span class="mini-label">Internship</span>
+            <h3>Commercial HVAC Product Development</h3>
+            <p>Hydronic pump package standardization across mechanical layouts, component selection, documentation, and configuration data.</p>
+          </article>
+          <article class="card team-card slide-up">
+            <span class="mini-label">Student Design Team</span>
+            <h3>UIC SAE Formula - Drivetrain Focus</h3>
+            <p>Developing stronger intuition for torque delivery, packaging constraints, reliability, and how design choices affect vehicle-level behavior.</p>
+          </article>
+          <article class="card team-card slide-up">
+            <span class="mini-label">Course + Lab Work</span>
+            <h3>Analysis, Fluids, and Manufacturing Projects</h3>
+            <p>Building a portfolio pipeline around FEA, statics, thermodynamics, 3D printing, and computational engineering tools.</p>
+          </article>
         </div>
       </section>
 
@@ -279,14 +362,27 @@
             <p class="eyebrow">Resume</p>
             <h2>Resume</h2>
           </div>
-          <p>Embedded here for quick review, with a download option if an employer wants the PDF.</p>
+          <p>Embedded here for quick review, plus a mobile-friendly summary in case a browser blocks PDF previews.</p>
         </div>
         <article class="card resume-card slide-up">
-          <div class="resume-embed-wrap">
-            <iframe class="resume-embed" src="resume.pdf" title="Aziz Mohammad Resume PDF"></iframe>
-          </div>
-          <div class="resume-actions">
-            <a class="btn btn-primary" href="resume.pdf" download>Download PDF</a>
+          <div class="resume-split">
+            <div class="resume-embed-wrap">
+              <iframe class="resume-embed" src="resume.pdf#view=FitH" title="Aziz Mohammad Resume PDF"></iframe>
+            </div>
+            <div class="resume-highlights">
+              <p class="eyebrow">Quick Resume Scan</p>
+              <h3>Mechanical Engineering Student</h3>
+              <ul>
+                <li>Junior undergraduate mechanical engineering student.</li>
+                <li>Systems design internship experience in hydronic pump package development.</li>
+                <li>SolidWorks, Creo, MATLAB, Python, ANSYS FEA, and technical documentation.</li>
+                <li>Interested in CAD design, product development, drivetrain systems, and manufacturable engineering.</li>
+              </ul>
+              <div class="resume-actions">
+                <a class="btn btn-primary" href="resume.pdf" download>Download PDF</a>
+                <a class="btn btn-secondary" href="resume.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
+              </div>
+            </div>
           </div>
         </article>
       </section>
@@ -320,6 +416,18 @@
       <p>&copy; <span id="year"></span> Aziz Mohammad</p>
     </footer>
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aziz Mohammad",
+        "url": "https://azizmoh1.github.io/Portfolio-Website/",
+        "email": "mailto:azizm0304@gmail.com",
+        "sameAs": ["https://www.linkedin.com/in/aziz-m-a90aa526a"],
+        "jobTitle": "Junior Mechanical Engineering Student",
+        "knowsAbout": ["Mechanical Design", "SolidWorks", "Creo", "MATLAB", "Python", "ANSYS FEA", "Hydronic Systems", "3D Printing"]
+      }
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

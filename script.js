@@ -1,3 +1,27 @@
+// Theme toggle with localStorage persistence
+const themeToggle = document.querySelector('.theme-toggle');
+const themeText = document.querySelector('.theme-text');
+const rootEl = document.documentElement;
+
+const setTheme = theme => {
+  rootEl.dataset.theme = theme;
+  localStorage.setItem('portfolio-theme', theme);
+  if (themeToggle) {
+    const isLight = theme === 'light';
+    themeToggle.setAttribute('aria-pressed', String(isLight));
+    themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+  }
+  if (themeText) themeText.textContent = theme === 'light' ? 'Light' : 'Dark';
+};
+
+const savedTheme = localStorage.getItem('portfolio-theme');
+const preferredTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+setTheme(savedTheme || preferredTheme);
+
+themeToggle?.addEventListener('click', () => {
+  setTheme(rootEl.dataset.theme === 'light' ? 'dark' : 'light');
+});
+
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 const navAnchors = Array.from(document.querySelectorAll('.nav-links a'));
@@ -169,3 +193,67 @@ if (copyEmailBtn) {
     grid.innerHTML = '<article class="card repo-card slide-up visible"><p>Unable to load repositories right now.</p></article>';
   }
 })();
+
+
+// Project filtering for recruiter-specific scanning
+const filterButtons = Array.from(document.querySelectorAll('[data-filter]'));
+const projectTiles = Array.from(document.querySelectorAll('.project-tile[data-tags]'));
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+    filterButtons.forEach(btn => btn.classList.toggle('active', btn === button));
+
+    projectTiles.forEach(tile => {
+      const tags = (tile.dataset.tags || '').split(/\s+/);
+      const show = filter === 'all' || tags.includes(filter);
+      tile.classList.toggle('is-filtered-out', !show);
+      tile.setAttribute('aria-hidden', String(!show));
+      tile.tabIndex = show ? 0 : -1;
+    });
+  });
+});
+
+// Animated metric counters
+const counterEls = Array.from(document.querySelectorAll('[data-count]'));
+const formatCounter = (value, decimals) => Number(value).toLocaleString(undefined, {
+  minimumFractionDigits: decimals,
+  maximumFractionDigits: decimals
+});
+
+const counterObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = Number(el.dataset.count || 0);
+    const decimals = Number(el.dataset.decimals || 0);
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    const duration = 900;
+    const start = performance.now();
+
+    const tick = now => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = target * eased;
+      el.textContent = `${prefix}${formatCounter(current, decimals)}${suffix}`;
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+
+    requestAnimationFrame(tick);
+    counterObserver.unobserve(el);
+  });
+}, { threshold: 0.45 });
+
+counterEls.forEach(el => counterObserver.observe(el));
+
+
+// Image comparison sliders for CAD/render vs. documentation views
+const compareBlocks = Array.from(document.querySelectorAll('[data-compare]'));
+compareBlocks.forEach(block => {
+  const input = block.querySelector('.compare-range');
+  if (!input) return;
+  const update = () => block.style.setProperty('--position', `${input.value}%`);
+  input.addEventListener('input', update);
+  update();
+});
