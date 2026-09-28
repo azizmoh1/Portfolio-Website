@@ -1,0 +1,487 @@
+{
+  "generated_utc": "2026-09-28T14:21:43.092931+00:00",
+  "status": "Completed - Phase 1",
+  "target": "FinalPosition",
+  "year": 2025,
+  "prediction_cutoff": "After qualifying and grid publication; before race start",
+  "split_method": "Chronological whole races; approximately 70/20/10",
+  "history_policy": "Walk-forward: each race uses only previously completed rounds",
+  "model": "random_forest",
+  "random_state": 42,
+  "raw_rows": 479,
+  "finisher_rows": 419,
+  "excluded_rows": 60,
+  "splits": {
+    "train": {
+      "rows": 277,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "teams": [
+        "Alpine",
+        "Aston Martin",
+        "Ferrari",
+        "Haas F1 Team",
+        "Kick Sauber",
+        "McLaren",
+        "Mercedes",
+        "Racing Bulls",
+        "Red Bull Racing",
+        "Williams"
+      ]
+    },
+    "validation": {
+      "rows": 91,
+      "rounds": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "teams": [
+        "Alpine",
+        "Aston Martin",
+        "Ferrari",
+        "Haas F1 Team",
+        "Kick Sauber",
+        "McLaren",
+        "Mercedes",
+        "Racing Bulls",
+        "Red Bull Racing",
+        "Williams"
+      ]
+    },
+    "test": {
+      "rows": 51,
+      "rounds": [
+        22,
+        23,
+        24
+      ],
+      "teams": [
+        "Alpine",
+        "Aston Martin",
+        "Ferrari",
+        "Haas F1 Team",
+        "Kick Sauber",
+        "McLaren",
+        "Mercedes",
+        "Racing Bulls",
+        "Red Bull Racing",
+        "Williams"
+      ]
+    }
+  },
+  "outlier_filter": {
+    "mean": 38.87597991441154,
+    "std": 5.504219967425108,
+    "removed": 0
+  },
+  "validation": {
+    "random_forest": {
+      "MAE": 2.7232482749241,
+      "MSE": 12.482299460527523,
+      "R2": 0.5631933661569117,
+      "n": 91,
+      "TeamMAE": {
+        "Alpine": {
+          "MAE": 4.287113883338884,
+          "n": 10
+        },
+        "Aston Martin": {
+          "MAE": 2.743518077601412,
+          "n": 9
+        },
+        "Ferrari": {
+          "MAE": 1.4475173160173156,
+          "n": 8
+        },
+        "Haas F1 Team": {
+          "MAE": 3.4257428571428576,
+          "n": 10
+        },
+        "Kick Sauber": {
+          "MAE": 4.617406204906207,
+          "n": 8
+        },
+        "McLaren": {
+          "MAE": 1.0361526806526802,
+          "n": 9
+        },
+        "Mercedes": {
+          "MAE": 2.4943117216117208,
+          "n": 10
+        },
+        "Racing Bulls": {
+          "MAE": 1.6991429773929783,
+          "n": 9
+        },
+        "Red Bull Racing": {
+          "MAE": 3.2555984487734477,
+          "n": 10
+        },
+        "Williams": {
+          "MAE": 1.9199015151515155,
+          "n": 8
+        }
+      }
+    },
+    "gradient_boosting": {
+      "MAE": 2.964437956418145,
+      "MSE": 15.440176841033578,
+      "R2": 0.45968515711376334,
+      "n": 91,
+      "TeamMAE": {
+        "Alpine": {
+          "MAE": 5.804427248563796,
+          "n": 10
+        },
+        "Aston Martin": {
+          "MAE": 2.0175922266467805,
+          "n": 9
+        },
+        "Ferrari": {
+          "MAE": 1.1884684319291061,
+          "n": 8
+        },
+        "Haas F1 Team": {
+          "MAE": 3.6445352873659673,
+          "n": 10
+        },
+        "Kick Sauber": {
+          "MAE": 4.138542128148651,
+          "n": 8
+        },
+        "McLaren": {
+          "MAE": 1.827009321204506,
+          "n": 9
+        },
+        "Mercedes": {
+          "MAE": 2.677778005683715,
+          "n": 10
+        },
+        "Racing Bulls": {
+          "MAE": 1.5328985902158054,
+          "n": 9
+        },
+        "Red Bull Racing": {
+          "MAE": 3.6491705977477538,
+          "n": 10
+        },
+        "Williams": {
+          "MAE": 2.623894614651621,
+          "n": 8
+        }
+      }
+    },
+    "linear_regression": {
+      "MAE": 2.1781315956311804,
+      "MSE": 8.58250756477438,
+      "R2": 0.6996630107171373,
+      "n": 91,
+      "TeamMAE": {
+        "Alpine": {
+          "MAE": 2.2444732507591043,
+          "n": 10
+        },
+        "Aston Martin": {
+          "MAE": 2.5563478398606634,
+          "n": 9
+        },
+        "Ferrari": {
+          "MAE": 1.4694830343876286,
+          "n": 8
+        },
+        "Haas F1 Team": {
+          "MAE": 1.893598394394176,
+          "n": 10
+        },
+        "Kick Sauber": {
+          "MAE": 3.7401543144371665,
+          "n": 8
+        },
+        "McLaren": {
+          "MAE": 1.0566346656387209,
+          "n": 9
+        },
+        "Mercedes": {
+          "MAE": 2.2479149482332805,
+          "n": 10
+        },
+        "Racing Bulls": {
+          "MAE": 1.7800782243925701,
+          "n": 9
+        },
+        "Red Bull Racing": {
+          "MAE": 3.4042769670714224,
+          "n": 10
+        },
+        "Williams": {
+          "MAE": 1.2615867797789608,
+          "n": 8
+        }
+      }
+    }
+  },
+  "test": {
+    "MAE": 2.953521272300684,
+    "MSE": 13.051198812634203,
+    "R2": 0.5062375547394683,
+    "n": 51,
+    "TeamMAE": {
+      "Alpine": {
+        "MAE": 4.013281866281866,
+        "n": 6
+      },
+      "Aston Martin": {
+        "MAE": 2.229972222222222,
+        "n": 4
+      },
+      "Ferrari": {
+        "MAE": 2.343524309024308,
+        "n": 6
+      },
+      "Haas F1 Team": {
+        "MAE": 2.370184126984128,
+        "n": 5
+      },
+      "Kick Sauber": {
+        "MAE": 3.0484165764790765,
+        "n": 4
+      },
+      "McLaren": {
+        "MAE": 1.0213255772005774,
+        "n": 4
+      },
+      "Mercedes": {
+        "MAE": 3.0470084961334956,
+        "n": 6
+      },
+      "Racing Bulls": {
+        "MAE": 4.896020634920636,
+        "n": 5
+      },
+      "Red Bull Racing": {
+        "MAE": 2.5599215182965183,
+        "n": 6
+      },
+      "Williams": {
+        "MAE": 3.4634572871572877,
+        "n": 5
+      }
+    }
+  },
+  "baseline": {
+    "name": "grid_position",
+    "MAE": 3.411764705882353,
+    "MSE": 21.176470588235293,
+    "R2": 0.1988363636363637
+  },
+  "missing_fraction": {
+    "GridPosition": 0.0,
+    "DriverExperience": 0.0,
+    "TeamReliability": 0.04175365344467641,
+    "CarPerformanceIndex": 0.04175365344467641,
+    "TrackTemperature": 0.0,
+    "AirTemperature": 0.0
+  },
+  "provenance": [
+    {
+      "season": 2025,
+      "round": 1,
+      "race": "Australian Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 2,
+      "race": "Chinese Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 3,
+      "race": "Japanese Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 4,
+      "race": "Bahrain Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 5,
+      "race": "Saudi Arabian Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 6,
+      "race": "Miami Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 7,
+      "race": "Emilia Romagna Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 8,
+      "race": "Monaco Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 9,
+      "race": "Spanish Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 10,
+      "race": "Canadian Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 11,
+      "race": "Austrian Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 12,
+      "race": "British Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 13,
+      "race": "Belgian Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 14,
+      "race": "Hungarian Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 15,
+      "race": "Dutch Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 16,
+      "race": "Italian Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 17,
+      "race": "Azerbaijan Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 18,
+      "race": "Singapore Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 19,
+      "race": "United States Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 20,
+      "race": "Mexico City Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 21,
+      "race": "S\u00e3o Paulo Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 22,
+      "race": "Las Vegas Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 23,
+      "race": "Qatar Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    },
+    {
+      "season": 2025,
+      "round": 24,
+      "race": "Abu Dhabi Grand Prix",
+      "results_source": "FastF1",
+      "qualifying_loaded": true
+    }
+  ],
+  "versions": {
+    "fastf1": "3.8.3",
+    "pandas": "2.3.3",
+    "numpy": "2.5.3",
+    "scikit-learn": "1.9.1"
+  },
+  "limitations": [
+    "Conditional on finishing: DNFs excluded from supervised training/evaluation.",
+    "Single-season, small test set; not evidence of generalization to future seasons.",
+    "Continuous predictions can tie and do not enforce a unique finishing order.",
+    "Qualifying tire and rain observations are proxies, not race strategy or track wetness.",
+    "Live telemetry, tire degradation, DRS and pit-loss physics are future work."
+  ]
+}

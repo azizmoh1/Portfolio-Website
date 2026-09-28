@@ -1,4 +1,41 @@
-<!doctype html>
+"""Regenerate the public case study from the measured experiment artifacts."""
+import csv
+import html
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+OUT = ROOT / "outputs"
+metrics = json.loads((OUT / "metrics.json").read_text())
+test, baseline = metrics["test"], metrics["baseline"]
+improvement = 100 * (1 - test["MAE"] / baseline["MAE"])
+escape = html.escape
+
+
+def table(caption, headings, rows):
+    header = ''.join(f'<th scope="col">{escape(h)}</th>' for h in headings)
+    body = ''.join('<tr>' + ''.join(f'<td>{escape(str(cell))}</td>' for cell in row) + '</tr>' for row in rows)
+    return f'<div class="f1-table-wrap"><table class="f1-table"><caption>{escape(caption)}</caption><thead><tr>{header}</tr></thead><tbody>{body}</tbody></table></div>'
+
+
+model_names = {"random_forest": "Random Forest (primary)", "gradient_boosting": "Gradient Boosting", "linear_regression": "Linear Regression"}
+validation = table("Validation: rounds 17-21", ["Model", "MAE", "MSE", "R²"],
+                   [(model_names[name], f"{v['MAE']:.2f}", f"{v['MSE']:.2f}", f"{v['R2']:.3f}")
+                    for name, v in metrics['validation'].items()])
+teams = table("Per-team test error", ["Team", "MAE (positions)", "Drivers evaluated"],
+              [(name, f"{v['MAE']:.2f}", v['n']) for name, v in test['TeamMAE'].items()])
+with (OUT / "test_predictions.csv").open() as handle:
+    predictions = list(csv.DictReader(handle))
+race_tables = ''
+for race in dict.fromkeys(row['RaceName'] for row in predictions):
+    rows = [r for r in predictions if r['RaceName'] == race]
+    rows.sort(key=lambda r: float(r['FinalPosition']))
+    body = table(f"{race}: finishers only", ["Driver", "Team", "Actual", "Predicted", "Error"],
+                 [(r['Driver'], r['TeamName'], int(float(r['FinalPosition'])), f"{float(r['Prediction']):.2f}",
+                   f"{float(r['AbsoluteError']):.2f}") for r in rows])
+    race_tables += f'<details><summary>{escape(race)} · {len(rows)} finishers</summary>{body}</details>'
+
+page = f'''<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -28,10 +65,10 @@
       <figure><img src="F1pic.jpg" alt="Formula 1 race car" width="1000" height="750" /><figcaption>2025 season study · 24 Grands Prix · pre-race prediction</figcaption></figure>
     </section>
     <div class="f1-metrics" aria-label="Measured Random Forest test results">
-      <div class="f1-metric"><strong>2.95</strong><span>Mean absolute error</span><small>Finishing positions, test set</small></div>
-      <div class="f1-metric"><strong>0.506</strong><span>Test R²</span><small>51 finishers across 3 later races</small></div>
-      <div class="f1-metric"><strong>13.4%</strong><span>Lower MAE than grid baseline</span><small>3.41 → 2.95 positions</small></div>
-      <div class="f1-metric"><strong>419</strong><span>Eligible driver-race entries</span><small>Across the full 2025 season</small></div>
+      <div class="f1-metric"><strong>{test['MAE']:.2f}</strong><span>Mean absolute error</span><small>Finishing positions, test set</small></div>
+      <div class="f1-metric"><strong>{test['R2']:.3f}</strong><span>Test R²</span><small>{test['n']} finishers across 3 later races</small></div>
+      <div class="f1-metric"><strong>{improvement:.1f}%</strong><span>Lower MAE than grid baseline</span><small>{baseline['MAE']:.2f} → {test['MAE']:.2f} positions</small></div>
+      <div class="f1-metric"><strong>{metrics['finisher_rows']}</strong><span>Eligible driver-race entries</span><small>Across the full 2025 season</small></div>
     </div>
     <section id="overview" class="f1-section">
       <p class="eyebrow">01 / Engineering question</p><h2>What can we know before lights out?</h2>
@@ -42,26 +79,26 @@
     <section id="process" class="f1-section">
       <p class="eyebrow">02 / Data to prediction</p><h2>A pipeline with a clear time boundary.</h2>
       <div class="f1-grid"><div class="card"><ol class="f1-steps">
-        <li><strong>Load and cache.</strong> Qualifying and race classification for all 24 rounds. 479 driver-race records; 60 retirement, DNS or disqualification records excluded from supervised modeling.</li>
+        <li><strong>Load and cache.</strong> Qualifying and race classification for all 24 rounds. {metrics['raw_rows']} driver-race records; {metrics['excluded_rows']} retirement, DNS or disqualification records excluded from supervised modeling.</li>
         <li><strong>Build historical features.</strong> Completed races by driver, team finish percentage, and team-average classified position over the last five earlier Grands Prix.</li>
         <li><strong>Add qualifying context.</strong> Published starting grid, fastest valid qualifying-lap tire compound, surface/air temperature, and a qualifying rainfall proxy.</li>
         <li><strong>Fit training transformations.</strong> Missing-value imputation, numerical scaling and categorical one-hot encoding. Temperature outlier limits use training data only.</li>
         <li><strong>Evaluate later races.</strong> Train on rounds 1-16, compare models on 17-21, and test the prespecified Random Forest on 22-24.</li>
       </ol></div><div class="card"><h3>Why whole races?</h3><p>A random driver split would mix the same event across training and test. Holding out complete later races gives a more realistic check of performance on an upcoming Grand Prix.</p>
-      <p>The split contains 277 training, 91 validation and 51 test entries. All ten teams appear in each partition.</p>
+      <p>The split contains {metrics['splits']['train']['rows']} training, {metrics['splits']['validation']['rows']} validation and {test['n']} test entries. All ten teams appear in each partition.</p>
       <p>Evaluation proceeds one race at a time: results from an earlier completed test race may become historical features for the next. Model weights remain fixed.</p>
       <p class="f1-note">Track temperature measures the surface; air temperature measures the ambient air. The rainfall feature is a weather proxy, not a measurement of track wetness.</p></div></div>
     </section>
     <section id="results" class="f1-section">
       <p class="eyebrow">03 / Measured results</p><h2>Tested on the final three Grands Prix.</h2>
-      <p>Las Vegas, Qatar and Abu Dhabi 2025. Random Forest achieved MAE 2.95, MSE 13.05, and R² 0.506. Average absolute error is not a confidence interval or a guarantee for any individual driver.</p>
+      <p>Las Vegas, Qatar and Abu Dhabi 2025. Random Forest achieved MAE {test['MAE']:.2f}, MSE {test['MSE']:.2f}, and R² {test['R2']:.3f}. Average absolute error is not a confidence interval or a guarantee for any individual driver.</p>
       <div class="f1-grid">
         <figure class="card"><a href="f1-model/outputs/pred_vs_actual.png"><img class="f1-plot" src="f1-model/outputs/pred_vs_actual.png" alt="Scatter plot of actual and predicted finishing positions for the held-out 2025 races" width="1440" height="1080" loading="lazy" /></a><figcaption>Each point is one finisher. The dashed line shows a perfect prediction. Click to view the full-resolution plot.</figcaption></figure>
         <figure class="card"><a href="f1-model/outputs/feature_importances.png"><img class="f1-plot" src="f1-model/outputs/feature_importances.png" alt="Top ten Random Forest feature importances, led by starting grid position" width="1620" height="1080" loading="lazy" /></a><figcaption>Starting position is the strongest model signal. Impurity-based importance describes this fitted model; it does not establish cause and effect.</figcaption></figure>
       </div>
-      <div class="f1-grid" style="margin-top:1.25rem"><div class="card"><h3>How the alternatives compared</h3><div class="f1-table-wrap"><table class="f1-table"><caption>Validation: rounds 17-21</caption><thead><tr><th scope="col">Model</th><th scope="col">MAE</th><th scope="col">MSE</th><th scope="col">R²</th></tr></thead><tbody><tr><td>Random Forest (primary)</td><td>2.72</td><td>12.48</td><td>0.563</td></tr><tr><td>Gradient Boosting</td><td>2.96</td><td>15.44</td><td>0.460</td></tr><tr><td>Linear Regression</td><td>2.18</td><td>8.58</td><td>0.700</td></tr></tbody></table></div><p class="f1-note">Linear Regression had the lowest validation MAE. Random Forest remains the prespecified primary experiment; the test set was not used to tune or select the model.</p></div>
-      <div class="card"><h3>Error by team</h3><div class="f1-table-wrap"><table class="f1-table"><caption>Per-team test error</caption><thead><tr><th scope="col">Team</th><th scope="col">MAE (positions)</th><th scope="col">Drivers evaluated</th></tr></thead><tbody><tr><td>Alpine</td><td>4.01</td><td>6</td></tr><tr><td>Aston Martin</td><td>2.23</td><td>4</td></tr><tr><td>Ferrari</td><td>2.34</td><td>6</td></tr><tr><td>Haas F1 Team</td><td>2.37</td><td>5</td></tr><tr><td>Kick Sauber</td><td>3.05</td><td>4</td></tr><tr><td>McLaren</td><td>1.02</td><td>4</td></tr><tr><td>Mercedes</td><td>3.05</td><td>6</td></tr><tr><td>Racing Bulls</td><td>4.90</td><td>5</td></tr><tr><td>Red Bull Racing</td><td>2.56</td><td>6</td></tr><tr><td>Williams</td><td>3.46</td><td>5</td></tr></tbody></table></div><p>Small sample counts make team-level comparisons uncertain.</p></div></div>
-      <details><summary>Inspect individual test predictions</summary><p>Continuous predicted positions can tie and do not enforce a unique race ranking.</p><details><summary>Las Vegas Grand Prix · 15 finishers</summary><div class="f1-table-wrap"><table class="f1-table"><caption>Las Vegas Grand Prix: finishers only</caption><thead><tr><th scope="col">Driver</th><th scope="col">Team</th><th scope="col">Actual</th><th scope="col">Predicted</th><th scope="col">Error</th></tr></thead><tbody><tr><td>VER</td><td>Red Bull Racing</td><td>1</td><td>3.79</td><td>2.79</td></tr><tr><td>RUS</td><td>Mercedes</td><td>2</td><td>5.08</td><td>3.08</td></tr><tr><td>ANT</td><td>Mercedes</td><td>3</td><td>10.84</td><td>7.84</td></tr><tr><td>LEC</td><td>Ferrari</td><td>4</td><td>8.64</td><td>4.64</td></tr><tr><td>SAI</td><td>Williams</td><td>5</td><td>5.39</td><td>0.39</td></tr><tr><td>HAD</td><td>Racing Bulls</td><td>6</td><td>11.59</td><td>5.59</td></tr><tr><td>HUL</td><td>Kick Sauber</td><td>7</td><td>12.61</td><td>5.61</td></tr><tr><td>HAM</td><td>Ferrari</td><td>8</td><td>9.03</td><td>1.03</td></tr><tr><td>OCO</td><td>Haas F1 Team</td><td>9</td><td>11.62</td><td>2.62</td></tr><tr><td>BEA</td><td>Haas F1 Team</td><td>10</td><td>11.38</td><td>1.38</td></tr><tr><td>ALO</td><td>Aston Martin</td><td>11</td><td>9.88</td><td>1.12</td></tr><tr><td>TSU</td><td>Red Bull Racing</td><td>12</td><td>11.37</td><td>0.63</td></tr><tr><td>GAS</td><td>Alpine</td><td>13</td><td>12.69</td><td>0.31</td></tr><tr><td>LAW</td><td>Racing Bulls</td><td>14</td><td>9.53</td><td>4.47</td></tr><tr><td>COL</td><td>Alpine</td><td>15</td><td>12.12</td><td>2.88</td></tr></tbody></table></div></details><details><summary>Qatar Grand Prix · 16 finishers</summary><div class="f1-table-wrap"><table class="f1-table"><caption>Qatar Grand Prix: finishers only</caption><thead><tr><th scope="col">Driver</th><th scope="col">Team</th><th scope="col">Actual</th><th scope="col">Predicted</th><th scope="col">Error</th></tr></thead><tbody><tr><td>VER</td><td>Red Bull Racing</td><td>1</td><td>4.85</td><td>3.85</td></tr><tr><td>PIA</td><td>McLaren</td><td>2</td><td>3.02</td><td>1.02</td></tr><tr><td>SAI</td><td>Williams</td><td>3</td><td>9.18</td><td>6.18</td></tr><tr><td>NOR</td><td>McLaren</td><td>4</td><td>3.41</td><td>0.59</td></tr><tr><td>ANT</td><td>Mercedes</td><td>5</td><td>7.65</td><td>2.65</td></tr><tr><td>RUS</td><td>Mercedes</td><td>6</td><td>4.83</td><td>1.17</td></tr><tr><td>ALO</td><td>Aston Martin</td><td>7</td><td>10.76</td><td>3.76</td></tr><tr><td>LEC</td><td>Ferrari</td><td>8</td><td>7.96</td><td>0.04</td></tr><tr><td>LAW</td><td>Racing Bulls</td><td>9</td><td>10.49</td><td>1.49</td></tr><tr><td>TSU</td><td>Red Bull Racing</td><td>10</td><td>12.21</td><td>2.21</td></tr><tr><td>ALB</td><td>Williams</td><td>11</td><td>9.60</td><td>1.40</td></tr><tr><td>HAM</td><td>Ferrari</td><td>12</td><td>8.51</td><td>3.49</td></tr><tr><td>BOR</td><td>Kick Sauber</td><td>13</td><td>10.64</td><td>2.36</td></tr><tr><td>COL</td><td>Alpine</td><td>14</td><td>11.23</td><td>2.77</td></tr><tr><td>OCO</td><td>Haas F1 Team</td><td>15</td><td>11.25</td><td>3.75</td></tr><tr><td>GAS</td><td>Alpine</td><td>16</td><td>12.68</td><td>3.32</td></tr></tbody></table></div></details><details><summary>Abu Dhabi Grand Prix · 20 finishers</summary><div class="f1-table-wrap"><table class="f1-table"><caption>Abu Dhabi Grand Prix: finishers only</caption><thead><tr><th scope="col">Driver</th><th scope="col">Team</th><th scope="col">Actual</th><th scope="col">Predicted</th><th scope="col">Error</th></tr></thead><tbody><tr><td>VER</td><td>Red Bull Racing</td><td>1</td><td>3.76</td><td>2.76</td></tr><tr><td>PIA</td><td>McLaren</td><td>2</td><td>4.01</td><td>2.01</td></tr><tr><td>NOR</td><td>McLaren</td><td>3</td><td>3.46</td><td>0.46</td></tr><tr><td>LEC</td><td>Ferrari</td><td>4</td><td>7.60</td><td>3.60</td></tr><tr><td>RUS</td><td>Mercedes</td><td>5</td><td>5.36</td><td>0.36</td></tr><tr><td>ALO</td><td>Aston Martin</td><td>6</td><td>9.11</td><td>3.11</td></tr><tr><td>OCO</td><td>Haas F1 Team</td><td>7</td><td>11.04</td><td>4.04</td></tr><tr><td>HAM</td><td>Ferrari</td><td>8</td><td>9.26</td><td>1.26</td></tr><tr><td>HUL</td><td>Kick Sauber</td><td>9</td><td>11.66</td><td>2.66</td></tr><tr><td>STR</td><td>Aston Martin</td><td>10</td><td>10.92</td><td>0.92</td></tr><tr><td>BOR</td><td>Kick Sauber</td><td>11</td><td>9.43</td><td>1.57</td></tr><tr><td>BEA</td><td>Haas F1 Team</td><td>12</td><td>12.05</td><td>0.05</td></tr><tr><td>SAI</td><td>Williams</td><td>13</td><td>9.71</td><td>3.29</td></tr><tr><td>TSU</td><td>Red Bull Racing</td><td>14</td><td>10.89</td><td>3.11</td></tr><tr><td>ANT</td><td>Mercedes</td><td>15</td><td>11.82</td><td>3.18</td></tr><tr><td>ALB</td><td>Williams</td><td>16</td><td>9.94</td><td>6.06</td></tr><tr><td>HAD</td><td>Racing Bulls</td><td>17</td><td>11.55</td><td>5.45</td></tr><tr><td>LAW</td><td>Racing Bulls</td><td>18</td><td>10.52</td><td>7.48</td></tr><tr><td>GAS</td><td>Alpine</td><td>19</td><td>12.12</td><td>6.88</td></tr><tr><td>COL</td><td>Alpine</td><td>20</td><td>12.08</td><td>7.92</td></tr></tbody></table></div></details></details>
+      <div class="f1-grid" style="margin-top:1.25rem"><div class="card"><h3>How the alternatives compared</h3>{validation}<p class="f1-note">Linear Regression had the lowest validation MAE. Random Forest remains the prespecified primary experiment; the test set was not used to tune or select the model.</p></div>
+      <div class="card"><h3>Error by team</h3>{teams}<p>Small sample counts make team-level comparisons uncertain.</p></div></div>
+      <details><summary>Inspect individual test predictions</summary><p>Continuous predicted positions can tie and do not enforce a unique race ranking.</p>{race_tables}</details>
       <details><summary>View the error distribution</summary><img class="f1-plot" src="f1-model/outputs/residuals.png" alt="Histogram of predicted minus actual finishing position" width="1440" height="720" loading="lazy" /></details>
     </section>
     <section id="lessons" class="f1-section">
@@ -74,7 +111,7 @@
       <div class="card"><p>The repository includes modular Python functions, automated tests, dependency versions, the derived feature dataset, individual predictions and all figures. No synthetic examples contribute to these reported metrics.</p>
       <div class="f1-actions"><a class="btn btn-primary" href="https://github.com/azizmoh1/Portfolio-Website/tree/main/f1-model">Source &amp; Setup Guide</a><a class="btn btn-secondary" href="f1-model/outputs/summary.txt">Measured Report</a><a class="btn btn-secondary" href="f1-model/outputs/dataset.csv" download>Download Dataset</a><a class="btn btn-secondary" href="f1-model/outputs/test_predictions.csv" download>Test Predictions</a></div>
       <pre><code>python -m pip install -r requirements.txt
-python f1_pipeline.py train --dataset outputs/dataset.csv \
+python f1_pipeline.py train --dataset outputs/dataset.csv \\
     --output-dir outputs-reproduced
 python -m pytest -q</code></pre>
       <p>Data sources: <a href="https://docs.fastf1.dev/">FastF1</a> and <a href="https://github.com/jolpica/jolpica-f1">Jolpica</a>. <a href="f1-model/outputs/metrics.json">Full metrics and provenance</a>. Independent educational project; not affiliated with Formula 1.</p></div>
@@ -84,3 +121,6 @@ python -m pytest -q</code></pre>
   <script src="script.js"></script>
 </body>
 </html>
+'''
+(ROOT.parent / "project-f1.html").write_text(page)
+print("Updated project-f1.html from measured results")

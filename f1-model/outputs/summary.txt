@@ -1,0 +1,23 @@
+Model training complete.
+Test MAE: 2.954 positions
+On average, the model predicts within +/-2.95 positions (MAE; not a confidence interval).
+Test MSE: 13.051
+Test R2: 0.506
+Baseline MAE: 3.412
+Per-team test MAE:
+  Alpine: 4.01 (n=6)
+  Aston Martin: 2.23 (n=4)
+  Ferrari: 2.34 (n=6)
+  Haas F1 Team: 2.37 (n=5)
+  Kick Sauber: 3.05 (n=4)
+  McLaren: 1.02 (n=4)
+  Mercedes: 3.05 (n=6)
+  Racing Bulls: 4.90 (n=5)
+  Red Bull Racing: 2.56 (n=6)
+  Williams: 3.46 (n=5)
+
+Conditional on finishing: DNFs excluded from supervised training/evaluation.
+Single-season, small test set; not evidence of generalization to future seasons.
+Continuous predictions can tie and do not enforce a unique finishing order.
+Qualifying tire and rain observations are proxies, not race strategy or track wetness.
+Live telemetry, tire degradation, DRS and pit-loss physics are future work.

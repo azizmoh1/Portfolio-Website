@@ -1,0 +1,480 @@
+Season,Round,RaceName,DriverId,Driver,TeamId,TeamName,GridPosition,DriverExperience,TeamReliability,CarPerformanceIndex,TireCompound,TrackTemperature,AirTemperature,TrackStatus,FinalPosition,Points_Scored,Status,Finished
+2025,1,Australian Grand Prix,norris,NOR,mclaren,McLaren,1.0,0,,,3,40.50133333333333,30.336000000000002,Dry,1.0,25.0,Finished,True
+2025,1,Australian Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,3.0,0,,,3,40.50133333333333,30.336000000000002,Dry,2.0,18.0,Finished,True
+2025,1,Australian Grand Prix,russell,RUS,mercedes,Mercedes,4.0,0,,,3,40.50133333333333,30.336000000000002,Dry,3.0,15.0,Finished,True
+2025,1,Australian Grand Prix,antonelli,ANT,mercedes,Mercedes,16.0,0,,,3,40.50133333333333,30.336000000000002,Dry,4.0,12.0,Finished,True
+2025,1,Australian Grand Prix,albon,ALB,williams,Williams,6.0,0,,,3,40.50133333333333,30.336000000000002,Dry,5.0,10.0,Finished,True
+2025,1,Australian Grand Prix,stroll,STR,aston_martin,Aston Martin,13.0,0,,,3,40.50133333333333,30.336000000000002,Dry,6.0,8.0,Finished,True
+2025,1,Australian Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,17.0,0,,,3,40.50133333333333,30.336000000000002,Dry,7.0,6.0,Finished,True
+2025,1,Australian Grand Prix,leclerc,LEC,ferrari,Ferrari,7.0,0,,,3,40.50133333333333,30.336000000000002,Dry,8.0,4.0,Finished,True
+2025,1,Australian Grand Prix,piastri,PIA,mclaren,McLaren,2.0,0,,,3,40.50133333333333,30.336000000000002,Dry,9.0,2.0,Finished,True
+2025,1,Australian Grand Prix,hamilton,HAM,ferrari,Ferrari,8.0,0,,,3,40.50133333333333,30.336000000000002,Dry,10.0,1.0,Finished,True
+2025,1,Australian Grand Prix,gasly,GAS,alpine,Alpine,9.0,0,,,3,40.50133333333333,30.336000000000002,Dry,11.0,0.0,Finished,True
+2025,1,Australian Grand Prix,tsunoda,TSU,rb,Racing Bulls,5.0,0,,,3,40.50133333333333,30.336000000000002,Dry,12.0,0.0,Finished,True
+2025,1,Australian Grand Prix,ocon,OCO,haas,Haas F1 Team,19.0,0,,,3,40.50133333333333,30.336000000000002,Dry,13.0,0.0,Finished,True
+2025,1,Australian Grand Prix,bearman,BEA,haas,Haas F1 Team,20.0,0,,,Unknown,40.50133333333333,30.336000000000002,Dry,14.0,0.0,Finished,True
+2025,1,Australian Grand Prix,lawson,LAW,red_bull,Red Bull Racing,18.0,0,,,3,40.50133333333333,30.336000000000002,Dry,15.0,0.0,Retired,False
+2025,1,Australian Grand Prix,bortoleto,BOR,sauber,Kick Sauber,15.0,0,,,3,40.50133333333333,30.336000000000002,Dry,16.0,0.0,Retired,False
+2025,1,Australian Grand Prix,alonso,ALO,aston_martin,Aston Martin,12.0,0,,,3,40.50133333333333,30.336000000000002,Dry,17.0,0.0,Retired,False
+2025,1,Australian Grand Prix,sainz,SAI,williams,Williams,10.0,0,,,3,40.50133333333333,30.336000000000002,Dry,18.0,0.0,Retired,False
+2025,1,Australian Grand Prix,doohan,DOO,alpine,Alpine,14.0,0,,,3,40.50133333333333,30.336000000000002,Dry,19.0,0.0,Retired,False
+2025,1,Australian Grand Prix,hadjar,HAD,rb,Racing Bulls,11.0,0,,,3,40.50133333333333,30.336000000000002,Dry,20.0,0.0,Retired,False
+2025,2,Chinese Grand Prix,piastri,PIA,mclaren,McLaren,1.0,1,100.0,5.0,3,38.67012987012986,26.13246753246753,Dry,1.0,25.0,Finished,True
+2025,2,Chinese Grand Prix,norris,NOR,mclaren,McLaren,3.0,1,100.0,5.0,3,38.67012987012986,26.13246753246753,Dry,2.0,18.0,Finished,True
+2025,2,Chinese Grand Prix,russell,RUS,mercedes,Mercedes,2.0,1,100.0,3.5,3,38.67012987012986,26.13246753246753,Dry,3.0,15.0,Finished,True
+2025,2,Chinese Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,4.0,1,50.0,8.5,3,38.67012987012986,26.13246753246753,Dry,4.0,12.0,Finished,True
+2025,2,Chinese Grand Prix,ocon,OCO,haas,Haas F1 Team,11.0,1,100.0,13.5,3,38.67012987012986,26.13246753246753,Dry,5.0,10.0,Finished,True
+2025,2,Chinese Grand Prix,antonelli,ANT,mercedes,Mercedes,8.0,1,100.0,3.5,3,38.67012987012986,26.13246753246753,Dry,6.0,8.0,Finished,True
+2025,2,Chinese Grand Prix,albon,ALB,williams,Williams,10.0,1,50.0,11.5,3,38.67012987012986,26.13246753246753,Dry,7.0,6.0,Finished,True
+2025,2,Chinese Grand Prix,bearman,BEA,haas,Haas F1 Team,17.0,1,100.0,13.5,3,38.67012987012986,26.13246753246753,Dry,8.0,4.0,Finished,True
+2025,2,Chinese Grand Prix,stroll,STR,aston_martin,Aston Martin,14.0,1,50.0,11.5,3,38.67012987012986,26.13246753246753,Dry,9.0,2.0,Finished,True
+2025,2,Chinese Grand Prix,sainz,SAI,williams,Williams,15.0,0,50.0,11.5,3,38.67012987012986,26.13246753246753,Dry,10.0,1.0,Finished,True
+2025,2,Chinese Grand Prix,hadjar,HAD,rb,Racing Bulls,7.0,0,50.0,16.0,3,38.67012987012986,26.13246753246753,Dry,11.0,0.0,Finished,True
+2025,2,Chinese Grand Prix,lawson,LAW,red_bull,Red Bull Racing,20.0,0,50.0,8.5,3,38.67012987012986,26.13246753246753,Dry,12.0,0.0,Finished,True
+2025,2,Chinese Grand Prix,doohan,DOO,alpine,Alpine,18.0,0,50.0,15.0,3,38.67012987012986,26.13246753246753,Dry,13.0,0.0,Finished,True
+2025,2,Chinese Grand Prix,bortoleto,BOR,sauber,Kick Sauber,19.0,0,50.0,11.5,3,38.67012987012986,26.13246753246753,Dry,14.0,0.0,Lapped,True
+2025,2,Chinese Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,12.0,1,50.0,11.5,3,38.67012987012986,26.13246753246753,Dry,15.0,0.0,Lapped,True
+2025,2,Chinese Grand Prix,tsunoda,TSU,rb,Racing Bulls,9.0,1,50.0,16.0,3,38.67012987012986,26.13246753246753,Dry,16.0,0.0,Lapped,True
+2025,2,Chinese Grand Prix,alonso,ALO,aston_martin,Aston Martin,13.0,0,50.0,11.5,3,38.67012987012986,26.13246753246753,Dry,17.0,0.0,Retired,False
+2025,2,Chinese Grand Prix,leclerc,LEC,ferrari,Ferrari,6.0,1,100.0,9.0,3,38.67012987012986,26.13246753246753,Dry,18.0,0.0,Disqualified,False
+2025,2,Chinese Grand Prix,hamilton,HAM,ferrari,Ferrari,5.0,1,100.0,9.0,3,38.67012987012986,26.13246753246753,Dry,19.0,0.0,Disqualified,False
+2025,2,Chinese Grand Prix,gasly,GAS,alpine,Alpine,16.0,1,50.0,15.0,3,38.67012987012986,26.13246753246753,Dry,20.0,0.0,Disqualified,False
+2025,3,Japanese Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,1.0,2,75.0,8.25,3,32.14117647058824,14.69529411764706,Dry,1.0,25.0,Finished,True
+2025,3,Japanese Grand Prix,norris,NOR,mclaren,McLaren,2.0,2,100.0,3.25,3,32.14117647058824,14.69529411764706,Dry,2.0,18.0,Finished,True
+2025,3,Japanese Grand Prix,piastri,PIA,mclaren,McLaren,3.0,2,100.0,3.25,3,32.14117647058824,14.69529411764706,Dry,3.0,15.0,Finished,True
+2025,3,Japanese Grand Prix,leclerc,LEC,ferrari,Ferrari,4.0,1,50.0,13.75,3,32.14117647058824,14.69529411764706,Dry,4.0,12.0,Finished,True
+2025,3,Japanese Grand Prix,russell,RUS,mercedes,Mercedes,5.0,2,100.0,4.0,3,32.14117647058824,14.69529411764706,Dry,5.0,10.0,Finished,True
+2025,3,Japanese Grand Prix,antonelli,ANT,mercedes,Mercedes,6.0,2,100.0,4.0,3,32.14117647058824,14.69529411764706,Dry,6.0,8.0,Finished,True
+2025,3,Japanese Grand Prix,hamilton,HAM,ferrari,Ferrari,8.0,1,50.0,13.75,3,32.14117647058824,14.69529411764706,Dry,7.0,6.0,Finished,True
+2025,3,Japanese Grand Prix,hadjar,HAD,rb,Racing Bulls,7.0,1,75.0,14.75,3,32.14117647058824,14.69529411764706,Dry,8.0,4.0,Finished,True
+2025,3,Japanese Grand Prix,albon,ALB,williams,Williams,9.0,2,75.0,10.0,3,32.14117647058824,14.69529411764706,Dry,9.0,2.0,Finished,True
+2025,3,Japanese Grand Prix,bearman,BEA,haas,Haas F1 Team,10.0,2,100.0,10.0,3,32.14117647058824,14.69529411764706,Dry,10.0,1.0,Finished,True
+2025,3,Japanese Grand Prix,alonso,ALO,aston_martin,Aston Martin,12.0,0,50.0,12.25,3,32.14117647058824,14.69529411764706,Dry,11.0,0.0,Finished,True
+2025,3,Japanese Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,14.0,2,75.0,8.25,3,32.14117647058824,14.69529411764706,Dry,12.0,0.0,Finished,True
+2025,3,Japanese Grand Prix,gasly,GAS,alpine,Alpine,11.0,1,50.0,15.75,3,32.14117647058824,14.69529411764706,Dry,13.0,0.0,Finished,True
+2025,3,Japanese Grand Prix,sainz,SAI,williams,Williams,15.0,1,75.0,10.0,3,32.14117647058824,14.69529411764706,Dry,14.0,0.0,Finished,True
+2025,3,Japanese Grand Prix,doohan,DOO,alpine,Alpine,19.0,1,50.0,15.75,3,32.14117647058824,14.69529411764706,Dry,15.0,0.0,Finished,True
+2025,3,Japanese Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,16.0,2,75.0,13.0,3,32.14117647058824,14.69529411764706,Dry,16.0,0.0,Finished,True
+2025,3,Japanese Grand Prix,lawson,LAW,rb,Racing Bulls,13.0,1,75.0,14.75,3,32.14117647058824,14.69529411764706,Dry,17.0,0.0,Finished,True
+2025,3,Japanese Grand Prix,ocon,OCO,haas,Haas F1 Team,18.0,2,100.0,10.0,3,32.14117647058824,14.69529411764706,Dry,18.0,0.0,Finished,True
+2025,3,Japanese Grand Prix,bortoleto,BOR,sauber,Kick Sauber,17.0,1,75.0,13.0,3,32.14117647058824,14.69529411764706,Dry,19.0,0.0,Finished,True
+2025,3,Japanese Grand Prix,stroll,STR,aston_martin,Aston Martin,20.0,2,50.0,12.25,3,32.14117647058824,14.69529411764706,Dry,20.0,0.0,Lapped,True
+2025,4,Bahrain Grand Prix,piastri,PIA,mclaren,McLaren,1.0,3,100.0,3.0,3,30.89425287356321,26.296551724137935,Dry,1.0,25.0,Finished,True
+2025,4,Bahrain Grand Prix,russell,RUS,mercedes,Mercedes,3.0,3,100.0,4.5,3,30.89425287356321,26.296551724137935,Dry,2.0,18.0,Finished,True
+2025,4,Bahrain Grand Prix,norris,NOR,mclaren,McLaren,6.0,3,100.0,3.0,3,30.89425287356321,26.296551724137935,Dry,3.0,15.0,Finished,True
+2025,4,Bahrain Grand Prix,leclerc,LEC,ferrari,Ferrari,2.0,2,66.66666666666666,11.0,3,30.89425287356321,26.296551724137935,Dry,4.0,12.0,Finished,True
+2025,4,Bahrain Grand Prix,hamilton,HAM,ferrari,Ferrari,9.0,2,66.66666666666666,11.0,3,30.89425287356321,26.296551724137935,Dry,5.0,10.0,Finished,True
+2025,4,Bahrain Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,7.0,3,83.33333333333334,7.666666666666667,3,30.89425287356321,26.296551724137935,Dry,6.0,8.0,Finished,True
+2025,4,Bahrain Grand Prix,gasly,GAS,alpine,Alpine,4.0,2,66.66666666666666,15.166666666666666,3,30.89425287356321,26.296551724137935,Dry,7.0,6.0,Finished,True
+2025,4,Bahrain Grand Prix,ocon,OCO,haas,Haas F1 Team,14.0,3,100.0,11.333333333333334,3,30.89425287356321,26.296551724137935,Dry,8.0,4.0,Finished,True
+2025,4,Bahrain Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,10.0,3,83.33333333333334,7.666666666666667,3,30.89425287356321,26.296551724137935,Dry,9.0,2.0,Finished,True
+2025,4,Bahrain Grand Prix,bearman,BEA,haas,Haas F1 Team,20.0,3,100.0,11.333333333333334,3,30.89425287356321,26.296551724137935,Dry,10.0,1.0,Finished,True
+2025,4,Bahrain Grand Prix,antonelli,ANT,mercedes,Mercedes,5.0,3,100.0,4.5,3,30.89425287356321,26.296551724137935,Dry,11.0,0.0,Finished,True
+2025,4,Bahrain Grand Prix,albon,ALB,williams,Williams,15.0,3,83.33333333333334,10.5,3,30.89425287356321,26.296551724137935,Dry,12.0,0.0,Finished,True
+2025,4,Bahrain Grand Prix,hadjar,HAD,rb,Racing Bulls,12.0,2,83.33333333333334,14.0,3,30.89425287356321,26.296551724137935,Dry,13.0,0.0,Finished,True
+2025,4,Bahrain Grand Prix,doohan,DOO,alpine,Alpine,11.0,2,66.66666666666666,15.166666666666666,3,30.89425287356321,26.296551724137935,Dry,14.0,0.0,Finished,True
+2025,4,Bahrain Grand Prix,alonso,ALO,aston_martin,Aston Martin,13.0,1,66.66666666666666,13.333333333333334,3,30.89425287356321,26.296551724137935,Dry,15.0,0.0,Finished,True
+2025,4,Bahrain Grand Prix,lawson,LAW,rb,Racing Bulls,17.0,2,83.33333333333334,14.0,3,30.89425287356321,26.296551724137935,Dry,16.0,0.0,Finished,True
+2025,4,Bahrain Grand Prix,stroll,STR,aston_martin,Aston Martin,19.0,3,66.66666666666666,13.333333333333334,3,30.89425287356321,26.296551724137935,Dry,17.0,0.0,Finished,True
+2025,4,Bahrain Grand Prix,bortoleto,BOR,sauber,Kick Sauber,18.0,2,83.33333333333334,14.5,3,30.89425287356321,26.296551724137935,Dry,18.0,0.0,Finished,True
+2025,4,Bahrain Grand Prix,sainz,SAI,williams,Williams,8.0,2,83.33333333333334,10.5,3,30.89425287356321,26.296551724137935,Dry,19.0,0.0,Retired,False
+2025,4,Bahrain Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,16.0,3,83.33333333333334,14.5,3,30.89425287356321,26.296551724137935,Dry,20.0,0.0,Disqualified,False
+2025,5,Saudi Arabian Grand Prix,piastri,PIA,mclaren,McLaren,2.0,4,100.0,2.75,3,37.22558139534884,29.57558139534884,Dry,1.0,25.0,Finished,True
+2025,5,Saudi Arabian Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,1.0,4,87.5,7.625,3,37.22558139534884,29.57558139534884,Dry,2.0,18.0,Finished,True
+2025,5,Saudi Arabian Grand Prix,leclerc,LEC,ferrari,Ferrari,4.0,3,75.0,9.375,3,37.22558139534884,29.57558139534884,Dry,3.0,15.0,Finished,True
+2025,5,Saudi Arabian Grand Prix,norris,NOR,mclaren,McLaren,10.0,4,100.0,2.75,3,37.22558139534884,29.57558139534884,Dry,4.0,12.0,Finished,True
+2025,5,Saudi Arabian Grand Prix,russell,RUS,mercedes,Mercedes,3.0,4,100.0,5.0,3,37.22558139534884,29.57558139534884,Dry,5.0,10.0,Finished,True
+2025,5,Saudi Arabian Grand Prix,antonelli,ANT,mercedes,Mercedes,5.0,4,100.0,5.0,3,37.22558139534884,29.57558139534884,Dry,6.0,8.0,Finished,True
+2025,5,Saudi Arabian Grand Prix,hamilton,HAM,ferrari,Ferrari,7.0,3,75.0,9.375,3,37.22558139534884,29.57558139534884,Dry,7.0,6.0,Finished,True
+2025,5,Saudi Arabian Grand Prix,sainz,SAI,williams,Williams,6.0,2,75.0,11.75,3,37.22558139534884,29.57558139534884,Dry,8.0,4.0,Finished,True
+2025,5,Saudi Arabian Grand Prix,albon,ALB,williams,Williams,11.0,4,75.0,11.75,3,37.22558139534884,29.57558139534884,Dry,9.0,2.0,Finished,True
+2025,5,Saudi Arabian Grand Prix,hadjar,HAD,rb,Racing Bulls,14.0,3,87.5,14.125,3,37.22558139534884,29.57558139534884,Dry,10.0,1.0,Finished,True
+2025,5,Saudi Arabian Grand Prix,alonso,ALO,aston_martin,Aston Martin,13.0,2,75.0,14.0,3,37.22558139534884,29.57558139534884,Dry,11.0,0.0,Finished,True
+2025,5,Saudi Arabian Grand Prix,lawson,LAW,rb,Racing Bulls,12.0,3,87.5,14.125,3,37.22558139534884,29.57558139534884,Dry,12.0,0.0,Finished,True
+2025,5,Saudi Arabian Grand Prix,bearman,BEA,haas,Haas F1 Team,15.0,4,100.0,10.75,3,37.22558139534884,29.57558139534884,Dry,13.0,0.0,Finished,True
+2025,5,Saudi Arabian Grand Prix,ocon,OCO,haas,Haas F1 Team,19.0,4,100.0,10.75,3,37.22558139534884,29.57558139534884,Dry,14.0,0.0,Finished,True
+2025,5,Saudi Arabian Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,18.0,3,75.0,15.625,3,37.22558139534884,29.57558139534884,Dry,15.0,0.0,Lapped,True
+2025,5,Saudi Arabian Grand Prix,stroll,STR,aston_martin,Aston Martin,16.0,4,75.0,14.0,3,37.22558139534884,29.57558139534884,Dry,16.0,0.0,Lapped,True
+2025,5,Saudi Arabian Grand Prix,doohan,DOO,alpine,Alpine,17.0,3,75.0,14.0,3,37.22558139534884,29.57558139534884,Dry,17.0,0.0,Lapped,True
+2025,5,Saudi Arabian Grand Prix,bortoleto,BOR,sauber,Kick Sauber,20.0,3,75.0,15.625,3,37.22558139534884,29.57558139534884,Dry,18.0,0.0,Lapped,True
+2025,5,Saudi Arabian Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,8.0,4,87.5,7.625,3,37.22558139534884,29.57558139534884,Dry,19.0,0.0,Retired,False
+2025,5,Saudi Arabian Grand Prix,gasly,GAS,alpine,Alpine,9.0,3,75.0,14.0,3,37.22558139534884,29.57558139534884,Dry,20.0,0.0,Retired,False
+2025,6,Miami Grand Prix,piastri,PIA,mclaren,McLaren,4.0,5,100.0,2.7,3,41.015384615384605,27.974358974358967,Dry,1.0,25.0,Finished,True
+2025,6,Miami Grand Prix,norris,NOR,mclaren,McLaren,2.0,5,100.0,2.7,3,41.015384615384605,27.974358974358967,Dry,2.0,18.0,Finished,True
+2025,6,Miami Grand Prix,russell,RUS,mercedes,Mercedes,5.0,5,100.0,5.1,3,41.015384615384605,27.974358974358967,Dry,3.0,15.0,Finished,True
+2025,6,Miami Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,1.0,5,80.0,8.2,3,41.015384615384605,27.974358974358967,Dry,4.0,12.0,Finished,True
+2025,6,Miami Grand Prix,albon,ALB,williams,Williams,7.0,5,80.0,11.1,3,41.015384615384605,27.974358974358967,Dry,5.0,10.0,Finished,True
+2025,6,Miami Grand Prix,antonelli,ANT,mercedes,Mercedes,3.0,5,100.0,5.1,3,41.015384615384605,27.974358974358967,Dry,6.0,8.0,Finished,True
+2025,6,Miami Grand Prix,leclerc,LEC,ferrari,Ferrari,8.0,4,80.0,8.5,3,41.015384615384605,27.974358974358967,Dry,7.0,6.0,Finished,True
+2025,6,Miami Grand Prix,hamilton,HAM,ferrari,Ferrari,12.0,4,80.0,8.5,3,41.015384615384605,27.974358974358967,Dry,8.0,4.0,Finished,True
+2025,6,Miami Grand Prix,sainz,SAI,williams,Williams,6.0,3,80.0,11.1,3,41.015384615384605,27.974358974358967,Dry,9.0,2.0,Finished,True
+2025,6,Miami Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,10.0,4,80.0,8.2,3,41.015384615384605,27.974358974358967,Dry,10.0,1.0,Finished,True
+2025,6,Miami Grand Prix,hadjar,HAD,rb,Racing Bulls,11.0,4,90.0,13.5,3,41.015384615384605,27.974358974358967,Dry,11.0,0.0,Finished,True
+2025,6,Miami Grand Prix,ocon,OCO,haas,Haas F1 Team,9.0,5,100.0,11.3,3,41.015384615384605,27.974358974358967,Dry,12.0,0.0,Finished,True
+2025,6,Miami Grand Prix,gasly,GAS,alpine,Alpine,20.0,3,70.0,14.9,3,41.015384615384605,27.974358974358967,Dry,13.0,0.0,Finished,True
+2025,6,Miami Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,16.0,4,80.0,15.8,3,41.015384615384605,27.974358974358967,Dry,14.0,0.0,Lapped,True
+2025,6,Miami Grand Prix,alonso,ALO,aston_martin,Aston Martin,17.0,3,80.0,13.9,3,41.015384615384605,27.974358974358967,Dry,15.0,0.0,Lapped,True
+2025,6,Miami Grand Prix,stroll,STR,aston_martin,Aston Martin,18.0,5,80.0,13.9,3,41.015384615384605,27.974358974358967,Dry,16.0,0.0,Lapped,True
+2025,6,Miami Grand Prix,lawson,LAW,rb,Racing Bulls,15.0,4,90.0,13.5,3,41.015384615384605,27.974358974358967,Dry,17.0,0.0,Retired,False
+2025,6,Miami Grand Prix,bortoleto,BOR,sauber,Kick Sauber,13.0,4,80.0,15.8,3,41.015384615384605,27.974358974358967,Dry,18.0,0.0,Retired,False
+2025,6,Miami Grand Prix,bearman,BEA,haas,Haas F1 Team,19.0,5,100.0,11.3,3,41.015384615384605,27.974358974358967,Dry,19.0,0.0,Retired,False
+2025,6,Miami Grand Prix,doohan,DOO,alpine,Alpine,14.0,4,70.0,14.9,3,41.015384615384605,27.974358974358967,Dry,20.0,0.0,Retired,False
+2025,7,Emilia Romagna Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,2.0,6,83.33333333333334,7.9,3,39.41636363636363,22.800909090909094,Dry,1.0,25.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,norris,NOR,mclaren,McLaren,4.0,6,100.0,2.0,3,39.41636363636363,22.800909090909094,Dry,2.0,18.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,piastri,PIA,mclaren,McLaren,1.0,6,100.0,2.0,3,39.41636363636363,22.800909090909094,Dry,3.0,15.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,hamilton,HAM,ferrari,Ferrari,12.0,5,83.33333333333334,8.2,3,39.41636363636363,22.800909090909094,Dry,4.0,12.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,albon,ALB,williams,Williams,7.0,6,83.33333333333334,10.2,3,39.41636363636363,22.800909090909094,Dry,5.0,10.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,leclerc,LEC,ferrari,Ferrari,11.0,5,83.33333333333334,8.2,3,39.41636363636363,22.800909090909094,Dry,6.0,8.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,russell,RUS,mercedes,Mercedes,3.0,6,100.0,5.3,2,39.41636363636363,22.800909090909094,Dry,7.0,6.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,sainz,SAI,williams,Williams,6.0,4,83.33333333333334,10.2,3,39.41636363636363,22.800909090909094,Dry,8.0,4.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,hadjar,HAD,rb,Racing Bulls,9.0,5,83.33333333333334,13.1,3,39.41636363636363,22.800909090909094,Dry,9.0,2.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,20.0,5,83.33333333333334,7.9,Unknown,39.41636363636363,22.800909090909094,Dry,10.0,1.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,alonso,ALO,aston_martin,Aston Martin,5.0,4,83.33333333333334,14.7,2,39.41636363636363,22.800909090909094,Dry,11.0,0.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,17.0,5,75.0,16.7,3,39.41636363636363,22.800909090909094,Dry,12.0,0.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,gasly,GAS,alpine,Alpine,10.0,4,66.66666666666666,15.2,3,39.41636363636363,22.800909090909094,Dry,13.0,0.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,lawson,LAW,rb,Racing Bulls,15.0,4,83.33333333333334,13.1,3,39.41636363636363,22.800909090909094,Dry,14.0,0.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,stroll,STR,aston_martin,Aston Martin,8.0,6,83.33333333333334,14.7,2,39.41636363636363,22.800909090909094,Dry,15.0,0.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,colapinto,COL,alpine,Alpine,16.0,0,66.66666666666666,15.2,3,39.41636363636363,22.800909090909094,Dry,16.0,0.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,bearman,BEA,haas,Haas F1 Team,19.0,5,91.66666666666666,11.7,3,39.41636363636363,22.800909090909094,Dry,17.0,0.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,bortoleto,BOR,sauber,Kick Sauber,14.0,4,75.0,16.7,3,39.41636363636363,22.800909090909094,Dry,18.0,0.0,Finished,True
+2025,7,Emilia Romagna Grand Prix,antonelli,ANT,mercedes,Mercedes,13.0,6,100.0,5.3,3,39.41636363636363,22.800909090909094,Dry,19.0,0.0,Retired,False
+2025,7,Emilia Romagna Grand Prix,ocon,OCO,haas,Haas F1 Team,18.0,6,91.66666666666666,11.7,3,39.41636363636363,22.800909090909094,Dry,20.0,0.0,Retired,False
+2025,8,Monaco Grand Prix,norris,NOR,mclaren,McLaren,1.0,7,100.0,2.2,3,40.28709677419354,21.137634408602153,Dry,1.0,25.0,Finished,True
+2025,8,Monaco Grand Prix,leclerc,LEC,ferrari,Ferrari,2.0,6,85.71428571428571,5.5,3,40.28709677419354,21.137634408602153,Dry,2.0,18.0,Finished,True
+2025,8,Monaco Grand Prix,piastri,PIA,mclaren,McLaren,3.0,7,100.0,2.2,3,40.28709677419354,21.137634408602153,Dry,3.0,15.0,Finished,True
+2025,8,Monaco Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,4.0,7,85.71428571428571,7.4,3,40.28709677419354,21.137634408602153,Dry,4.0,12.0,Finished,True
+2025,8,Monaco Grand Prix,hamilton,HAM,ferrari,Ferrari,7.0,6,85.71428571428571,5.5,3,40.28709677419354,21.137634408602153,Dry,5.0,10.0,Finished,True
+2025,8,Monaco Grand Prix,hadjar,HAD,rb,Racing Bulls,5.0,6,85.71428571428571,12.7,3,40.28709677419354,21.137634408602153,Dry,6.0,8.0,Lapped,True
+2025,8,Monaco Grand Prix,ocon,OCO,haas,Haas F1 Team,8.0,6,85.71428571428571,14.1,3,40.28709677419354,21.137634408602153,Dry,7.0,6.0,Lapped,True
+2025,8,Monaco Grand Prix,lawson,LAW,rb,Racing Bulls,9.0,5,85.71428571428571,12.7,3,40.28709677419354,21.137634408602153,Dry,8.0,4.0,Lapped,True
+2025,8,Monaco Grand Prix,albon,ALB,williams,Williams,10.0,7,85.71428571428571,9.8,3,40.28709677419354,21.137634408602153,Dry,9.0,2.0,Lapped,True
+2025,8,Monaco Grand Prix,sainz,SAI,williams,Williams,11.0,5,85.71428571428571,9.8,2,40.28709677419354,21.137634408602153,Dry,10.0,1.0,Lapped,True
+2025,8,Monaco Grand Prix,russell,RUS,mercedes,Mercedes,14.0,7,92.85714285714286,7.0,3,40.28709677419354,21.137634408602153,Dry,11.0,0.0,Lapped,True
+2025,8,Monaco Grand Prix,bearman,BEA,haas,Haas F1 Team,20.0,6,85.71428571428571,14.1,3,40.28709677419354,21.137634408602153,Dry,12.0,0.0,Lapped,True
+2025,8,Monaco Grand Prix,colapinto,COL,alpine,Alpine,18.0,1,71.42857142857143,14.8,3,40.28709677419354,21.137634408602153,Dry,13.0,0.0,Lapped,True
+2025,8,Monaco Grand Prix,bortoleto,BOR,sauber,Kick Sauber,16.0,5,78.57142857142857,16.8,3,40.28709677419354,21.137634408602153,Dry,14.0,0.0,Lapped,True
+2025,8,Monaco Grand Prix,stroll,STR,aston_martin,Aston Martin,19.0,7,85.71428571428571,14.7,3,40.28709677419354,21.137634408602153,Dry,15.0,0.0,Lapped,True
+2025,8,Monaco Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,13.0,6,78.57142857142857,16.8,3,40.28709677419354,21.137634408602153,Dry,16.0,0.0,Lapped,True
+2025,8,Monaco Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,12.0,6,85.71428571428571,7.4,3,40.28709677419354,21.137634408602153,Dry,17.0,0.0,Lapped,True
+2025,8,Monaco Grand Prix,antonelli,ANT,mercedes,Mercedes,15.0,6,92.85714285714286,7.0,3,40.28709677419354,21.137634408602153,Dry,18.0,0.0,Lapped,True
+2025,8,Monaco Grand Prix,alonso,ALO,aston_martin,Aston Martin,6.0,5,85.71428571428571,14.7,3,40.28709677419354,21.137634408602153,Dry,19.0,0.0,Retired,False
+2025,8,Monaco Grand Prix,gasly,GAS,alpine,Alpine,17.0,5,71.42857142857143,14.8,3,40.28709677419354,21.137634408602153,Dry,20.0,0.0,Retired,False
+2025,9,Spanish Grand Prix,piastri,PIA,mclaren,McLaren,1.0,8,100.0,2.1,3,46.82337662337662,29.136363636363637,Dry,1.0,25.0,Finished,True
+2025,9,Spanish Grand Prix,norris,NOR,mclaren,McLaren,2.0,8,100.0,2.1,3,46.82337662337662,29.136363636363637,Dry,2.0,18.0,Finished,True
+2025,9,Spanish Grand Prix,leclerc,LEC,ferrari,Ferrari,7.0,7,87.5,5.1,3,46.82337662337662,29.136363636363637,Dry,3.0,15.0,Finished,True
+2025,9,Spanish Grand Prix,russell,RUS,mercedes,Mercedes,4.0,8,93.75,8.8,3,46.82337662337662,29.136363636363637,Dry,4.0,12.0,Finished,True
+2025,9,Spanish Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,15.0,7,81.25,16.3,3,46.82337662337662,29.136363636363637,Dry,5.0,10.0,Finished,True
+2025,9,Spanish Grand Prix,hamilton,HAM,ferrari,Ferrari,5.0,7,87.5,5.1,3,46.82337662337662,29.136363636363637,Dry,6.0,8.0,Finished,True
+2025,9,Spanish Grand Prix,hadjar,HAD,rb,Racing Bulls,9.0,7,87.5,11.6,3,46.82337662337662,29.136363636363637,Dry,7.0,6.0,Finished,True
+2025,9,Spanish Grand Prix,gasly,GAS,alpine,Alpine,8.0,5,68.75,15.3,3,46.82337662337662,29.136363636363637,Dry,8.0,4.0,Finished,True
+2025,9,Spanish Grand Prix,alonso,ALO,aston_martin,Aston Martin,10.0,5,81.25,15.0,3,46.82337662337662,29.136363636363637,Dry,9.0,2.0,Finished,True
+2025,9,Spanish Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,3.0,8,87.5,8.2,3,46.82337662337662,29.136363636363637,Dry,10.0,1.0,Finished,True
+2025,9,Spanish Grand Prix,lawson,LAW,rb,Racing Bulls,13.0,6,87.5,11.6,3,46.82337662337662,29.136363636363637,Dry,11.0,0.0,Finished,True
+2025,9,Spanish Grand Prix,bortoleto,BOR,sauber,Kick Sauber,12.0,6,81.25,16.3,3,46.82337662337662,29.136363636363637,Dry,12.0,0.0,Finished,True
+2025,9,Spanish Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,19.0,7,87.5,8.2,3,46.82337662337662,29.136363636363637,Dry,13.0,0.0,Finished,True
+2025,9,Spanish Grand Prix,sainz,SAI,williams,Williams,17.0,6,87.5,9.4,3,46.82337662337662,29.136363636363637,Dry,14.0,0.0,Finished,True
+2025,9,Spanish Grand Prix,colapinto,COL,alpine,Alpine,18.0,2,68.75,15.3,3,46.82337662337662,29.136363636363637,Dry,15.0,0.0,Finished,True
+2025,9,Spanish Grand Prix,ocon,OCO,haas,Haas F1 Team,16.0,7,87.5,13.2,3,46.82337662337662,29.136363636363637,Dry,16.0,0.0,Finished,True
+2025,9,Spanish Grand Prix,bearman,BEA,haas,Haas F1 Team,14.0,7,87.5,13.2,3,46.82337662337662,29.136363636363637,Dry,17.0,0.0,Finished,True
+2025,9,Spanish Grand Prix,antonelli,ANT,mercedes,Mercedes,6.0,7,93.75,8.8,3,46.82337662337662,29.136363636363637,Dry,18.0,0.0,Retired,False
+2025,9,Spanish Grand Prix,albon,ALB,williams,Williams,11.0,8,87.5,9.4,3,46.82337662337662,29.136363636363637,Dry,19.0,0.0,Retired,False
+2025,10,Canadian Grand Prix,russell,RUS,mercedes,Mercedes,1.0,9,88.88888888888889,9.7,2,43.145882352941186,21.3,Dry,1.0,25.0,Finished,True
+2025,10,Canadian Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,2.0,9,88.88888888888889,9.0,2,43.145882352941186,21.3,Dry,2.0,18.0,Finished,True
+2025,10,Canadian Grand Prix,antonelli,ANT,mercedes,Mercedes,4.0,7,88.88888888888889,9.7,2,43.145882352941186,21.3,Dry,3.0,15.0,Finished,True
+2025,10,Canadian Grand Prix,piastri,PIA,mclaren,McLaren,3.0,9,100.0,2.0,3,43.145882352941186,21.3,Dry,4.0,12.0,Finished,True
+2025,10,Canadian Grand Prix,leclerc,LEC,ferrari,Ferrari,8.0,8,88.88888888888889,5.1,3,43.145882352941186,21.3,Dry,5.0,10.0,Finished,True
+2025,10,Canadian Grand Prix,hamilton,HAM,ferrari,Ferrari,5.0,8,88.88888888888889,5.1,3,43.145882352941186,21.3,Dry,6.0,8.0,Finished,True
+2025,10,Canadian Grand Prix,alonso,ALO,aston_martin,Aston Martin,6.0,6,82.35294117647058,13.6,2,43.145882352941186,21.3,Dry,7.0,6.0,Finished,True
+2025,10,Canadian Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,11.0,8,83.33333333333334,14.2,3,43.145882352941186,21.3,Dry,8.0,4.0,Finished,True
+2025,10,Canadian Grand Prix,ocon,OCO,haas,Haas F1 Team,14.0,8,88.88888888888889,14.7,3,43.145882352941186,21.3,Dry,9.0,2.0,Lapped,True
+2025,10,Canadian Grand Prix,sainz,SAI,williams,Williams,16.0,7,83.33333333333334,9.6,3,43.145882352941186,21.3,Dry,10.0,1.0,Lapped,True
+2025,10,Canadian Grand Prix,bearman,BEA,haas,Haas F1 Team,13.0,8,88.88888888888889,14.7,3,43.145882352941186,21.3,Dry,11.0,0.0,Lapped,True
+2025,10,Canadian Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,18.0,8,88.88888888888889,9.0,3,43.145882352941186,21.3,Dry,12.0,0.0,Lapped,True
+2025,10,Canadian Grand Prix,colapinto,COL,alpine,Alpine,10.0,3,72.22222222222221,15.5,2,43.145882352941186,21.3,Dry,13.0,0.0,Lapped,True
+2025,10,Canadian Grand Prix,bortoleto,BOR,sauber,Kick Sauber,15.0,7,83.33333333333334,14.2,3,43.145882352941186,21.3,Dry,14.0,0.0,Lapped,True
+2025,10,Canadian Grand Prix,gasly,GAS,alpine,Alpine,20.0,6,72.22222222222221,15.5,3,43.145882352941186,21.3,Dry,15.0,0.0,Lapped,True
+2025,10,Canadian Grand Prix,hadjar,HAD,rb,Racing Bulls,12.0,8,88.88888888888889,10.5,3,43.145882352941186,21.3,Dry,16.0,0.0,Lapped,True
+2025,10,Canadian Grand Prix,stroll,STR,aston_martin,Aston Martin,17.0,8,82.35294117647058,13.6,3,43.145882352941186,21.3,Dry,17.0,0.0,Lapped,True
+2025,10,Canadian Grand Prix,norris,NOR,mclaren,McLaren,7.0,9,100.0,2.0,3,43.145882352941186,21.3,Dry,18.0,0.0,Retired,False
+2025,10,Canadian Grand Prix,lawson,LAW,rb,Racing Bulls,19.0,7,88.88888888888889,10.5,3,43.145882352941186,21.3,Dry,19.0,0.0,Retired,False
+2025,10,Canadian Grand Prix,albon,ALB,williams,Williams,9.0,8,83.33333333333334,9.6,2,43.145882352941186,21.3,Dry,20.0,0.0,Retired,False
+2025,11,Austrian Grand Prix,norris,NOR,mclaren,McLaren,1.0,9,95.0,3.7,3,47.19659090909091,27.77386363636364,Dry,1.0,25.0,Finished,True
+2025,11,Austrian Grand Prix,piastri,PIA,mclaren,McLaren,3.0,10,95.0,3.7,3,47.19659090909091,27.77386363636364,Dry,2.0,18.0,Finished,True
+2025,11,Austrian Grand Prix,leclerc,LEC,ferrari,Ferrari,2.0,9,90.0,5.2,3,47.19659090909091,27.77386363636364,Dry,3.0,15.0,Finished,True
+2025,11,Austrian Grand Prix,hamilton,HAM,ferrari,Ferrari,4.0,9,90.0,5.2,3,47.19659090909091,27.77386363636364,Dry,4.0,12.0,Finished,True
+2025,11,Austrian Grand Prix,russell,RUS,mercedes,Mercedes,5.0,10,90.0,9.0,3,47.19659090909091,27.77386363636364,Dry,5.0,10.0,Finished,True
+2025,11,Austrian Grand Prix,lawson,LAW,rb,Racing Bulls,6.0,7,85.0,11.8,3,47.19659090909091,27.77386363636364,Dry,6.0,8.0,Finished,True
+2025,11,Austrian Grand Prix,alonso,ALO,aston_martin,Aston Martin,11.0,7,84.21052631578947,13.3,3,47.19659090909091,27.77386363636364,Dry,7.0,6.0,Lapped,True
+2025,11,Austrian Grand Prix,bortoleto,BOR,sauber,Kick Sauber,8.0,8,85.0,13.1,3,47.19659090909091,27.77386363636364,Dry,8.0,4.0,Lapped,True
+2025,11,Austrian Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,20.0,9,85.0,13.1,3,47.19659090909091,27.77386363636364,Dry,9.0,2.0,Lapped,True
+2025,11,Austrian Grand Prix,ocon,OCO,haas,Haas F1 Team,17.0,9,90.0,14.0,3,47.19659090909091,27.77386363636364,Dry,10.0,1.0,Lapped,True
+2025,11,Austrian Grand Prix,bearman,BEA,haas,Haas F1 Team,15.0,9,90.0,14.0,3,47.19659090909091,27.77386363636364,Dry,11.0,0.0,Lapped,True
+2025,11,Austrian Grand Prix,hadjar,HAD,rb,Racing Bulls,13.0,9,85.0,11.8,Unknown,47.19659090909091,27.77386363636364,Dry,12.0,0.0,Lapped,True
+2025,11,Austrian Grand Prix,gasly,GAS,alpine,Alpine,10.0,7,75.0,14.6,3,47.19659090909091,27.77386363636364,Dry,13.0,0.0,Lapped,True
+2025,11,Austrian Grand Prix,stroll,STR,aston_martin,Aston Martin,16.0,9,84.21052631578947,13.3,3,47.19659090909091,27.77386363636364,Dry,14.0,0.0,Lapped,True
+2025,11,Austrian Grand Prix,colapinto,COL,alpine,Alpine,14.0,4,75.0,14.6,3,47.19659090909091,27.77386363636364,Dry,15.0,0.0,Lapped,True
+2025,11,Austrian Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,18.0,9,90.0,8.3,3,47.19659090909091,27.77386363636364,Dry,16.0,0.0,Lapped,True
+2025,11,Austrian Grand Prix,albon,ALB,williams,Williams,12.0,8,80.0,10.9,Unknown,47.19659090909091,27.77386363636364,Dry,17.0,0.0,Retired,False
+2025,11,Austrian Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,7.0,10,90.0,8.3,3,47.19659090909091,27.77386363636364,Dry,18.0,0.0,Retired,False
+2025,11,Austrian Grand Prix,antonelli,ANT,mercedes,Mercedes,9.0,8,90.0,9.0,3,47.19659090909091,27.77386363636364,Dry,19.0,0.0,Retired,False
+2025,11,Austrian Grand Prix,sainz,SAI,williams,Williams,19.0,8,80.0,10.9,3,47.19659090909091,27.77386363636364,Dry,20.0,0.0,Did not start,False
+2025,12,British Grand Prix,norris,NOR,mclaren,McLaren,3.0,10,95.45454545454545,3.7,3,27.432183908045985,20.196551724137933,Dry,1.0,25.0,Finished,True
+2025,12,British Grand Prix,piastri,PIA,mclaren,McLaren,2.0,11,95.45454545454545,3.7,3,27.432183908045985,20.196551724137933,Dry,2.0,18.0,Finished,True
+2025,12,British Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,19.0,10,86.36363636363636,11.6,3,27.432183908045985,20.196551724137933,Dry,3.0,15.0,Finished,True
+2025,12,British Grand Prix,hamilton,HAM,ferrari,Ferrari,5.0,10,90.9090909090909,4.4,3,27.432183908045985,20.196551724137933,Dry,4.0,12.0,Finished,True
+2025,12,British Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,1.0,10,86.36363636363636,10.3,3,27.432183908045985,20.196551724137933,Dry,5.0,10.0,Finished,True
+2025,12,British Grand Prix,gasly,GAS,alpine,Alpine,8.0,8,77.27272727272727,14.1,3,27.432183908045985,20.196551724137933,Dry,6.0,8.0,Finished,True
+2025,12,British Grand Prix,stroll,STR,aston_martin,Aston Martin,17.0,10,85.71428571428571,12.3,3,27.432183908045985,20.196551724137933,Dry,7.0,6.0,Finished,True
+2025,12,British Grand Prix,albon,ALB,williams,Williams,13.0,8,76.19047619047619,13.2,3,27.432183908045985,20.196551724137933,Dry,8.0,4.0,Finished,True
+2025,12,British Grand Prix,alonso,ALO,aston_martin,Aston Martin,7.0,8,85.71428571428571,12.3,3,27.432183908045985,20.196551724137933,Dry,9.0,2.0,Finished,True
+2025,12,British Grand Prix,russell,RUS,mercedes,Mercedes,4.0,11,86.36363636363636,10.5,3,27.432183908045985,20.196551724137933,Dry,10.0,1.0,Finished,True
+2025,12,British Grand Prix,bearman,BEA,haas,Haas F1 Team,18.0,10,90.9090909090909,13.0,3,27.432183908045985,20.196551724137933,Dry,11.0,0.0,Finished,True
+2025,12,British Grand Prix,sainz,SAI,williams,Williams,9.0,8,76.19047619047619,13.2,3,27.432183908045985,20.196551724137933,Dry,12.0,0.0,Finished,True
+2025,12,British Grand Prix,ocon,OCO,haas,Haas F1 Team,14.0,10,90.9090909090909,13.0,3,27.432183908045985,20.196551724137933,Dry,13.0,0.0,Finished,True
+2025,12,British Grand Prix,leclerc,LEC,ferrari,Ferrari,6.0,10,90.9090909090909,4.4,3,27.432183908045985,20.196551724137933,Dry,14.0,0.0,Finished,True
+2025,12,British Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,11.0,10,86.36363636363636,10.3,3,27.432183908045985,20.196551724137933,Dry,15.0,0.0,Lapped,True
+2025,12,British Grand Prix,antonelli,ANT,mercedes,Mercedes,10.0,8,86.36363636363636,10.5,3,27.432183908045985,20.196551724137933,Dry,16.0,0.0,Retired,False
+2025,12,British Grand Prix,hadjar,HAD,rb,Racing Bulls,12.0,10,86.36363636363636,10.8,3,27.432183908045985,20.196551724137933,Dry,17.0,0.0,Retired,False
+2025,12,British Grand Prix,bortoleto,BOR,sauber,Kick Sauber,16.0,9,86.36363636363636,11.6,3,27.432183908045985,20.196551724137933,Dry,18.0,0.0,Retired,False
+2025,12,British Grand Prix,lawson,LAW,rb,Racing Bulls,15.0,8,86.36363636363636,10.8,3,27.432183908045985,20.196551724137933,Dry,19.0,0.0,Retired,False
+2025,12,British Grand Prix,colapinto,COL,alpine,Alpine,20.0,5,77.27272727272727,14.1,3,27.432183908045985,20.196551724137933,Dry,20.0,0.0,Did not start,False
+2025,13,Belgian Grand Prix,piastri,PIA,mclaren,McLaren,2.0,12,95.83333333333334,3.5,3,37.72658227848101,22.645569620253166,Dry,1.0,25.0,Finished,True
+2025,13,Belgian Grand Prix,norris,NOR,mclaren,McLaren,1.0,11,95.83333333333334,3.5,3,37.72658227848101,22.645569620253166,Dry,2.0,18.0,Finished,True
+2025,13,Belgian Grand Prix,leclerc,LEC,ferrari,Ferrari,3.0,11,91.66666666666666,5.2,3,37.72658227848101,22.645569620253166,Dry,3.0,15.0,Finished,True
+2025,13,Belgian Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,4.0,11,87.5,11.2,3,37.72658227848101,22.645569620253166,Dry,4.0,12.0,Finished,True
+2025,13,Belgian Grand Prix,russell,RUS,mercedes,Mercedes,6.0,12,83.33333333333334,10.5,3,37.72658227848101,22.645569620253166,Dry,5.0,10.0,Finished,True
+2025,13,Belgian Grand Prix,albon,ALB,williams,Williams,5.0,9,78.26086956521739,13.9,3,37.72658227848101,22.645569620253166,Dry,6.0,8.0,Finished,True
+2025,13,Belgian Grand Prix,hamilton,HAM,ferrari,Ferrari,18.0,11,91.66666666666666,5.2,3,37.72658227848101,22.645569620253166,Dry,7.0,6.0,Finished,True
+2025,13,Belgian Grand Prix,lawson,LAW,rb,Racing Bulls,9.0,8,79.16666666666666,12.1,3,37.72658227848101,22.645569620253166,Dry,8.0,4.0,Finished,True
+2025,13,Belgian Grand Prix,bortoleto,BOR,sauber,Kick Sauber,10.0,9,83.33333333333334,10.7,3,37.72658227848101,22.645569620253166,Dry,9.0,2.0,Finished,True
+2025,13,Belgian Grand Prix,gasly,GAS,alpine,Alpine,13.0,9,78.26086956521739,13.8,3,37.72658227848101,22.645569620253166,Dry,10.0,1.0,Finished,True
+2025,13,Belgian Grand Prix,bearman,BEA,haas,Haas F1 Team,12.0,11,91.66666666666666,11.7,3,37.72658227848101,22.645569620253166,Dry,11.0,0.0,Finished,True
+2025,13,Belgian Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,14.0,11,83.33333333333334,10.7,3,37.72658227848101,22.645569620253166,Dry,12.0,0.0,Finished,True
+2025,13,Belgian Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,7.0,11,87.5,11.2,3,37.72658227848101,22.645569620253166,Dry,13.0,0.0,Finished,True
+2025,13,Belgian Grand Prix,stroll,STR,aston_martin,Aston Martin,16.0,11,86.95652173913044,11.3,3,37.72658227848101,22.645569620253166,Dry,14.0,0.0,Finished,True
+2025,13,Belgian Grand Prix,ocon,OCO,haas,Haas F1 Team,11.0,11,91.66666666666666,11.7,3,37.72658227848101,22.645569620253166,Dry,15.0,0.0,Finished,True
+2025,13,Belgian Grand Prix,antonelli,ANT,mercedes,Mercedes,19.0,8,83.33333333333334,10.5,3,37.72658227848101,22.645569620253166,Dry,16.0,0.0,Finished,True
+2025,13,Belgian Grand Prix,alonso,ALO,aston_martin,Aston Martin,20.0,9,86.95652173913044,11.3,3,37.72658227848101,22.645569620253166,Dry,17.0,0.0,Finished,True
+2025,13,Belgian Grand Prix,sainz,SAI,williams,Williams,17.0,9,78.26086956521739,13.9,3,37.72658227848101,22.645569620253166,Dry,18.0,0.0,Finished,True
+2025,13,Belgian Grand Prix,colapinto,COL,alpine,Alpine,15.0,5,78.26086956521739,13.8,3,37.72658227848101,22.645569620253166,Dry,19.0,0.0,Finished,True
+2025,13,Belgian Grand Prix,hadjar,HAD,rb,Racing Bulls,8.0,10,79.16666666666666,12.1,3,37.72658227848101,22.645569620253166,Dry,20.0,0.0,Lapped,True
+2025,14,Hungarian Grand Prix,norris,NOR,mclaren,McLaren,3.0,12,96.15384615384616,3.4,3,42.53333333333334,28.14880952380953,Dry,1.0,25.0,Finished,True
+2025,14,Hungarian Grand Prix,piastri,PIA,mclaren,McLaren,2.0,13,96.15384615384616,3.4,3,42.53333333333334,28.14880952380953,Dry,2.0,18.0,Finished,True
+2025,14,Hungarian Grand Prix,russell,RUS,mercedes,Mercedes,4.0,13,84.61538461538461,9.7,3,42.53333333333334,28.14880952380953,Dry,3.0,15.0,Finished,True
+2025,14,Hungarian Grand Prix,leclerc,LEC,ferrari,Ferrari,1.0,12,92.3076923076923,5.5,3,42.53333333333334,28.14880952380953,Dry,4.0,12.0,Finished,True
+2025,14,Hungarian Grand Prix,alonso,ALO,aston_martin,Aston Martin,5.0,10,88.0,11.0,3,42.53333333333334,28.14880952380953,Dry,5.0,10.0,Finished,True
+2025,14,Hungarian Grand Prix,bortoleto,BOR,sauber,Kick Sauber,7.0,10,84.61538461538461,9.8,3,42.53333333333334,28.14880952380953,Dry,6.0,8.0,Finished,True
+2025,14,Hungarian Grand Prix,stroll,STR,aston_martin,Aston Martin,6.0,12,88.0,11.0,3,42.53333333333334,28.14880952380953,Dry,7.0,6.0,Finished,True
+2025,14,Hungarian Grand Prix,lawson,LAW,rb,Racing Bulls,9.0,9,80.76923076923077,13.5,3,42.53333333333334,28.14880952380953,Dry,8.0,4.0,Finished,True
+2025,14,Hungarian Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,8.0,12,88.46153846153845,10.8,3,42.53333333333334,28.14880952380953,Dry,9.0,2.0,Finished,True
+2025,14,Hungarian Grand Prix,antonelli,ANT,mercedes,Mercedes,15.0,9,84.61538461538461,9.7,3,42.53333333333334,28.14880952380953,Dry,10.0,1.0,Lapped,True
+2025,14,Hungarian Grand Prix,hadjar,HAD,rb,Racing Bulls,10.0,11,80.76923076923077,13.5,3,42.53333333333334,28.14880952380953,Dry,11.0,0.0,Lapped,True
+2025,14,Hungarian Grand Prix,hamilton,HAM,ferrari,Ferrari,12.0,12,92.3076923076923,5.5,3,42.53333333333334,28.14880952380953,Dry,12.0,0.0,Lapped,True
+2025,14,Hungarian Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,18.0,12,84.61538461538461,9.8,3,42.53333333333334,28.14880952380953,Dry,13.0,0.0,Lapped,True
+2025,14,Hungarian Grand Prix,sainz,SAI,williams,Williams,13.0,10,80.0,14.4,3,42.53333333333334,28.14880952380953,Dry,14.0,0.0,Lapped,True
+2025,14,Hungarian Grand Prix,albon,ALB,williams,Williams,19.0,10,80.0,14.4,3,42.53333333333334,28.14880952380953,Dry,15.0,0.0,Lapped,True
+2025,14,Hungarian Grand Prix,ocon,OCO,haas,Haas F1 Team,17.0,12,92.3076923076923,12.4,3,42.53333333333334,28.14880952380953,Dry,16.0,0.0,Lapped,True
+2025,14,Hungarian Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,20.0,12,88.46153846153845,10.8,3,42.53333333333334,28.14880952380953,Dry,17.0,0.0,Lapped,True
+2025,14,Hungarian Grand Prix,colapinto,COL,alpine,Alpine,14.0,6,80.0,13.4,3,42.53333333333334,28.14880952380953,Dry,18.0,0.0,Lapped,True
+2025,14,Hungarian Grand Prix,gasly,GAS,alpine,Alpine,16.0,10,80.0,13.4,3,42.53333333333334,28.14880952380953,Dry,19.0,0.0,Lapped,True
+2025,14,Hungarian Grand Prix,bearman,BEA,haas,Haas F1 Team,11.0,12,92.3076923076923,12.4,3,42.53333333333334,28.14880952380953,Dry,20.0,0.0,Retired,False
+2025,15,Dutch Grand Prix,piastri,PIA,mclaren,McLaren,1.0,14,96.42857142857143,3.4,3,34.228205128205126,20.594871794871793,Dry,1.0,25.0,Finished,True
+2025,15,Dutch Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,3.0,13,89.28571428571429,11.1,3,34.228205128205126,20.594871794871793,Dry,2.0,18.0,Finished,True
+2025,15,Dutch Grand Prix,hadjar,HAD,rb,Racing Bulls,4.0,12,82.14285714285714,13.6,3,34.228205128205126,20.594871794871793,Dry,3.0,15.0,Finished,True
+2025,15,Dutch Grand Prix,russell,RUS,mercedes,Mercedes,5.0,14,85.71428571428571,8.8,3,34.228205128205126,20.594871794871793,Dry,4.0,12.0,Finished,True
+2025,15,Dutch Grand Prix,albon,ALB,williams,Williams,15.0,11,81.48148148148148,14.0,3,34.228205128205126,20.594871794871793,Dry,5.0,10.0,Finished,True
+2025,15,Dutch Grand Prix,bearman,BEA,haas,Haas F1 Team,20.0,12,89.28571428571429,12.7,3,34.228205128205126,20.594871794871793,Dry,6.0,8.0,Finished,True
+2025,15,Dutch Grand Prix,stroll,STR,aston_martin,Aston Martin,19.0,13,88.88888888888889,10.4,3,34.228205128205126,20.594871794871793,Dry,7.0,6.0,Finished,True
+2025,15,Dutch Grand Prix,alonso,ALO,aston_martin,Aston Martin,10.0,11,88.88888888888889,10.4,3,34.228205128205126,20.594871794871793,Dry,8.0,4.0,Finished,True
+2025,15,Dutch Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,12.0,13,89.28571428571429,11.1,3,34.228205128205126,20.594871794871793,Dry,9.0,2.0,Finished,True
+2025,15,Dutch Grand Prix,ocon,OCO,haas,Haas F1 Team,18.0,13,89.28571428571429,12.7,3,34.228205128205126,20.594871794871793,Dry,10.0,1.0,Finished,True
+2025,15,Dutch Grand Prix,colapinto,COL,alpine,Alpine,16.0,7,81.48148148148148,14.8,3,34.228205128205126,20.594871794871793,Dry,11.0,0.0,Finished,True
+2025,15,Dutch Grand Prix,lawson,LAW,rb,Racing Bulls,8.0,10,82.14285714285714,13.6,3,34.228205128205126,20.594871794871793,Dry,12.0,0.0,Finished,True
+2025,15,Dutch Grand Prix,sainz,SAI,williams,Williams,9.0,11,81.48148148148148,14.0,3,34.228205128205126,20.594871794871793,Dry,13.0,0.0,Finished,True
+2025,15,Dutch Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,17.0,13,85.71428571428571,10.0,3,34.228205128205126,20.594871794871793,Dry,14.0,0.0,Finished,True
+2025,15,Dutch Grand Prix,bortoleto,BOR,sauber,Kick Sauber,13.0,11,85.71428571428571,10.0,3,34.228205128205126,20.594871794871793,Dry,15.0,0.0,Finished,True
+2025,15,Dutch Grand Prix,antonelli,ANT,mercedes,Mercedes,11.0,10,85.71428571428571,8.8,3,34.228205128205126,20.594871794871793,Dry,16.0,0.0,Finished,True
+2025,15,Dutch Grand Prix,gasly,GAS,alpine,Alpine,14.0,11,81.48148148148148,14.8,3,34.228205128205126,20.594871794871793,Dry,17.0,0.0,Finished,True
+2025,15,Dutch Grand Prix,norris,NOR,mclaren,McLaren,2.0,13,96.42857142857143,3.4,3,34.228205128205126,20.594871794871793,Dry,18.0,0.0,Retired,False
+2025,15,Dutch Grand Prix,leclerc,LEC,ferrari,Ferrari,6.0,13,92.85714285714286,6.2,3,34.228205128205126,20.594871794871793,Dry,19.0,0.0,Retired,False
+2025,15,Dutch Grand Prix,hamilton,HAM,ferrari,Ferrari,7.0,13,92.85714285714286,6.2,3,34.228205128205126,20.594871794871793,Dry,20.0,0.0,Retired,False
+2025,16,Italian Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,1.0,14,90.0,10.8,3,42.77820512820513,26.60641025641026,Dry,1.0,25.0,Finished,True
+2025,16,Italian Grand Prix,norris,NOR,mclaren,McLaren,2.0,13,93.33333333333333,3.1,3,42.77820512820513,26.60641025641026,Dry,2.0,18.0,Finished,True
+2025,16,Italian Grand Prix,piastri,PIA,mclaren,McLaren,3.0,15,93.33333333333333,3.1,3,42.77820512820513,26.60641025641026,Dry,3.0,15.0,Finished,True
+2025,16,Italian Grand Prix,leclerc,LEC,ferrari,Ferrari,4.0,13,86.66666666666667,9.0,3,42.77820512820513,26.60641025641026,Dry,4.0,12.0,Finished,True
+2025,16,Italian Grand Prix,russell,RUS,mercedes,Mercedes,5.0,15,86.66666666666667,10.4,3,42.77820512820513,26.60641025641026,Dry,5.0,10.0,Finished,True
+2025,16,Italian Grand Prix,hamilton,HAM,ferrari,Ferrari,10.0,13,86.66666666666667,9.0,3,42.77820512820513,26.60641025641026,Dry,6.0,8.0,Finished,True
+2025,16,Italian Grand Prix,albon,ALB,williams,Williams,14.0,12,82.75862068965517,12.8,3,42.77820512820513,26.60641025641026,Dry,7.0,6.0,Finished,True
+2025,16,Italian Grand Prix,bortoleto,BOR,sauber,Kick Sauber,7.0,12,86.66666666666667,10.7,3,42.77820512820513,26.60641025641026,Dry,8.0,4.0,Finished,True
+2025,16,Italian Grand Prix,antonelli,ANT,mercedes,Mercedes,6.0,11,86.66666666666667,10.4,3,42.77820512820513,26.60641025641026,Dry,9.0,2.0,Finished,True
+2025,16,Italian Grand Prix,hadjar,HAD,rb,Racing Bulls,19.0,13,83.33333333333334,11.6,3,42.77820512820513,26.60641025641026,Dry,10.0,1.0,Finished,True
+2025,16,Italian Grand Prix,sainz,SAI,williams,Williams,13.0,12,82.75862068965517,12.8,3,42.77820512820513,26.60641025641026,Dry,11.0,0.0,Finished,True
+2025,16,Italian Grand Prix,bearman,BEA,haas,Haas F1 Team,11.0,13,90.0,12.3,3,42.77820512820513,26.60641025641026,Dry,12.0,0.0,Finished,True
+2025,16,Italian Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,9.0,14,90.0,10.8,3,42.77820512820513,26.60641025641026,Dry,13.0,0.0,Finished,True
+2025,16,Italian Grand Prix,lawson,LAW,rb,Racing Bulls,18.0,11,83.33333333333334,11.6,3,42.77820512820513,26.60641025641026,Dry,14.0,0.0,Finished,True
+2025,16,Italian Grand Prix,ocon,OCO,haas,Haas F1 Team,15.0,14,90.0,12.3,3,42.77820512820513,26.60641025641026,Dry,15.0,0.0,Lapped,True
+2025,16,Italian Grand Prix,gasly,GAS,alpine,Alpine,20.0,12,82.75862068965517,14.8,3,42.77820512820513,26.60641025641026,Dry,16.0,0.0,Lapped,True
+2025,16,Italian Grand Prix,colapinto,COL,alpine,Alpine,17.0,8,82.75862068965517,14.8,3,42.77820512820513,26.60641025641026,Dry,17.0,0.0,Lapped,True
+2025,16,Italian Grand Prix,stroll,STR,aston_martin,Aston Martin,16.0,14,89.65517241379311,9.5,3,42.77820512820513,26.60641025641026,Dry,18.0,0.0,Lapped,True
+2025,16,Italian Grand Prix,alonso,ALO,aston_martin,Aston Martin,8.0,12,89.65517241379311,9.5,3,42.77820512820513,26.60641025641026,Dry,19.0,0.0,Retired,False
+2025,16,Italian Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,12.0,14,86.66666666666667,10.7,3,42.77820512820513,26.60641025641026,Dry,20.0,0.0,Did not start,False
+2025,17,Azerbaijan Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,1.0,15,90.625,8.8,3,26.07851851851852,20.748888888888892,Mixed Rain,1.0,25.0,Finished,True
+2025,17,Azerbaijan Grand Prix,russell,RUS,mercedes,Mercedes,5.0,16,87.5,9.4,2,26.07851851851852,20.748888888888892,Mixed Rain,2.0,18.0,Finished,True
+2025,17,Azerbaijan Grand Prix,sainz,SAI,williams,Williams,2.0,13,83.87096774193549,10.9,2,26.07851851851852,20.748888888888892,Mixed Rain,3.0,15.0,Finished,True
+2025,17,Azerbaijan Grand Prix,antonelli,ANT,mercedes,Mercedes,4.0,12,87.5,9.4,2,26.07851851851852,20.748888888888892,Mixed Rain,4.0,12.0,Finished,True
+2025,17,Azerbaijan Grand Prix,lawson,LAW,rb,Racing Bulls,3.0,12,84.375,12.2,2,26.07851851851852,20.748888888888892,Mixed Rain,5.0,10.0,Finished,True
+2025,17,Azerbaijan Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,6.0,15,90.625,8.8,2,26.07851851851852,20.748888888888892,Mixed Rain,6.0,8.0,Finished,True
+2025,17,Azerbaijan Grand Prix,norris,NOR,mclaren,McLaren,7.0,14,93.75,3.3,3,26.07851851851852,20.748888888888892,Mixed Rain,7.0,6.0,Finished,True
+2025,17,Azerbaijan Grand Prix,hamilton,HAM,ferrari,Ferrari,12.0,14,87.5,9.3,3,26.07851851851852,20.748888888888892,Mixed Rain,8.0,4.0,Finished,True
+2025,17,Azerbaijan Grand Prix,leclerc,LEC,ferrari,Ferrari,10.0,14,87.5,9.3,3,26.07851851851852,20.748888888888892,Mixed Rain,9.0,2.0,Finished,True
+2025,17,Azerbaijan Grand Prix,hadjar,HAD,rb,Racing Bulls,8.0,14,84.375,12.2,2,26.07851851851852,20.748888888888892,Mixed Rain,10.0,1.0,Finished,True
+2025,17,Azerbaijan Grand Prix,bortoleto,BOR,sauber,Kick Sauber,13.0,13,87.09677419354838,11.8,2,26.07851851851852,20.748888888888892,Mixed Rain,11.0,0.0,Finished,True
+2025,17,Azerbaijan Grand Prix,bearman,BEA,haas,Haas F1 Team,15.0,14,90.625,12.9,3,26.07851851851852,20.748888888888892,Mixed Rain,12.0,0.0,Finished,True
+2025,17,Azerbaijan Grand Prix,albon,ALB,williams,Williams,19.0,13,83.87096774193549,10.9,3,26.07851851851852,20.748888888888892,Mixed Rain,13.0,0.0,Finished,True
+2025,17,Azerbaijan Grand Prix,ocon,OCO,haas,Haas F1 Team,20.0,15,90.625,12.9,3,26.07851851851852,20.748888888888892,Mixed Rain,14.0,0.0,Finished,True
+2025,17,Azerbaijan Grand Prix,alonso,ALO,aston_martin,Aston Martin,11.0,12,87.09677419354838,11.1,2,26.07851851851852,20.748888888888892,Mixed Rain,15.0,0.0,Finished,True
+2025,17,Azerbaijan Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,17.0,14,87.09677419354838,11.8,3,26.07851851851852,20.748888888888892,Mixed Rain,16.0,0.0,Finished,True
+2025,17,Azerbaijan Grand Prix,stroll,STR,aston_martin,Aston Martin,14.0,15,87.09677419354838,11.1,2,26.07851851851852,20.748888888888892,Mixed Rain,17.0,0.0,Finished,True
+2025,17,Azerbaijan Grand Prix,gasly,GAS,alpine,Alpine,18.0,13,83.87096774193549,15.3,3,26.07851851851852,20.748888888888892,Mixed Rain,18.0,0.0,Lapped,True
+2025,17,Azerbaijan Grand Prix,colapinto,COL,alpine,Alpine,16.0,9,83.87096774193549,15.3,3,26.07851851851852,20.748888888888892,Mixed Rain,19.0,0.0,Lapped,True
+2025,17,Azerbaijan Grand Prix,piastri,PIA,mclaren,McLaren,9.0,16,93.75,3.3,3,26.07851851851852,20.748888888888892,Mixed Rain,20.0,0.0,Retired,False
+2025,18,Singapore Grand Prix,russell,RUS,mercedes,Mercedes,1.0,17,88.23529411764706,7.4,3,34.9609756097561,29.863414634146345,Dry,1.0,25.0,Finished,True
+2025,18,Singapore Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,2.0,16,91.17647058823529,7.5,3,34.9609756097561,29.863414634146345,Dry,2.0,18.0,Finished,True
+2025,18,Singapore Grand Prix,norris,NOR,mclaren,McLaren,5.0,15,91.17647058823529,5.7,3,34.9609756097561,29.863414634146345,Dry,3.0,15.0,Finished,True
+2025,18,Singapore Grand Prix,piastri,PIA,mclaren,McLaren,3.0,16,91.17647058823529,5.7,3,34.9609756097561,29.863414634146345,Dry,4.0,12.0,Finished,True
+2025,18,Singapore Grand Prix,antonelli,ANT,mercedes,Mercedes,4.0,13,88.23529411764706,7.4,3,34.9609756097561,29.863414634146345,Dry,5.0,10.0,Finished,True
+2025,18,Singapore Grand Prix,leclerc,LEC,ferrari,Ferrari,7.0,15,88.23529411764706,9.2,3,34.9609756097561,29.863414634146345,Dry,6.0,8.0,Finished,True
+2025,18,Singapore Grand Prix,alonso,ALO,aston_martin,Aston Martin,10.0,13,87.87878787878788,12.7,3,34.9609756097561,29.863414634146345,Dry,7.0,6.0,Finished,True
+2025,18,Singapore Grand Prix,hamilton,HAM,ferrari,Ferrari,6.0,15,88.23529411764706,9.2,3,34.9609756097561,29.863414634146345,Dry,8.0,4.0,Finished,True
+2025,18,Singapore Grand Prix,bearman,BEA,haas,Haas F1 Team,9.0,15,91.17647058823529,13.1,3,34.9609756097561,29.863414634146345,Dry,9.0,2.0,Finished,True
+2025,18,Singapore Grand Prix,sainz,SAI,williams,Williams,18.0,14,84.84848484848484,10.5,3,34.9609756097561,29.863414634146345,Dry,10.0,1.0,Lapped,True
+2025,18,Singapore Grand Prix,hadjar,HAD,rb,Racing Bulls,8.0,15,85.29411764705883,10.1,3,34.9609756097561,29.863414634146345,Dry,11.0,0.0,Lapped,True
+2025,18,Singapore Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,13.0,16,91.17647058823529,7.5,3,34.9609756097561,29.863414634146345,Dry,12.0,0.0,Lapped,True
+2025,18,Singapore Grand Prix,stroll,STR,aston_martin,Aston Martin,15.0,16,87.87878787878788,12.7,3,34.9609756097561,29.863414634146345,Dry,13.0,0.0,Lapped,True
+2025,18,Singapore Grand Prix,albon,ALB,williams,Williams,20.0,14,84.84848484848484,10.5,3,34.9609756097561,29.863414634146345,Dry,14.0,0.0,Lapped,True
+2025,18,Singapore Grand Prix,lawson,LAW,rb,Racing Bulls,12.0,13,85.29411764705883,10.1,3,34.9609756097561,29.863414634146345,Dry,15.0,0.0,Lapped,True
+2025,18,Singapore Grand Prix,colapinto,COL,alpine,Alpine,16.0,10,84.84848484848484,16.4,3,34.9609756097561,29.863414634146345,Dry,16.0,0.0,Lapped,True
+2025,18,Singapore Grand Prix,bortoleto,BOR,sauber,Kick Sauber,14.0,14,87.87878787878788,12.4,3,34.9609756097561,29.863414634146345,Dry,17.0,0.0,Lapped,True
+2025,18,Singapore Grand Prix,ocon,OCO,haas,Haas F1 Team,17.0,16,91.17647058823529,13.1,3,34.9609756097561,29.863414634146345,Dry,18.0,0.0,Lapped,True
+2025,18,Singapore Grand Prix,gasly,GAS,alpine,Alpine,19.0,14,84.84848484848484,16.4,3,34.9609756097561,29.863414634146345,Dry,19.0,0.0,Lapped,True
+2025,18,Singapore Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,11.0,15,87.87878787878788,12.4,3,34.9609756097561,29.863414634146345,Dry,20.0,0.0,Lapped,True
+2025,19,United States Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,1.0,17,91.66666666666666,7.2,3,45.712500000000006,33.92272727272728,Dry,1.0,25.0,Finished,True
+2025,19,United States Grand Prix,norris,NOR,mclaren,McLaren,2.0,16,91.66666666666666,6.1,3,45.712500000000006,33.92272727272728,Dry,2.0,18.0,Finished,True
+2025,19,United States Grand Prix,leclerc,LEC,ferrari,Ferrari,3.0,16,88.88888888888889,9.6,3,45.712500000000006,33.92272727272728,Dry,3.0,15.0,Finished,True
+2025,19,United States Grand Prix,hamilton,HAM,ferrari,Ferrari,5.0,16,88.88888888888889,9.6,3,45.712500000000006,33.92272727272728,Dry,4.0,12.0,Finished,True
+2025,19,United States Grand Prix,piastri,PIA,mclaren,McLaren,6.0,17,91.66666666666666,6.1,3,45.712500000000006,33.92272727272728,Dry,5.0,10.0,Finished,True
+2025,19,United States Grand Prix,russell,RUS,mercedes,Mercedes,4.0,18,88.88888888888889,5.9,3,45.712500000000006,33.92272727272728,Dry,6.0,8.0,Finished,True
+2025,19,United States Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,13.0,17,91.66666666666666,7.2,3,45.712500000000006,33.92272727272728,Dry,7.0,6.0,Finished,True
+2025,19,United States Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,11.0,16,88.57142857142857,14.0,3,45.712500000000006,33.92272727272728,Dry,8.0,4.0,Finished,True
+2025,19,United States Grand Prix,bearman,BEA,haas,Haas F1 Team,8.0,16,91.66666666666666,13.2,3,45.712500000000006,33.92272727272728,Dry,9.0,2.0,Finished,True
+2025,19,United States Grand Prix,alonso,ALO,aston_martin,Aston Martin,10.0,14,88.57142857142857,11.6,3,45.712500000000006,33.92272727272728,Dry,10.0,1.0,Finished,True
+2025,19,United States Grand Prix,lawson,LAW,rb,Racing Bulls,12.0,14,86.11111111111111,9.9,3,45.712500000000006,33.92272727272728,Dry,11.0,0.0,Finished,True
+2025,19,United States Grand Prix,stroll,STR,aston_martin,Aston Martin,19.0,17,88.57142857142857,11.6,3,45.712500000000006,33.92272727272728,Dry,12.0,0.0,Finished,True
+2025,19,United States Grand Prix,antonelli,ANT,mercedes,Mercedes,7.0,14,88.88888888888889,5.9,3,45.712500000000006,33.92272727272728,Dry,13.0,0.0,Finished,True
+2025,19,United States Grand Prix,albon,ALB,williams,Williams,18.0,15,85.71428571428571,10.5,3,45.712500000000006,33.92272727272728,Dry,14.0,0.0,Finished,True
+2025,19,United States Grand Prix,ocon,OCO,haas,Haas F1 Team,17.0,17,91.66666666666666,13.2,3,45.712500000000006,33.92272727272728,Dry,15.0,0.0,Finished,True
+2025,19,United States Grand Prix,hadjar,HAD,rb,Racing Bulls,20.0,16,86.11111111111111,9.9,Unknown,45.712500000000006,33.92272727272728,Dry,16.0,0.0,Finished,True
+2025,19,United States Grand Prix,colapinto,COL,alpine,Alpine,15.0,11,85.71428571428571,17.0,3,45.712500000000006,33.92272727272728,Dry,17.0,0.0,Lapped,True
+2025,19,United States Grand Prix,bortoleto,BOR,sauber,Kick Sauber,16.0,15,88.57142857142857,14.0,3,45.712500000000006,33.92272727272728,Dry,18.0,0.0,Lapped,True
+2025,19,United States Grand Prix,gasly,GAS,alpine,Alpine,14.0,15,85.71428571428571,17.0,3,45.712500000000006,33.92272727272728,Dry,19.0,0.0,Lapped,True
+2025,19,United States Grand Prix,sainz,SAI,williams,Williams,9.0,15,85.71428571428571,10.5,3,45.712500000000006,33.92272727272728,Dry,20.0,0.0,Retired,False
+2025,20,Mexico City Grand Prix,norris,NOR,mclaren,McLaren,1.0,17,92.10526315789474,6.5,3,46.035897435897446,26.189743589743586,Dry,1.0,25.0,Finished,True
+2025,20,Mexico City Grand Prix,leclerc,LEC,ferrari,Ferrari,2.0,17,89.47368421052632,8.7,3,46.035897435897446,26.189743589743586,Dry,2.0,18.0,Finished,True
+2025,20,Mexico City Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,5.0,18,92.10526315789474,5.4,3,46.035897435897446,26.189743589743586,Dry,3.0,15.0,Finished,True
+2025,20,Mexico City Grand Prix,bearman,BEA,haas,Haas F1 Team,9.0,17,92.10526315789474,12.0,3,46.035897435897446,26.189743589743586,Dry,4.0,12.0,Finished,True
+2025,20,Mexico City Grand Prix,piastri,PIA,mclaren,McLaren,7.0,18,92.10526315789474,6.5,3,46.035897435897446,26.189743589743586,Dry,5.0,10.0,Finished,True
+2025,20,Mexico City Grand Prix,antonelli,ANT,mercedes,Mercedes,6.0,15,89.47368421052632,6.5,3,46.035897435897446,26.189743589743586,Dry,6.0,8.0,Finished,True
+2025,20,Mexico City Grand Prix,russell,RUS,mercedes,Mercedes,4.0,19,89.47368421052632,6.5,3,46.035897435897446,26.189743589743586,Dry,7.0,6.0,Finished,True
+2025,20,Mexico City Grand Prix,hamilton,HAM,ferrari,Ferrari,3.0,17,89.47368421052632,8.7,3,46.035897435897446,26.189743589743586,Dry,8.0,4.0,Finished,True
+2025,20,Mexico City Grand Prix,ocon,OCO,haas,Haas F1 Team,11.0,18,92.10526315789474,12.0,3,46.035897435897446,26.189743589743586,Dry,9.0,2.0,Finished,True
+2025,20,Mexico City Grand Prix,bortoleto,BOR,sauber,Kick Sauber,16.0,16,89.1891891891892,14.7,3,46.035897435897446,26.189743589743586,Dry,10.0,1.0,Finished,True
+2025,20,Mexico City Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,10.0,18,92.10526315789474,5.4,3,46.035897435897446,26.189743589743586,Dry,11.0,0.0,Finished,True
+2025,20,Mexico City Grand Prix,albon,ALB,williams,Williams,17.0,16,83.78378378378379,11.0,3,46.035897435897446,26.189743589743586,Dry,12.0,0.0,Lapped,True
+2025,20,Mexico City Grand Prix,hadjar,HAD,rb,Racing Bulls,8.0,17,86.8421052631579,10.7,3,46.035897435897446,26.189743589743586,Dry,13.0,0.0,Lapped,True
+2025,20,Mexico City Grand Prix,stroll,STR,aston_martin,Aston Martin,19.0,18,89.1891891891892,12.6,3,46.035897435897446,26.189743589743586,Dry,14.0,0.0,Lapped,True
+2025,20,Mexico City Grand Prix,gasly,GAS,alpine,Alpine,18.0,16,86.48648648648648,16.9,3,46.035897435897446,26.189743589743586,Dry,15.0,0.0,Lapped,True
+2025,20,Mexico City Grand Prix,colapinto,COL,alpine,Alpine,20.0,12,86.48648648648648,16.9,3,46.035897435897446,26.189743589743586,Dry,16.0,0.0,Lapped,True
+2025,20,Mexico City Grand Prix,sainz,SAI,williams,Williams,12.0,15,83.78378378378379,11.0,3,46.035897435897446,26.189743589743586,Dry,17.0,0.0,Retired,False
+2025,20,Mexico City Grand Prix,alonso,ALO,aston_martin,Aston Martin,14.0,15,89.1891891891892,12.6,3,46.035897435897446,26.189743589743586,Dry,18.0,0.0,Retired,False
+2025,20,Mexico City Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,13.0,17,89.1891891891892,14.7,3,46.035897435897446,26.189743589743586,Dry,19.0,0.0,Retired,False
+2025,20,Mexico City Grand Prix,lawson,LAW,rb,Racing Bulls,15.0,15,86.8421052631579,10.7,3,46.035897435897446,26.189743589743586,Dry,20.0,0.0,Retired,False
+2025,21,São Paulo Grand Prix,norris,NOR,mclaren,McLaren,1.0,18,92.5,5.2,3,40.28048780487806,25.97073170731707,Dry,1.0,25.0,Finished,True
+2025,21,São Paulo Grand Prix,antonelli,ANT,mercedes,Mercedes,2.0,16,90.0,5.8,3,40.28048780487806,25.97073170731707,Dry,2.0,18.0,Finished,True
+2025,21,São Paulo Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,19.0,19,92.5,5.7,3,40.28048780487806,25.97073170731707,Dry,3.0,15.0,Finished,True
+2025,21,São Paulo Grand Prix,russell,RUS,mercedes,Mercedes,6.0,20,90.0,5.8,3,40.28048780487806,25.97073170731707,Dry,4.0,12.0,Finished,True
+2025,21,São Paulo Grand Prix,piastri,PIA,mclaren,McLaren,4.0,19,92.5,5.2,3,40.28048780487806,25.97073170731707,Dry,5.0,10.0,Finished,True
+2025,21,São Paulo Grand Prix,bearman,BEA,haas,Haas F1 Team,8.0,18,92.5,11.7,3,40.28048780487806,25.97073170731707,Dry,6.0,8.0,Finished,True
+2025,21,São Paulo Grand Prix,lawson,LAW,rb,Racing Bulls,7.0,15,85.0,12.5,3,40.28048780487806,25.97073170731707,Dry,7.0,6.0,Finished,True
+2025,21,São Paulo Grand Prix,hadjar,HAD,rb,Racing Bulls,5.0,18,85.0,12.5,3,40.28048780487806,25.97073170731707,Dry,8.0,4.0,Finished,True
+2025,21,São Paulo Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,10.0,17,87.17948717948718,14.7,3,40.28048780487806,25.97073170731707,Dry,9.0,2.0,Finished,True
+2025,21,São Paulo Grand Prix,gasly,GAS,alpine,Alpine,9.0,17,87.17948717948718,17.2,3,40.28048780487806,25.97073170731707,Dry,10.0,1.0,Finished,True
+2025,21,São Paulo Grand Prix,albon,ALB,williams,Williams,12.0,17,82.05128205128204,12.1,3,40.28048780487806,25.97073170731707,Dry,11.0,0.0,Finished,True
+2025,21,São Paulo Grand Prix,ocon,OCO,haas,Haas F1 Team,20.0,19,92.5,11.7,3,40.28048780487806,25.97073170731707,Dry,12.0,0.0,Finished,True
+2025,21,São Paulo Grand Prix,sainz,SAI,williams,Williams,15.0,15,82.05128205128204,12.1,3,40.28048780487806,25.97073170731707,Dry,13.0,0.0,Finished,True
+2025,21,São Paulo Grand Prix,alonso,ALO,aston_martin,Aston Martin,11.0,15,87.17948717948718,14.3,3,40.28048780487806,25.97073170731707,Dry,14.0,0.0,Finished,True
+2025,21,São Paulo Grand Prix,colapinto,COL,alpine,Alpine,16.0,13,87.17948717948718,17.2,3,40.28048780487806,25.97073170731707,Dry,15.0,0.0,Finished,True
+2025,21,São Paulo Grand Prix,stroll,STR,aston_martin,Aston Martin,14.0,19,87.17948717948718,14.3,3,40.28048780487806,25.97073170731707,Dry,16.0,0.0,Finished,True
+2025,21,São Paulo Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,17.0,19,92.5,5.7,3,40.28048780487806,25.97073170731707,Dry,17.0,0.0,Finished,True
+2025,21,São Paulo Grand Prix,hamilton,HAM,ferrari,Ferrari,13.0,18,90.0,5.8,3,40.28048780487806,25.97073170731707,Dry,18.0,0.0,Retired,False
+2025,21,São Paulo Grand Prix,leclerc,LEC,ferrari,Ferrari,3.0,18,90.0,5.8,3,40.28048780487806,25.97073170731707,Dry,19.0,0.0,Retired,False
+2025,21,São Paulo Grand Prix,bortoleto,BOR,sauber,Kick Sauber,18.0,17,87.17948717948718,14.7,Unknown,40.28048780487806,25.97073170731707,Dry,20.0,0.0,Retired,False
+2025,22,Las Vegas Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,2.0,20,92.85714285714286,6.3,4,12.549411764705884,11.728235294117646,Mixed Rain,1.0,25.0,Finished,True
+2025,22,Las Vegas Grand Prix,russell,RUS,mercedes,Mercedes,4.0,21,90.47619047619048,5.0,4,12.549411764705884,11.728235294117646,Mixed Rain,2.0,18.0,Finished,True
+2025,22,Las Vegas Grand Prix,antonelli,ANT,mercedes,Mercedes,17.0,17,90.47619047619048,5.0,5,12.549411764705884,11.728235294117646,Mixed Rain,3.0,15.0,Finished,True
+2025,22,Las Vegas Grand Prix,leclerc,LEC,ferrari,Ferrari,9.0,18,85.71428571428571,8.5,4,12.549411764705884,11.728235294117646,Mixed Rain,4.0,12.0,Finished,True
+2025,22,Las Vegas Grand Prix,sainz,SAI,williams,Williams,3.0,16,82.92682926829268,12.7,4,12.549411764705884,11.728235294117646,Mixed Rain,5.0,10.0,Finished,True
+2025,22,Las Vegas Grand Prix,hadjar,HAD,rb,Racing Bulls,8.0,19,85.71428571428571,11.6,4,12.549411764705884,11.728235294117646,Mixed Rain,6.0,8.0,Finished,True
+2025,22,Las Vegas Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,11.0,18,85.36585365853658,14.8,5,12.549411764705884,11.728235294117646,Mixed Rain,7.0,6.0,Finished,True
+2025,22,Las Vegas Grand Prix,hamilton,HAM,ferrari,Ferrari,19.0,18,85.71428571428571,8.5,5,12.549411764705884,11.728235294117646,Mixed Rain,8.0,4.0,Finished,True
+2025,22,Las Vegas Grand Prix,ocon,OCO,haas,Haas F1 Team,13.0,20,92.85714285714286,10.8,5,12.549411764705884,11.728235294117646,Mixed Rain,9.0,2.0,Finished,True
+2025,22,Las Vegas Grand Prix,bearman,BEA,haas,Haas F1 Team,14.0,19,92.85714285714286,10.8,5,12.549411764705884,11.728235294117646,Mixed Rain,10.0,1.0,Finished,True
+2025,22,Las Vegas Grand Prix,alonso,ALO,aston_martin,Aston Martin,7.0,16,87.8048780487805,13.6,4,12.549411764705884,11.728235294117646,Mixed Rain,11.0,0.0,Finished,True
+2025,22,Las Vegas Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,20.0,20,92.85714285714286,6.3,5,12.549411764705884,11.728235294117646,Mixed Rain,12.0,0.0,Finished,True
+2025,22,Las Vegas Grand Prix,gasly,GAS,alpine,Alpine,10.0,18,87.8048780487805,16.4,4,12.549411764705884,11.728235294117646,Mixed Rain,13.0,0.0,Finished,True
+2025,22,Las Vegas Grand Prix,lawson,LAW,rb,Racing Bulls,6.0,16,85.71428571428571,11.6,4,12.549411764705884,11.728235294117646,Mixed Rain,14.0,0.0,Lapped,True
+2025,22,Las Vegas Grand Prix,colapinto,COL,alpine,Alpine,15.0,14,87.8048780487805,16.4,5,12.549411764705884,11.728235294117646,Mixed Rain,15.0,0.0,Lapped,True
+2025,22,Las Vegas Grand Prix,albon,ALB,williams,Williams,16.0,18,82.92682926829268,12.7,5,12.549411764705884,11.728235294117646,Mixed Rain,16.0,0.0,Retired,False
+2025,22,Las Vegas Grand Prix,bortoleto,BOR,sauber,Kick Sauber,18.0,17,85.36585365853658,14.8,5,12.549411764705884,11.728235294117646,Mixed Rain,17.0,0.0,Retired,False
+2025,22,Las Vegas Grand Prix,stroll,STR,aston_martin,Aston Martin,12.0,20,87.8048780487805,13.6,5,12.549411764705884,11.728235294117646,Mixed Rain,18.0,0.0,Retired,False
+2025,22,Las Vegas Grand Prix,norris,NOR,mclaren,McLaren,1.0,19,92.85714285714286,5.3,4,12.549411764705884,11.728235294117646,Mixed Rain,19.0,0.0,Disqualified,False
+2025,22,Las Vegas Grand Prix,piastri,PIA,mclaren,McLaren,5.0,20,92.85714285714286,5.3,4,12.549411764705884,11.728235294117646,Mixed Rain,20.0,0.0,Disqualified,False
+2025,23,Qatar Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,3.0,21,93.18181818181817,6.9,3,25.481395348837214,20.504651162790697,Dry,1.0,25.0,Finished,True
+2025,23,Qatar Grand Prix,piastri,PIA,mclaren,McLaren,1.0,20,88.63636363636364,6.5,3,25.481395348837214,20.504651162790697,Dry,2.0,18.0,Finished,True
+2025,23,Qatar Grand Prix,sainz,SAI,williams,Williams,7.0,17,81.3953488372093,13.2,3,25.481395348837214,20.504651162790697,Dry,3.0,15.0,Finished,True
+2025,23,Qatar Grand Prix,norris,NOR,mclaren,McLaren,2.0,19,88.63636363636364,6.5,3,25.481395348837214,20.504651162790697,Dry,4.0,12.0,Finished,True
+2025,23,Qatar Grand Prix,antonelli,ANT,mercedes,Mercedes,5.0,18,90.9090909090909,4.9,3,25.481395348837214,20.504651162790697,Dry,5.0,10.0,Finished,True
+2025,23,Qatar Grand Prix,russell,RUS,mercedes,Mercedes,4.0,22,90.9090909090909,4.9,3,25.481395348837214,20.504651162790697,Dry,6.0,8.0,Finished,True
+2025,23,Qatar Grand Prix,alonso,ALO,aston_martin,Aston Martin,8.0,17,86.04651162790698,13.3,3,25.481395348837214,20.504651162790697,Dry,7.0,6.0,Finished,True
+2025,23,Qatar Grand Prix,leclerc,LEC,ferrari,Ferrari,10.0,19,86.36363636363636,8.0,3,25.481395348837214,20.504651162790697,Dry,8.0,4.0,Finished,True
+2025,23,Qatar Grand Prix,lawson,LAW,rb,Racing Bulls,12.0,17,86.36363636363636,12.1,3,25.481395348837214,20.504651162790697,Dry,9.0,2.0,Finished,True
+2025,23,Qatar Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,15.0,21,93.18181818181817,6.9,3,25.481395348837214,20.504651162790697,Dry,10.0,1.0,Finished,True
+2025,23,Qatar Grand Prix,albon,ALB,williams,Williams,14.0,18,81.3953488372093,13.2,3,25.481395348837214,20.504651162790697,Dry,11.0,0.0,Finished,True
+2025,23,Qatar Grand Prix,hamilton,HAM,ferrari,Ferrari,17.0,19,86.36363636363636,8.0,3,25.481395348837214,20.504651162790697,Dry,12.0,0.0,Finished,True
+2025,23,Qatar Grand Prix,bortoleto,BOR,sauber,Kick Sauber,19.0,17,83.72093023255815,14.5,3,25.481395348837214,20.504651162790697,Dry,13.0,0.0,Finished,True
+2025,23,Qatar Grand Prix,colapinto,COL,alpine,Alpine,20.0,15,88.37209302325581,15.5,3,25.481395348837214,20.504651162790697,Dry,14.0,0.0,Lapped,True
+2025,23,Qatar Grand Prix,ocon,OCO,haas,Haas F1 Team,16.0,21,93.18181818181817,10.1,3,25.481395348837214,20.504651162790697,Dry,15.0,0.0,Lapped,True
+2025,23,Qatar Grand Prix,gasly,GAS,alpine,Alpine,9.0,19,88.37209302325581,15.5,3,25.481395348837214,20.504651162790697,Dry,16.0,0.0,Lapped,True
+2025,23,Qatar Grand Prix,stroll,STR,aston_martin,Aston Martin,18.0,20,86.04651162790698,13.3,3,25.481395348837214,20.504651162790697,Dry,17.0,0.0,Retired,False
+2025,23,Qatar Grand Prix,hadjar,HAD,rb,Racing Bulls,6.0,20,86.36363636363636,12.1,3,25.481395348837214,20.504651162790697,Dry,18.0,0.0,Retired,False
+2025,23,Qatar Grand Prix,bearman,BEA,haas,Haas F1 Team,13.0,20,93.18181818181817,10.1,3,25.481395348837214,20.504651162790697,Dry,19.0,0.0,Retired,False
+2025,23,Qatar Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,11.0,19,83.72093023255815,14.5,3,25.481395348837214,20.504651162790697,Dry,20.0,0.0,Retired,False
+2025,24,Abu Dhabi Grand Prix,max_verstappen,VER,red_bull,Red Bull Racing,1.0,22,93.47826086956522,6.6,3,29.110389610389603,25.096103896103898,Dry,1.0,25.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,piastri,PIA,mclaren,McLaren,3.0,21,89.13043478260869,6.4,3,29.110389610389603,25.096103896103898,Dry,2.0,18.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,norris,NOR,mclaren,McLaren,2.0,20,89.13043478260869,6.4,3,29.110389610389603,25.096103896103898,Dry,3.0,15.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,leclerc,LEC,ferrari,Ferrari,5.0,20,86.95652173913044,8.6,3,29.110389610389603,25.096103896103898,Dry,4.0,12.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,russell,RUS,mercedes,Mercedes,4.0,23,91.30434782608695,5.4,3,29.110389610389603,25.096103896103898,Dry,5.0,10.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,alonso,ALO,aston_martin,Aston Martin,6.0,18,84.44444444444444,13.7,3,29.110389610389603,25.096103896103898,Dry,6.0,8.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,ocon,OCO,haas,Haas F1 Team,8.0,22,91.30434782608695,10.8,3,29.110389610389603,25.096103896103898,Dry,7.0,6.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,hamilton,HAM,ferrari,Ferrari,16.0,20,86.95652173913044,8.6,3,29.110389610389603,25.096103896103898,Dry,8.0,4.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,hulkenberg,HUL,sauber,Kick Sauber,18.0,19,82.22222222222221,14.1,3,29.110389610389603,25.096103896103898,Dry,9.0,2.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,stroll,STR,aston_martin,Aston Martin,15.0,20,84.44444444444444,13.7,3,29.110389610389603,25.096103896103898,Dry,10.0,1.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,bortoleto,BOR,sauber,Kick Sauber,7.0,18,82.22222222222221,14.1,3,29.110389610389603,25.096103896103898,Dry,11.0,0.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,bearman,BEA,haas,Haas F1 Team,11.0,20,91.30434782608695,10.8,3,29.110389610389603,25.096103896103898,Dry,12.0,0.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,sainz,SAI,williams,Williams,12.0,18,82.22222222222221,12.2,3,29.110389610389603,25.096103896103898,Dry,13.0,0.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,tsunoda,TSU,red_bull,Red Bull Racing,10.0,22,93.47826086956522,6.6,3,29.110389610389603,25.096103896103898,Dry,14.0,0.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,antonelli,ANT,mercedes,Mercedes,14.0,19,91.30434782608695,5.4,3,29.110389610389603,25.096103896103898,Dry,15.0,0.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,albon,ALB,williams,Williams,17.0,19,82.22222222222221,12.2,3,29.110389610389603,25.096103896103898,Dry,16.0,0.0,Finished,True
+2025,24,Abu Dhabi Grand Prix,hadjar,HAD,rb,Racing Bulls,9.0,20,84.78260869565217,12.2,3,29.110389610389603,25.096103896103898,Dry,17.0,0.0,Lapped,True
+2025,24,Abu Dhabi Grand Prix,lawson,LAW,rb,Racing Bulls,13.0,18,84.78260869565217,12.2,3,29.110389610389603,25.096103896103898,Dry,18.0,0.0,Lapped,True
+2025,24,Abu Dhabi Grand Prix,gasly,GAS,alpine,Alpine,19.0,20,88.88888888888889,15.0,3,29.110389610389603,25.096103896103898,Dry,19.0,0.0,Lapped,True
+2025,24,Abu Dhabi Grand Prix,colapinto,COL,alpine,Alpine,20.0,16,88.88888888888889,15.0,3,29.110389610389603,25.096103896103898,Dry,20.0,0.0,Lapped,True

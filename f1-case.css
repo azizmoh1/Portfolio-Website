@@ -1,0 +1,53 @@
+/* F1 case study: uses the portfolio's shared typography and theme tokens. */
+.f1-page { padding-bottom: 4rem; }
+.f1-hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; padding: 4rem 0 2.5rem; align-items: center; }
+.f1-hero h1 { font-size: clamp(2.6rem, 5.5vw, 4.5rem); margin: 1rem 0; }
+.f1-hero .lead { color: var(--ink-soft); font-size: 1.08rem; }
+.f1-hero figure { margin: 0; }
+.f1-hero img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); }
+.f1-page figcaption { color: var(--muted); font-size: .82rem; margin-top: .65rem; line-height: 1.5; }
+.f1-status { display: inline-flex; gap: .5rem; align-items: center; color: var(--green); border: 1px solid var(--green); border-radius: 100px; padding: .35rem .8rem; font-size: .8rem; font-weight: 700; }
+.f1-status::before { content: ''; width: .4rem; height: .4rem; border-radius: 50%; background: currentColor; }
+.f1-actions { display: flex; gap: .65rem; flex-wrap: wrap; margin-top: 1.3rem; }
+.f1-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.f1-metric { padding: 1.35rem; background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius); }
+.f1-metric strong { display: block; font-family: 'Rajdhani', sans-serif; font-size: 2.8rem; line-height: 1.15; color: var(--ink); }
+.f1-metric span { display: block; color: var(--ink-soft); font-size: .85rem; }
+.f1-metric small { display: block; color: var(--muted); margin-top: .5rem; font-size: .75rem; }
+.f1-section { margin-top: 3.5rem; scroll-margin-top: 6rem; }
+.f1-section > p { max-width: 78ch; margin: .75rem 0 1.5rem; }
+.f1-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.f1-page .card { min-width: 0; }
+.f1-page .card p + p { margin-top: .8rem; }
+.f1-page figure.card { margin: 0; }
+.f1-plot { display: block; width: 100%; height: auto; border-radius: 6px; background: white; }
+.f1-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.f1-table { width: 100%; border-collapse: collapse; text-align: left; font-size: .9rem; }
+.f1-table caption { text-align: left; padding: 1rem; font-weight: 700; color: var(--ink); }
+.f1-table th { color: var(--ink); background: var(--accent-dim); }
+.f1-table th, .f1-table td { padding: .8rem 1rem; border-bottom: 1px solid var(--line); }
+.f1-table td { color: var(--ink-soft); }
+.f1-table tbody tr:last-child td { border-bottom: 0; }
+.f1-table .numeric { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.f1-note { border-left: 3px solid var(--accent); padding-left: 1rem; margin: 1.2rem 0; }
+.f1-steps { list-style: none; padding: 0; counter-reset: step; display: grid; gap: 1rem; }
+.f1-steps li { counter-increment: step; position: relative; padding-left: 2.6rem; }
+.f1-steps li::before { content: counter(step, decimal-leading-zero); position: absolute; left: 0; font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--accent); }
+.f1-steps strong { color: var(--ink-soft); }
+.f1-page details { margin-top: 1rem; padding: 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-card); }
+.f1-page summary { cursor: pointer; font-weight: 700; color: var(--ink); padding: .4rem 0; }
+.f1-page details[open] summary { margin-bottom: .8rem; }
+.f1-page pre { overflow-x: auto; padding: 1.2rem; border-radius: var(--radius-sm); background: var(--bg); color: var(--ink-soft); font-size: .83rem; line-height: 1.7; }
+.f1-page a:not(.btn) { text-underline-offset: .2em; }
+@media (max-width: 780px) {
+  .f1-hero, .f1-grid { grid-template-columns: 1fr; }
+  .f1-hero { gap: 1.5rem; padding-top: 2rem; }
+  .f1-metrics { grid-template-columns: 1fr 1fr; gap: .65rem; }
+  .f1-metric { padding: 1rem; }
+  .f1-metric strong { font-size: 2.3rem; }
+  .f1-section { margin-top: 2.5rem; }
+  .f1-table th, .f1-table td { padding: .7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .f1-page * { animation: none !important; transition: none !important; }
+}

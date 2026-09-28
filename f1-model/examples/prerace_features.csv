@@ -1,0 +1,3 @@
+Driver,GridPosition,DriverExperience,TeamReliability,CarPerformanceIndex,TrackTemperature,AirTemperature,TeamName,TireCompound,TrackStatus
+Hypothetical driver A,3,5,90,4.5,35,24,McLaren,3,Dry
+Hypothetical driver B,12,4,80,11.2,35,24,Williams,3,Dry
