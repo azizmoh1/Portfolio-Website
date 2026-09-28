@@ -39,6 +39,10 @@
 .f1-page details[open] summary { margin-bottom: .8rem; }
 .f1-page pre { overflow-x: auto; padding: 1.2rem; border-radius: var(--radius-sm); background: var(--bg); color: var(--ink-soft); font-size: .83rem; line-height: 1.7; }
 .f1-page a:not(.btn) { text-underline-offset: .2em; }
+.f1-select-label { display: block; margin-bottom: .5rem; color: var(--ink-soft); font-weight: 700; }
+.f1-select { width: 100%; max-width: 35rem; padding: .8rem; margin-bottom: .9rem; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.f1-select:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+#f1-race-summary { margin-bottom: 1rem; }
 @media (max-width: 780px) {
   .f1-hero, .f1-grid { grid-template-columns: 1fr; }
   .f1-hero { gap: 1.5rem; padding-top: 2rem; }

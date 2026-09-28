@@ -1,0 +1,241 @@
+{
+  "status": "Completed - Final pre-race model",
+  "generated_utc": "2026-09-28T15:25:02.142741+00:00",
+  "scope": "Pre-race only: conditional position, retirement probability, unique field ordering",
+  "selection_train": 2023,
+  "selection_validation": 2024,
+  "evaluation_training": [
+    2023,
+    2024
+  ],
+  "test_season": 2025,
+  "deployment_training": [
+    2023,
+    2024,
+    2025
+  ],
+  "position_model": "random_forest",
+  "retirement_model": "random_forest",
+  "position_validation": {
+    "random_forest": {
+      "MAE": 2.296800449613047,
+      "MSE": 9.167174805716831,
+      "R2": 0.6651786232090675,
+      "n": 425
+    },
+    "gradient_boosting": {
+      "MAE": 2.415001849198293,
+      "MSE": 9.862270125353653,
+      "R2": 0.6397910008658568,
+      "n": 425
+    },
+    "linear_regression": {
+      "MAE": 2.6470127938155392,
+      "MSE": 11.580380660127066,
+      "R2": 0.5770388283674013,
+      "n": 425
+    }
+  },
+  "retirement_validation": {
+    "random_forest": {
+      "Brier": 0.0935060974775556,
+      "LogLoss": 0.3330414469836612,
+      "ROC_AUC": 0.605858343337335,
+      "n": 474,
+      "retirements": 49
+    },
+    "logistic_regression": {
+      "Brier": 0.11457136635399567,
+      "LogLoss": 0.3836976692336292,
+      "ROC_AUC": 0.678703481392557,
+      "n": 474,
+      "retirements": 49
+    }
+  },
+  "conditional_position_test": {
+    "MAE": 2.4313998769926126,
+    "MSE": 10.37960738815829,
+    "R2": 0.6121085593966986,
+    "n": 419
+  },
+  "retirement_test": {
+    "Brier": 0.09690896095723506,
+    "LogLoss": 0.3410015598181828,
+    "ROC_AUC": 0.5835088211895737,
+    "n": 470,
+    "retirements": 51
+  },
+  "retirement_constant_baseline": {
+    "Brier": 0.09684766153595717,
+    "LogLoss": 0.3439362184993827,
+    "ROC_AUC": 0.5,
+    "n": 470,
+    "retirements": 51
+  },
+  "full_field_test": {
+    "combined": {
+      "MAE": 3.4112734864300625,
+      "MSE": 23.32776617954071,
+      "R2": 0.29588477041433814,
+      "n": 479,
+      "MeanRaceSpearman": 0.6476190476190475,
+      "PodiumRecall": 0.7777777777777777,
+      "WinnerAccuracy": 0.5833333333333334,
+      "races": 24
+    },
+    "grid_baseline": {
+      "MAE": 3.3444676409185803,
+      "MSE": 23.09394572025052,
+      "R2": 0.30294230627558694,
+      "n": 479,
+      "MeanRaceSpearman": 0.6511173767752715,
+      "PodiumRecall": 0.75,
+      "WinnerAccuracy": 0.6666666666666666,
+      "races": 24
+    },
+    "position_only": {
+      "MAE": 3.4029227557411272,
+      "MSE": 23.340292275574114,
+      "R2": 0.29550668813605696,
+      "n": 479,
+      "MeanRaceSpearman": 0.6473893065998327,
+      "PodiumRecall": 0.7638888888888888,
+      "WinnerAccuracy": 0.5833333333333334,
+      "races": 24
+    }
+  },
+  "team_test": {
+    "Alpine": {
+      "MAE": 3.1458333333333335,
+      "n": 48
+    },
+    "Aston Martin": {
+      "MAE": 3.6808510638297873,
+      "n": 47
+    },
+    "Ferrari": {
+      "MAE": 3.3958333333333335,
+      "n": 48
+    },
+    "Haas F1 Team": {
+      "MAE": 3.7708333333333335,
+      "n": 48
+    },
+    "Kick Sauber": {
+      "MAE": 4.208333333333333,
+      "n": 48
+    },
+    "McLaren": {
+      "MAE": 2.4791666666666665,
+      "n": 48
+    },
+    "Mercedes": {
+      "MAE": 3.1875,
+      "n": 48
+    },
+    "Racing Bulls": {
+      "MAE": 3.5416666666666665,
+      "n": 48
+    },
+    "Red Bull Racing": {
+      "MAE": 2.7291666666666665,
+      "n": 48
+    },
+    "Williams": {
+      "MAE": 3.9791666666666665,
+      "n": 48
+    }
+  },
+  "data": {
+    "2023": {
+      "rows": 440,
+      "races": 22,
+      "finishers": 374,
+      "sha256": "40755719c26afd855131b0c35eae50d7d5a163caa72e86f86440cdf1d500cb7f"
+    },
+    "2024": {
+      "rows": 479,
+      "races": 24,
+      "finishers": 425,
+      "sha256": "aaaff4e3da3583f8b78cf93336708199a6a7fd5c084f97d2015c303505aefde8"
+    },
+    "2025": {
+      "rows": 479,
+      "races": 24,
+      "finishers": 419,
+      "sha256": "03cb885a923a42640356b4a65a0fed3b194d80a755dd0ccfc7b83762e314d963"
+    }
+  },
+  "features": [
+    "GridPosition",
+    "DriverExperience",
+    "TeamReliability",
+    "CarPerformanceIndex",
+    "TrackTemperature",
+    "AirTemperature",
+    "DriverRecentPosition",
+    "QualifyingGapPercent",
+    "QualifyingPosition",
+    "TeamId",
+    "DriverId",
+    "TireCompound",
+    "TrackStatus"
+  ],
+  "outlier_filter": {
+    "mean": 32.68496054680644,
+    "std": 9.120441444229058,
+    "removed": 0
+  },
+  "missing_numeric_fraction": {
+    "2023": {
+      "GridPosition": 0.0022727272727272726,
+      "DriverExperience": 0.0,
+      "TeamReliability": 0.045454545454545456,
+      "CarPerformanceIndex": 0.045454545454545456,
+      "TrackTemperature": 0.0,
+      "AirTemperature": 0.0,
+      "DriverRecentPosition": 0.05,
+      "QualifyingGapPercent": 0.0022727272727272726,
+      "QualifyingPosition": 0.0
+    },
+    "2024": {
+      "GridPosition": 0.0,
+      "DriverExperience": 0.0,
+      "TeamReliability": 0.04175365344467641,
+      "CarPerformanceIndex": 0.04175365344467641,
+      "TrackTemperature": 0.04175365344467641,
+      "AirTemperature": 0.04175365344467641,
+      "DriverRecentPosition": 0.05010438413361169,
+      "QualifyingGapPercent": 0.04384133611691023,
+      "QualifyingPosition": 0.04175365344467641
+    },
+    "2025": {
+      "GridPosition": 0.0,
+      "DriverExperience": 0.0,
+      "TeamReliability": 0.04175365344467641,
+      "CarPerformanceIndex": 0.04175365344467641,
+      "TrackTemperature": 0.0,
+      "AirTemperature": 0.0,
+      "DriverRecentPosition": 0.04384133611691023,
+      "QualifyingGapPercent": 0.008350730688935281,
+      "QualifyingPosition": 0.0020876826722338203
+    }
+  },
+  "prediction_cutoff": "After qualifying and confirmed grid publication, before race start",
+  "history_policy": "One upcoming race at a time; earlier 2025 outcomes may update rolling features, never model weights",
+  "rank_policy": "Sort (1-p_retire)*conditional_position + p_retire*training_mean_retired_position_fraction*field_size; ties resolved by grid then driver ID",
+  "versions": {
+    "fastf1": "3.8.3",
+    "pandas": "2.3.3",
+    "numpy": "2.5.3",
+    "scikit-learn": "1.9.1"
+  },
+  "limitations": [
+    "Retirement includes crashes and mechanical failures; DNS and DSQ are excluded from classifier evaluation.",
+    "Full-field evaluation includes every returned entry, including DNS/DSQ; these outcomes are not separately modeled.",
+    "Unique ordering is an expected-position heuristic, not a probabilistic race simulation.",
+    "No claim that retirement probabilities are useful unless they beat the constant-rate baseline.",
+    "Three historical seasons do not establish performance under future regulation changes.",
+    "Qualifying pace/compound/rain are proxies; no live strategy, tire degradation, DRS or pit-loss model."
+  ]
+}

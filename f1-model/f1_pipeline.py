@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Formula 1 finishing-position prediction | Aziz Mohammad, UIC Mechanical Engineering.
 
-Completed Phase 1 portfolio pipeline: connect SAE drivetrain engineering context
+Completed Phase 1 portfolio pipeline: connect motorsport data
 to reproducible data engineering and predictive analytics. Predict at the point
 when qualifying and the starting grid are known. Current-race outcomes are labels
 only; all rolling statistics use earlier Grands Prix. Physics-based tire wear,
@@ -72,12 +72,25 @@ def load_and_cache_session(year, round_number, kind, cache_dir, offline=False):
                          weather=kind == "Q", messages=False)
             if session.results.empty:
                 raise DataLoadError("No session results returned")
+            if kind == "R":
+                validate_race_results(session.results)
             return session
         except Exception as exc:
             errors.append(str(exc))
         finally:
             fastf1.Cache.offline_mode(offline)
     raise DataLoadError(f"{year} round {round_number} {kind}: " + " | ".join(errors))
+
+
+def validate_race_results(results):
+    """FastF1 can return a populated entry list while result metadata failed."""
+    for column in ["DriverId", "TeamId", "Position", "Status"]:
+        if column not in results or results[column].isna().any():
+            raise DataLoadError(f"Incomplete race results: missing {column}")
+    if results.DriverId.astype(str).str.strip().eq("").any() or results.DriverId.duplicated().any():
+        raise DataLoadError("Incomplete race results: driver IDs are empty or duplicated")
+    if not pd.to_numeric(results.Position, errors="coerce").gt(0).all():
+        raise DataLoadError("Incomplete race results: invalid finishing positions")
 
 
 def fallback_results(year, round_number, cache_dir, offline=False):
@@ -108,7 +121,9 @@ def fallback_results(year, round_number, cache_dir, offline=False):
              "GridPosition": r.get("grid"), "Position": r["position"],
              "Points": r["points"], "Status": r["status"]}
             for r in race["Results"]]
-    return pd.DataFrame(rows), race["raceName"]
+    frame = pd.DataFrame(rows)
+    validate_race_results(frame)
+    return frame, race["raceName"]
 
 
 def weather_features(weather):
@@ -155,6 +170,17 @@ def qualifying_features(session):
 def extract_features(results, qual_session, history, year, round_number, race_name):
     """One row per driver; history is unchanged until the entire race is extracted."""
     weather, compounds = qualifying_features(qual_session)
+    pace, qual_positions = {}, {}
+    if qual_session is not None:
+        try:
+            laps = qual_session.laps.dropna(subset=["LapTime"])
+            if "Deleted" in laps:
+                laps = laps[~laps["Deleted"].eq(True)]
+            best = laps.groupby("Driver")["LapTime"].min().dt.total_seconds()
+            pace = ((best / best.min() - 1) * 100).to_dict()
+            qual_positions = qual_session.results.set_index("Abbreviation")["Position"].to_dict()
+        except Exception as exc:
+            LOG.warning("Qualifying pace/position unavailable: %s", exc)
     rows = []
     for _, result in results.iterrows():
         driver, team = str(result["DriverId"]), str(result["TeamId"])
@@ -163,7 +189,7 @@ def extract_features(results, qual_session, history, year, round_number, race_na
         team_past = past[past["TeamId"].eq(team)]
         # Average both cars within each GP, then the last five GPs (not five cars).
         team_races = team_past.groupby("Round")["FinalPosition"].mean().tail(5)
-        starts = team_past[~team_past["Status"].isin(["Did not start", "Did not qualify", "Withdrawn"])]
+        starts = team_past[~team_past["Status"].isin(["Did not start", "Did not qualify", "Withdrawn", "Withdrew"])]
         rows.append({
             "Season": year, "Round": round_number, "RaceName": race_name,
             "DriverId": driver, "Driver": result["Abbreviation"], "TeamId": team,
@@ -172,6 +198,10 @@ def extract_features(results, qual_session, history, year, round_number, race_na
             "DriverExperience": int(driver_past["Finished"].sum()),
             "TeamReliability": float(starts["Finished"].mean() * 100) if len(starts) else np.nan,
             "CarPerformanceIndex": float(team_races.mean()) if len(team_races) else np.nan,
+            "DriverRecentPosition": float(driver_past.sort_values("Round")["FinalPosition"].tail(5).mean()),
+            "QualifyingGapPercent": pace.get(result["Abbreviation"], np.nan),
+            "QualifyingPosition": qual_positions.get(result["Abbreviation"], np.nan),
+            "FieldSize": len(results),
             "TireCompound": compounds.get(result["Abbreviation"], "Unknown"),
             "TrackTemperature": weather[0], "AirTemperature": weather[1],
             "TrackStatus": weather[2],

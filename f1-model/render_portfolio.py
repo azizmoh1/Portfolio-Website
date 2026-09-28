@@ -1,126 +1,129 @@
-"""Regenerate the public case study from the measured experiment artifacts."""
+"""Build the final case study and browser explorer from verified experiment files."""
 import csv
 import html
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT / "outputs"
-metrics = json.loads((OUT / "metrics.json").read_text())
-test, baseline = metrics["test"], metrics["baseline"]
-improvement = 100 * (1 - test["MAE"] / baseline["MAE"])
-escape = html.escape
+OUT = ROOT / 'final_outputs'
+m = json.loads((OUT / 'metrics.json').read_text())
+pos, risk = m['conditional_position_test'], m['retirement_test']
+rank, grid = m['full_field_test']['combined'], m['full_field_test']['grid_baseline']
+constant = m['retirement_constant_baseline']
+e = html.escape
 
 
-def table(caption, headings, rows):
-    header = ''.join(f'<th scope="col">{escape(h)}</th>' for h in headings)
-    body = ''.join('<tr>' + ''.join(f'<td>{escape(str(cell))}</td>' for cell in row) + '</tr>' for row in rows)
-    return f'<div class="f1-table-wrap"><table class="f1-table"><caption>{escape(caption)}</caption><thead><tr>{header}</tr></thead><tbody>{body}</tbody></table></div>'
+def table(caption, headers, rows):
+    head = ''.join(f'<th scope="col">{e(h)}</th>' for h in headers)
+    body = ''.join('<tr>'+''.join(f'<td>{e(str(v))}</td>' for v in row)+'</tr>' for row in rows)
+    return f'<div class="f1-table-wrap"><table class="f1-table"><caption>{e(caption)}</caption><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
 
 
-model_names = {"random_forest": "Random Forest (primary)", "gradient_boosting": "Gradient Boosting", "linear_regression": "Linear Regression"}
-validation = table("Validation: rounds 17-21", ["Model", "MAE", "MSE", "R²"],
-                   [(model_names[name], f"{v['MAE']:.2f}", f"{v['MSE']:.2f}", f"{v['R2']:.3f}")
-                    for name, v in metrics['validation'].items()])
-teams = table("Per-team test error", ["Team", "MAE (positions)", "Drivers evaluated"],
-              [(name, f"{v['MAE']:.2f}", v['n']) for name, v in test['TeamMAE'].items()])
-with (OUT / "test_predictions.csv").open() as handle:
-    predictions = list(csv.DictReader(handle))
-race_tables = ''
-for race in dict.fromkeys(row['RaceName'] for row in predictions):
-    rows = [r for r in predictions if r['RaceName'] == race]
-    rows.sort(key=lambda r: float(r['FinalPosition']))
-    body = table(f"{race}: finishers only", ["Driver", "Team", "Actual", "Predicted", "Error"],
-                 [(r['Driver'], r['TeamName'], int(float(r['FinalPosition'])), f"{float(r['Prediction']):.2f}",
-                   f"{float(r['AbsoluteError']):.2f}") for r in rows])
-    race_tables += f'<details><summary>{escape(race)} · {len(rows)} finishers</summary>{body}</details>'
-
+comparison = table('Full 2025 field: 479 driver entries', ['Ordering', 'MAE', 'MSE', 'Race Spearman'],
+    [(name, f"{v['MAE']:.2f}", f"{v['MSE']:.2f}", f"{v['MeanRaceSpearman']:.3f}")
+     for name, v in [('Combined model', rank), ('Position-only model', m['full_field_test']['position_only']), ('Starting-grid baseline', grid)]])
+validation = table('Position-model selection: 2024 finishers', ['Model', 'Validation MAE'],
+    [(name.replace('_', ' ').title(), f"{v['MAE']:.2f}") for name, v in m['position_validation'].items()])
+team_table = table('Full-field test error by team', ['Team', 'MAE', 'Entries'],
+    [(name, f"{v['MAE']:.2f}", v['n']) for name,v in m['team_test'].items()])
+retirement_table = table('Retirement probability: 2025 eligible starters', ['Model', 'Brier (lower is better)', 'ROC AUC'],
+    [('Retirement model', f"{risk['Brier']:.4f}", f"{risk['ROC_AUC']:.3f}"), ('Constant training rate', f"{constant['Brier']:.4f}", '0.500')])
+rank_note = ('The combined model beat grid order on full-field MAE.' if rank['MAE'] < grid['MAE'] else
+             'Starting-grid order had slightly lower full-field MAE. The added model complexity did not beat that baseline on this test season.')
+risk_note = ('The retirement model beat the constant-rate baseline on Brier score.' if risk['Brier'] < constant['Brier'] else
+             'The retirement model narrowly missed the constant-rate baseline on Brier score. Treat its probabilities as exploratory estimates, not reliable warnings about individual drivers.')
+with (OUT / 'test_predictions.csv').open() as f:
+    predictions = list(csv.DictReader(f))
+races = []
+for number in sorted({int(r['Round']) for r in predictions}):
+    rows = [r for r in predictions if int(r['Round']) == number]
+    rows.sort(key=lambda r: int(r['PredictedPosition']))
+    races.append({'round': number, 'name': rows[0]['RaceName'], 'drivers': [
+        {'driver': r['Driver'], 'team': r['TeamName'], 'predicted': int(r['PredictedPosition']),
+         'actual': int(float(r['FinalPosition'])), 'risk': float(r['RetirementProbability']),
+         'status': r['Status']} for r in rows]})
+(OUT / 'race_forecasts.json').write_text(json.dumps(races, indent=2, allow_nan=False)+'\n')
+rows_total = sum(v['rows'] for v in m['data'].values())
+races_total = sum(v['races'] for v in m['data'].values())
 page = f'''<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Aziz Mohammad's completed F1 prediction pipeline: 24 Grands Prix, chronological evaluation, Python, FastF1 and Random Forest. Explore measured results and source code." />
-  <title>Formula 1 Race Prediction | Aziz Mohammad</title>
+  <meta name="description" content="Aziz Mohammad's completed Formula 1 pre-race prediction project: three seasons, retirement probabilities, full-field forecasts and transparent held-out evaluation." />
+  <title>Formula 1 Pre-Race Prediction | Aziz Mohammad</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Rajdhani:wght@500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="f1-case.css" />
+  <link rel="stylesheet" href="styles.css" /><link rel="stylesheet" href="f1-case.css" />
 </head>
 <body>
-  <header class="site-header"><nav class="nav container" aria-label="Main navigation">
-    <a class="logo" href="index.html#projects">AM <span>/ Projects</span></a>
-    <button class="menu-toggle" aria-label="Toggle menu">Menu</button>
-    <ul class="nav-links"><li><a href="#overview">Overview</a></li><li><a href="#process">Method</a></li><li><a href="#results">Results</a></li><li><a href="#source">Source</a></li></ul>
-  </nav></header>
-  <main class="container f1-page">
-    <section class="f1-hero" aria-labelledby="project-title">
-      <div><span class="f1-status">Completed · Phase 1</span>
-        <h1 id="project-title">Predicting the<br />finishing order.</h1>
-        <p class="lead">Formula 1 race prediction, from session data to a tested machine-learning pipeline.</p>
-        <p>Built by Aziz Mohammad, UIC Mechanical Engineering. Connecting SAE Formula drivetrain experience with data engineering and predictive analytics.</p>
-        <div class="f1-actions"><a class="btn btn-primary" href="#results">Explore Results</a><a class="btn btn-secondary" href="https://github.com/azizmoh1/Portfolio-Website/tree/main/f1-model">View Python Source</a></div>
-      </div>
-      <figure><img src="F1pic.jpg" alt="Formula 1 race car" width="1000" height="750" /><figcaption>2025 season study · 24 Grands Prix · pre-race prediction</figcaption></figure>
-    </section>
-    <div class="f1-metrics" aria-label="Measured Random Forest test results">
-      <div class="f1-metric"><strong>{test['MAE']:.2f}</strong><span>Mean absolute error</span><small>Finishing positions, test set</small></div>
-      <div class="f1-metric"><strong>{test['R2']:.3f}</strong><span>Test R²</span><small>{test['n']} finishers across 3 later races</small></div>
-      <div class="f1-metric"><strong>{improvement:.1f}%</strong><span>Lower MAE than grid baseline</span><small>{baseline['MAE']:.2f} → {test['MAE']:.2f} positions</small></div>
-      <div class="f1-metric"><strong>{metrics['finisher_rows']}</strong><span>Eligible driver-race entries</span><small>Across the full 2025 season</small></div>
-    </div>
-    <section id="overview" class="f1-section">
-      <p class="eyebrow">01 / Engineering question</p><h2>What can we know before lights out?</h2>
-      <p>Starting position matters, but it does not determine the result. This project asks whether qualifying conditions, team finish rate and recent car performance can improve on simply predicting that every driver finishes where they start.</p>
-      <div class="f1-grid"><div class="card"><h3>Completed scope</h3><p>Cached session ingestion, historical features, data cleaning, three regression models, chronological validation, test metrics, plots, model export and CSV-based inference.</p><p>The data pipeline uses FastF1 with a Jolpica results fallback. Reproduction and automated tests are included with the source.</p></div>
-      <div class="card"><h3>Prediction boundary</h3><p>Features are available after qualifying and grid publication, before race start. Race outcomes supply training labels and prior-round history only.</p><p>Results are conditional on a driver finishing. Live-race strategy, retirement prediction and detailed tire physics are future extensions.</p></div></div>
-    </section>
-    <section id="process" class="f1-section">
-      <p class="eyebrow">02 / Data to prediction</p><h2>A pipeline with a clear time boundary.</h2>
-      <div class="f1-grid"><div class="card"><ol class="f1-steps">
-        <li><strong>Load and cache.</strong> Qualifying and race classification for all 24 rounds. {metrics['raw_rows']} driver-race records; {metrics['excluded_rows']} retirement, DNS or disqualification records excluded from supervised modeling.</li>
-        <li><strong>Build historical features.</strong> Completed races by driver, team finish percentage, and team-average classified position over the last five earlier Grands Prix.</li>
-        <li><strong>Add qualifying context.</strong> Published starting grid, fastest valid qualifying-lap tire compound, surface/air temperature, and a qualifying rainfall proxy.</li>
-        <li><strong>Fit training transformations.</strong> Missing-value imputation, numerical scaling and categorical one-hot encoding. Temperature outlier limits use training data only.</li>
-        <li><strong>Evaluate later races.</strong> Train on rounds 1-16, compare models on 17-21, and test the prespecified Random Forest on 22-24.</li>
-      </ol></div><div class="card"><h3>Why whole races?</h3><p>A random driver split would mix the same event across training and test. Holding out complete later races gives a more realistic check of performance on an upcoming Grand Prix.</p>
-      <p>The split contains {metrics['splits']['train']['rows']} training, {metrics['splits']['validation']['rows']} validation and {test['n']} test entries. All ten teams appear in each partition.</p>
-      <p>Evaluation proceeds one race at a time: results from an earlier completed test race may become historical features for the next. Model weights remain fixed.</p>
-      <p class="f1-note">Track temperature measures the surface; air temperature measures the ambient air. The rainfall feature is a weather proxy, not a measurement of track wetness.</p></div></div>
-    </section>
-    <section id="results" class="f1-section">
-      <p class="eyebrow">03 / Measured results</p><h2>Tested on the final three Grands Prix.</h2>
-      <p>Las Vegas, Qatar and Abu Dhabi 2025. Random Forest achieved MAE {test['MAE']:.2f}, MSE {test['MSE']:.2f}, and R² {test['R2']:.3f}. Average absolute error is not a confidence interval or a guarantee for any individual driver.</p>
-      <div class="f1-grid">
-        <figure class="card"><a href="f1-model/outputs/pred_vs_actual.png"><img class="f1-plot" src="f1-model/outputs/pred_vs_actual.png" alt="Scatter plot of actual and predicted finishing positions for the held-out 2025 races" width="1440" height="1080" loading="lazy" /></a><figcaption>Each point is one finisher. The dashed line shows a perfect prediction. Click to view the full-resolution plot.</figcaption></figure>
-        <figure class="card"><a href="f1-model/outputs/feature_importances.png"><img class="f1-plot" src="f1-model/outputs/feature_importances.png" alt="Top ten Random Forest feature importances, led by starting grid position" width="1620" height="1080" loading="lazy" /></a><figcaption>Starting position is the strongest model signal. Impurity-based importance describes this fitted model; it does not establish cause and effect.</figcaption></figure>
-      </div>
-      <div class="f1-grid" style="margin-top:1.25rem"><div class="card"><h3>How the alternatives compared</h3>{validation}<p class="f1-note">Linear Regression had the lowest validation MAE. Random Forest remains the prespecified primary experiment; the test set was not used to tune or select the model.</p></div>
-      <div class="card"><h3>Error by team</h3>{teams}<p>Small sample counts make team-level comparisons uncertain.</p></div></div>
-      <details><summary>Inspect individual test predictions</summary><p>Continuous predicted positions can tie and do not enforce a unique race ranking.</p>{race_tables}</details>
-      <details><summary>View the error distribution</summary><img class="f1-plot" src="f1-model/outputs/residuals.png" alt="Histogram of predicted minus actual finishing position" width="1440" height="720" loading="lazy" /></details>
-    </section>
-    <section id="lessons" class="f1-section">
-      <p class="eyebrow">04 / What this establishes</p><h2>A working baseline, with room to improve.</h2>
-      <div class="f1-grid"><div class="card"><h3>Engineering lessons</h3><p>Reliable feature definitions matter: five races means five events, not five individual car results. Lapped finishers belong in the dataset. Team finish percentage combines mechanical failures with crashes and other causes.</p><p>The grid baseline is competitive, and the simpler linear model performed best on validation. Greater model complexity does not automatically produce better predictions.</p></div>
-      <div class="card"><h3>Limits and next experiments</h3><p>This is a single-season study with only three test events and excludes drivers who did not finish. It does not yet demonstrate performance across seasons or predict a complete field including retirements.</p><p>Next experiments: multi-season evaluation, retirement probability, tire degradation, DRS speed delta and circuit-specific pit-lane loss. Stationary service time and total pit-stop time loss must be modeled separately.</p></div></div>
-    </section>
-    <section id="source" class="f1-section">
-      <p class="eyebrow">05 / Reproduce the work</p><h2>Code, data and results you can inspect.</h2>
-      <div class="card"><p>The repository includes modular Python functions, automated tests, dependency versions, the derived feature dataset, individual predictions and all figures. No synthetic examples contribute to these reported metrics.</p>
-      <div class="f1-actions"><a class="btn btn-primary" href="https://github.com/azizmoh1/Portfolio-Website/tree/main/f1-model">Source &amp; Setup Guide</a><a class="btn btn-secondary" href="f1-model/outputs/summary.txt">Measured Report</a><a class="btn btn-secondary" href="f1-model/outputs/dataset.csv" download>Download Dataset</a><a class="btn btn-secondary" href="f1-model/outputs/test_predictions.csv" download>Test Predictions</a></div>
-      <pre><code>python -m pip install -r requirements.txt
-python f1_pipeline.py train --dataset outputs/dataset.csv \\
-    --output-dir outputs-reproduced
+<header class="site-header"><nav class="nav container" aria-label="Main navigation">
+  <a class="logo" href="index.html#projects">AM <span>/ Projects</span></a>
+  <button class="menu-toggle" aria-label="Toggle menu">Menu</button>
+  <ul class="nav-links"><li><a href="#overview">Overview</a></li><li><a href="#method">Method</a></li><li><a href="#results">Results</a></li><li><a href="#explorer">Race Explorer</a></li><li><a href="#source">Source</a></li></ul>
+</nav></header>
+<main class="container f1-page">
+<section class="f1-hero" aria-labelledby="project-title">
+  <div><span class="f1-status">Completed · Final pre-race model</span>
+    <h1 id="project-title">Formula 1.<br />Before lights out.</h1>
+    <p class="lead">Predict finishing positions, estimate retirement risk, and forecast a complete race order.</p>
+    <p>Built by Aziz Mohammad, UIC Mechanical Engineering. A motorsport data project connecting engineering analysis with machine learning.</p>
+    <div class="f1-actions"><a class="btn btn-primary" href="#explorer">Explore Race Forecasts</a><a class="btn btn-secondary" href="https://github.com/azizmoh1/Portfolio-Website/tree/main/f1-model">View Python Source</a></div>
+  </div>
+  <figure><img src="F1pic.jpg" alt="Formula 1 race car" width="1000" height="750" /><figcaption>2023–2025 data · {races_total} Grands Prix · {rows_total:,} driver-race entries</figcaption></figure>
+</section>
+<div class="f1-metrics" aria-label="Final model measured results">
+  <div class="f1-metric"><strong>{pos['MAE']:.2f}</strong><span>Finisher-only MAE</span><small>{pos['n']} finishers in the 2025 test season</small></div>
+  <div class="f1-metric"><strong>{rank['MAE']:.2f}</strong><span>Full-field rank MAE</span><small>Grid baseline: {grid['MAE']:.2f} positions</small></div>
+  <div class="f1-metric"><strong>{risk['Brier']:.4f}</strong><span>Retirement Brier score</span><small>Constant baseline: {constant['Brier']:.4f}</small></div>
+  <div class="f1-metric"><strong>{races_total}</strong><span>Grands Prix studied</span><small>Model selection before the 2025 holdout</small></div>
+</div>
+<section id="overview" class="f1-section"><p class="eyebrow">01 / Project scope</p><h2>Three predictions. One pre-race boundary.</h2>
+<p>The completed pipeline uses qualifying observations, the confirmed grid and previous race results. It turns those inputs into a conditional finishing-position estimate, a retirement probability, and a unique position for every driver in the supplied field.</p>
+<div class="f1-grid"><div class="card"><h3>From prototype to final model</h3><p>The original single-season baseline expanded to three seasons, explicit season-level evaluation, retirement classification, full-field ranking, and commands for preparing upcoming-race inputs.</p><p>Historical data snapshots, source provenance, model files generated by training, regression tests, and evaluation artifacts make the process reproducible.</p></div>
+<div class="card"><h3>Known before the start</h3><p>Prediction occurs after qualifying and final grid publication. No current-race finish, points, race-lap times or pit stops enter the feature matrix.</p><p>Live telemetry, strategy optimization, tire degradation, DRS and engine-specific failure physics are outside the completed pre-race scope.</p></div></div></section>
+<section id="method" class="f1-section"><p class="eyebrow">02 / Validation design</p><h2>Choose on earlier seasons. Test on a later one.</h2>
+<div class="f1-grid"><div class="card"><ol class="f1-steps">
+<li><strong>Collect.</strong> FastF1 qualifying and classification data for 2023–2025, with caching, completeness checks and a Jolpica results fallback.</li>
+<li><strong>Engineer.</strong> Grid, qualifying position and pace gap, driver/team history, qualifying compound, and surface/air temperatures. Weather is a rainfall proxy, not measured track wetness.</li>
+<li><strong>Select.</strong> Fit candidates on 2023; use 2024 finisher MAE for position-model selection and retirement Brier score for classifier selection.</li>
+<li><strong>Evaluate.</strong> Refit selected models on 2023–2024 and test on all 24 races of 2025. Fit preprocessing only inside the training partition.</li>
+<li><strong>Deploy.</strong> After freezing test results, refit model types on 2023–2025 for future-race predictions. That refit has no independent test score.</li>
+</ol></div><div class="card"><h3>How a field becomes an order</h3><p>The ranking score blends predicted finishing position with retirement probability and the typical classified position of retired drivers in training data. Scores are sorted, with grid position and driver ID breaking ties.</p><p>This guarantees a unique 1-to-N order, but remains a ranking heuristic rather than a physical race simulation.</p><p class="f1-note">Test evaluation predicts one GP at a time: earlier completed 2025 races update historical features for later ones. The evaluation model weights remain fixed.</p>{validation}</div></div></section>
+<section id="results" class="f1-section"><p class="eyebrow">03 / Measured performance</p><h2>What the 2025 holdout actually shows.</h2>
+<p class="f1-note">2025 was explored during the original prototype. It is held out of final-stage fitting and selection, but is not a never-inspected external benchmark.</p>
+<p>Finisher-only position prediction achieved MAE {pos['MAE']:.2f}, MSE {pos['MSE']:.2f} and R² {pos['R2']:.3f}. Full-field evaluation is harder: it includes retired, non-starting and disqualified entries. MAE is average absolute error, not a confidence interval.</p>
+<div class="f1-grid"><div class="card"><h3>Full-field ordering</h3>{comparison}<p class="f1-note">{rank_note}</p><p>Winner accuracy: {rank['WinnerAccuracy']:.1%}. Podium recall: {rank['PodiumRecall']:.1%}. These are retrospective results on 24 races, not future-race guarantees.</p></div>
+<div class="card"><h3>Retirement probabilities</h3>{retirement_table}<p class="f1-note">{risk_note}</p><p>The classifier is evaluated on {risk['n']} eligible starters, including {risk['retirements']} retirements. DNS and disqualifications are excluded from this classifier metric; crashes and mechanical failures are both counted as retirements.</p></div></div>
+<div class="f1-grid" style="margin-top:1.25rem">
+<figure class="card"><a href="f1-model/final_outputs/full_field.png"><img class="f1-plot" src="f1-model/final_outputs/full_field.png" alt="Full-field predicted versus actual finishing positions for 2025" width="1440" height="1080" loading="lazy" /></a><figcaption>Every returned 2025 driver entry. The diagonal represents perfect agreement; overlapping integer positions appear darker.</figcaption></figure>
+<figure class="card"><a href="f1-model/final_outputs/retirement_calibration.png"><img class="f1-plot" src="f1-model/final_outputs/retirement_calibration.png" alt="Predicted retirement probabilities compared with observed frequencies" width="1440" height="900" loading="lazy" /></a><figcaption>Equal-frequency probability bins show calibration on held-out starters. The CSV includes the count in each bin.</figcaption></figure></div>
+<details><summary>Feature importance and error distribution</summary><div class="f1-grid"><img class="f1-plot" src="f1-model/final_outputs/feature_importances.png" alt="Position-model feature importance" width="1620" height="1080" loading="lazy" /><img class="f1-plot" src="f1-model/final_outputs/residuals.png" alt="Full-field rank prediction errors" width="1440" height="720" loading="lazy" /></div><p>Feature importance describes the fitted model, not a causal relationship.</p></details>
+<details><summary>Per-team full-field test error</summary>{team_table}</details>
+</section>
+<section id="explorer" class="f1-section"><p class="eyebrow">04 / Inspect the forecasts</p><h2>One race, every driver.</h2>
+<p>Explore retrospective forecasts from the frozen evaluation model. These are held-out 2025 races, not live or upcoming-race predictions. The final deployment model is separate.</p>
+<div class="card"><label class="f1-select-label" for="f1-race-select">Choose a 2025 Grand Prix</label>
+<select id="f1-race-select" class="f1-select" disabled><option>Loading race data…</option></select>
+<p id="f1-race-summary" role="status" aria-live="polite">Loading the published test predictions.</p>
+<div class="f1-table-wrap"><table class="f1-table"><caption id="f1-race-caption">Race forecast</caption><thead><tr><th scope="col">Predicted</th><th scope="col">Driver</th><th scope="col">Team</th><th scope="col">Actual</th><th scope="col">Retirement risk</th><th scope="col">Outcome</th></tr></thead><tbody id="f1-race-body"></tbody></table></div>
+<p><a href="f1-model/final_outputs/test_predictions.csv" download>Download all predictions and input features</a></p><noscript><p>Enable JavaScript for the race selector, or use the CSV download above.</p></noscript></div></section>
+<section id="limits" class="f1-section"><p class="eyebrow">05 / Engineering conclusions</p><h2>Completion includes knowing the limits.</h2>
+<div class="f1-grid"><div class="card"><h3>What worked</h3><p>Strict time boundaries, stable driver/team IDs, complete-field validation and source-completeness checks make the pipeline auditable. Lapped finishers stay in the data; withdrawn drivers are not mislabeled as retirements.</p><p>The model can prepare upcoming-race inputs without touching current-race outcomes, and its deployment bundle can generate both probabilities and a unique order.</p></div>
+<div class="card"><h3>What needs more evidence</h3><p>The combined order did not beat starting-grid order on full-season MAE, and retirement probability narrowly missed its Brier baseline. Those results remain visible instead of being tuned away on the test set.</p><p>Future regulation changes, qualifying weather, rare failures and unmodeled DNS/DSQ outcomes limit transferability. The next research step would require a new evaluation period.</p></div></div></section>
+<section id="source" class="f1-section"><p class="eyebrow">06 / Reproduce or predict</p><h2>Run the complete pre-race pipeline.</h2>
+<div class="card"><p>The repository contains the data, source code, tests, setup guide and exact measured outputs. Training regenerates both the frozen evaluation bundle and the later deployment bundle.</p>
+<div class="f1-actions"><a class="btn btn-primary" href="https://github.com/azizmoh1/Portfolio-Website/tree/main/f1-model">Source &amp; Setup</a><a class="btn btn-secondary" href="f1-model/final_outputs/summary.txt">Measured Report</a><a class="btn btn-secondary" href="f1-model/final_outputs/metrics.json">Full Metrics</a><a class="btn btn-secondary" href="f1-model/final_outputs/example_prerace_grid.csv" download>Example Input</a></div>
+<pre><code>python -m pip install -r requirements.txt
+python final_pipeline.py train
 python -m pytest -q</code></pre>
-      <p>Data sources: <a href="https://docs.fastf1.dev/">FastF1</a> and <a href="https://github.com/jolpica/jolpica-f1">Jolpica</a>. <a href="f1-model/outputs/metrics.json">Full metrics and provenance</a>. Independent educational project; not affiliated with Formula 1.</p></div>
-    </section>
-  </main>
-  <footer class="site-footer"><p>Aziz Mohammad · Mechanical Engineering · <a href="index.html#projects">Back to projects</a></p></footer>
-  <script src="script.js"></script>
-</body>
-</html>
+<p>Use the README's <code>prepare</code> and <code>predict</code> commands for a future race after qualifying and confirmed grid publication. Only load model files you trust.</p>
+<p>Data: <a href="https://docs.fastf1.dev/">FastF1</a> and <a href="https://github.com/jolpica/jolpica-f1">Jolpica</a>. <a href="https://github.com/azizmoh1/Portfolio-Website/tree/main/f1-model/data">Season datasets and provenance</a>. Independent educational project; not affiliated with Formula 1.</p></div></section>
+</main>
+<footer class="site-footer"><p>Aziz Mohammad · Mechanical Engineering · <a href="index.html#projects">Back to projects</a></p></footer>
+<script src="script.js"></script><script src="f1-explorer.js"></script>
+</body></html>
 '''
-(ROOT.parent / "project-f1.html").write_text(page)
-print("Updated project-f1.html from measured results")
+(ROOT.parent / 'project-f1.html').write_text(page)
+print('Generated final case study and 24-race explorer from measured artifacts.')

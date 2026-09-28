@@ -1,0 +1,13 @@
+Final pre-race pipeline complete.
+Selection: 2023 train / 2024 validation; test: full 2025 season (479 entries).
+Position model: random_forest; retirement model: random_forest.
+Finisher-only position MAE: 2.431; R2: 0.612.
+Full-field rank MAE: 3.411; grid baseline: 3.344; position-only: 3.403.
+Retirement Brier: 0.0969; constant baseline: 0.0968; ROC AUC: 0.584.
+Deployment model refitted on 2023-2025 after evaluation. No test metrics reported for that refit.
+Retirement includes crashes and mechanical failures; DNS and DSQ are excluded from classifier evaluation.
+Full-field evaluation includes every returned entry, including DNS/DSQ; these outcomes are not separately modeled.
+Unique ordering is an expected-position heuristic, not a probabilistic race simulation.
+No claim that retirement probabilities are useful unless they beat the constant-rate baseline.
+Three historical seasons do not establish performance under future regulation changes.
+Qualifying pace/compound/rain are proxies; no live strategy, tire degradation, DRS or pit-loss model.
