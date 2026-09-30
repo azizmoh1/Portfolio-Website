@@ -76,7 +76,8 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.16 }
+  // Tall galleries may never reach a viewport-percentage threshold.
+  { threshold: 0, rootMargin: '0px 0px -24px 0px' }
 );
 revealTargets.forEach(el => revealObserver.observe(el));
 
