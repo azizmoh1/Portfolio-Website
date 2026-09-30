@@ -90,20 +90,19 @@ const observedSections = sectionIds
   .filter(Boolean);
 
 if (observedSections.length) {
-  const sectionObserver = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const id = entry.target.id;
-        navAnchors.forEach(link => {
-          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-        });
-      });
-    },
-    { threshold: 0.45 }
-  );
-
-  observedSections.forEach(section => sectionObserver.observe(section));
+  let navUpdatePending = false;
+  const updateNavigation = () => {
+    const current = observedSections.filter(section => section.getBoundingClientRect().top <= 150).at(-1);
+    navAnchors.forEach(link => link.classList.toggle('active', Boolean(current) && link.getAttribute('href') === `#${current.id}`));
+    navUpdatePending = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!navUpdatePending) {
+      navUpdatePending = true;
+      requestAnimationFrame(updateNavigation);
+    }
+  }, { passive: true });
+  updateNavigation();
 }
 
 // Image preview modal (gallery/CAD renders/diagrams/prototypes)
@@ -266,3 +265,4 @@ compareBlocks.forEach(block => {
   input.addEventListener('input', update);
   update();
 });
+
