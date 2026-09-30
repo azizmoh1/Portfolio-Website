@@ -50,3 +50,6 @@ html[data-theme='light'] .v2-button.primary{color:#fff}
 
 #home{scroll-margin-top:72px}
 body:not(.portfolio-v2) .page-intro h1{font-size:clamp(2rem,4vw,3.2rem)}
+
+/* Keep case-study headings clear of the sticky navigation. */
+.case-study-page section[id]{scroll-margin-top:90px}
