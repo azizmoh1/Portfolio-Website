@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=visuals-fix-2" />
-  </head>
+  <link rel="stylesheet" href="home.css?v=portfolio-v2"></head>
   <body>
     <header class="site-header">
       <nav class="nav container">
@@ -27,7 +27,7 @@
       </nav>
     </header>
 
-    <main class="container case-study-page internship-page">
+    <main class="container case-study-page internship-page"><aside class="project-brief" aria-label="Project summary"><div><span class="project-kind kind-internship">Internship Project</span> <span></span></div><p><strong>My contribution:</strong> CAD assemblies, configuration matrices, supplier data and package documentation.</p><p><strong>Tools:</strong> SolidWorks · Excel · Systems Integration</p></aside>
       <section id="overview" class="intern-hero reveal">
         <div class="intern-hero-copy">
           <p class="eyebrow">Systems Design Engineering Internship</p>
@@ -201,6 +201,22 @@
         </div>
       </section>
 
+      <section class="section container"><article class="compare-card card slide-up" aria-label="CAD render to documentation comparison">
+          <div class="compare-copy">
+            <p class="eyebrow">CAD Showcase</p>
+            <h3>From model view to engineering communication.</h3>
+            <p>Drag the slider to compare the clean SolidWorks render against the drawing/documentation view used to communicate dimensions, component callouts, and package layout.</p>
+          </div>
+          <div class="image-compare" data-compare style="--position: 55%;">
+            <img class="compare-image compare-base" src="internship-assets/package-drawing-color.png" alt="Hydronic pump package drawing and callout sheet" />
+            <div class="compare-overlay">
+              <img class="compare-image" src="internship-assets/full-package-render.png" alt="Hydronic pump package CAD render" />
+            </div>
+            <input class="compare-range" type="range" min="0" max="100" value="55" aria-label="Compare CAD render and drawing view" />
+            <span class="compare-label compare-label-left">CAD Render</span>
+            <span class="compare-label compare-label-right">Drawing View</span>
+          </div>
+        </article></section>
       <section id="visuals" class="section reveal">
         <div class="section-heading split-heading">
           <div>
@@ -273,3 +289,4 @@
     <script src="script.js?v=visuals-fix-2"></script>
   </body>
 </html>
+
