@@ -37,12 +37,14 @@ const navAnchors = Array.from(document.querySelectorAll('.nav-links a'));
 
 if (menuToggle && navLinks) {
   menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+    const opened = navLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(opened));
   });
 
   navAnchors.forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
     });
   });
 }
@@ -113,11 +115,27 @@ const modalCaption = modal?.querySelector('.modal-caption');
 const modalClose = modal?.querySelector('.modal-close');
 
 if (modal && modalImage && modalCaption && modalClose) {
+  let previewTrigger = null;
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.setAttribute('aria-label', 'Project image preview');
+  document.querySelectorAll('[data-modal-img]').forEach(trigger => {
+    trigger.tabIndex = 0;
+    trigger.setAttribute('role', 'button');
+    trigger.setAttribute('aria-label', 'Preview: ' + (trigger.alt || 'project image'));
+    trigger.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        trigger.click();
+      }
+    });
+  });
   const closeModal = () => {
     modal.hidden = true;
     modalImage.src = '';
     modalCaption.textContent = '';
     document.body.style.overflow = '';
+    previewTrigger?.focus();
   };
 
   document.addEventListener('click', event => {
@@ -128,10 +146,13 @@ if (modal && modalImage && modalCaption && modalClose) {
     const caption = trigger.getAttribute('data-caption') || trigger.getAttribute('alt') || '';
     if (!src) return;
 
+    previewTrigger = trigger;
     modalImage.src = src;
+    modalImage.alt = caption;
     modalCaption.textContent = caption;
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
+    modalClose.focus();
   });
 
   modalClose.addEventListener('click', closeModal);
@@ -141,6 +162,7 @@ if (modal && modalImage && modalCaption && modalClose) {
 
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !modal.hidden) closeModal();
+    if (event.key === 'Tab' && !modal.hidden) { event.preventDefault(); modalClose.focus(); }
   });
 }
 

@@ -53,3 +53,33 @@ body:not(.portfolio-v2) .page-intro h1{font-size:clamp(2rem,4vw,3.2rem)}
 
 /* Keep case-study headings clear of the sticky navigation. */
 .case-study-page section[id]{scroll-margin-top:90px}
+
+/* Final case-study consistency pass. */
+.detail-page{background:var(--bg)}
+.detail-page .bg-orb,.detail-page .hero::before,.detail-page .hero::after{display:none}
+.detail-page h1,.detail-page h2,.detail-page h3,.detail-page .logo{font-family:"Space Grotesk",sans-serif;letter-spacing:-.035em}
+.detail-page h1{font-size:clamp(2rem,4vw,3.2rem);line-height:1.12}
+.detail-page h2{font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.2}
+.detail-page h3{font-size:1.15rem;line-height:1.3}
+.detail-page .card h2{font-size:1.45rem}
+.detail-page main{padding-bottom:3rem}
+.detail-page .section{padding:2rem 0}
+.detail-page .section-heading{margin-bottom:1.25rem}
+.detail-page .hero,.detail-page .page-intro{padding:2rem 0}
+.detail-page .hero-inner{max-width:100%}
+.detail-page .hero-inner:has(>.project-image){display:grid;grid-template-columns:1fr 1fr;gap:1rem 2rem;align-items:center}
+.detail-page .hero-inner>.project-image{grid-column:2;grid-row:1/4;max-height:380px;object-fit:contain}
+.detail-page .hero-inner>h1,.detail-page .hero-inner>p{grid-column:1}
+.detail-page .grid.two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.detail-page .clean-list{padding-left:1.25rem}
+.detail-page .clean-list li{margin-bottom:.5rem}
+.detail-page section[id]{scroll-margin-top:90px}
+.detail-page .reveal,.detail-page .slide-up{opacity:1;transform:none;transition:none}
+.detail-page .nav{gap:12px}
+.detail-page .nav-links a{font-size:.78rem;padding:.4rem .55rem;white-space:nowrap}
+.detail-page .logo{white-space:nowrap;font-size:1rem}
+.detail-page .project-brief{margin:24px 0 0}
+.detail-page .internship-visual-gallery .visual-card img{height:280px;min-height:0;aspect-ratio:auto;width:100%;object-fit:contain}
+.detail-page .internship-visual-gallery .visual-card{min-height:0}
+@media(max-width:1000px){.detail-page .menu-toggle{display:block}.detail-page .nav-links{display:none;position:absolute;top:66px;left:0;right:0;padding:16px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column}.detail-page .nav-links.open{display:flex}.detail-page .nav-links a{display:block;padding:10px}}
+@media(max-width:760px){.detail-page .grid.two-col,.detail-page .hero-inner:has(>.project-image){grid-template-columns:1fr}.detail-page .hero-inner>.project-image{grid-column:1;grid-row:auto;max-height:300px}.detail-page .section{padding:1.5rem 0}.detail-page .internship-visual-gallery .visual-card img{height:220px}}
