@@ -252,7 +252,7 @@
               Tet10 tetrahedral elements with adaptive sizing, resolution 4, slow transition, fine span angle
               center. Bounding box diagonal: 10.27 m. Min edge length: 5.68×10⁻⁵ m. Average surface area:
               0.13457 m². Two warnings were noted (model length unit change, potential mesh object loss)
-              — neither affected the validity of results.
+              — these warnings should be reviewed alongside mesh quality and sensitivity before relying on the result.
             </p>
             <div class="formula-block">
               Element Type: Tet10 · Adaptive Sizing: On · Resolution: 4<br>
@@ -303,8 +303,8 @@
               <strong style="color:var(--ink);">Results:</strong> The minimum safety factor of 4.6116 occurs
               at the base of the pole where bending stress is highest — more than double the required minimum
               of 2. The average safety factor across the structure was 14.955. Maximum deformation of 0.045227 m
-              (45.2 mm) occurs at the tip of the mast arm, within acceptable deflection limits. These results
-              confirm the design meets all structural requirements under the specified loading conditions.
+              (45.2 mm) occurs at the tip of the mast arm, for the modeled load case. The reported safety factor exceeds the assignment minimum of 2.
+              Deflection acceptance, mesh convergence, and material consistency need separate checks before treating this as a validated design.
             </p>
           </div>
         </section>
@@ -313,7 +313,7 @@
         <section class="section" style="padding: 2.5rem 0;">
           <div class="section-heading">
             <p class="eyebrow">Materials</p>
-            <h2>Material Selection & Cost</h2>
+            <h2>Material Selection & Cost</h2><p>The analysis setup above uses structural steel, while the comparison below considers stainless steel and aluminum. Each material requires a matching FEA run before results can be applied to it.</p>
           </div>
           <div class="meta-grid">
             <article class="card slide-up" style="border-color: rgba(59,130,246,0.35);">
@@ -386,3 +386,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+
