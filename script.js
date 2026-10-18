@@ -41,6 +41,14 @@ if (menuToggle && navLinks) {
     menuToggle.setAttribute('aria-expanded', String(opened));
   });
 
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.focus();
+    }
+  });
+
   navAnchors.forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
@@ -59,7 +67,11 @@ Array.from(document.querySelectorAll('a[href^="#"]')).forEach(link => {
     if (!el) return;
 
     event.preventDefault();
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (link.classList.contains('skip-link') || link.classList.contains('coil-skip')) {
+      el.setAttribute('tabindex', '-1');
+      el.focus({ preventScroll: true });
+    }
+    el.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
   });
 });
 
@@ -260,6 +272,11 @@ const counterObserver = new IntersectionObserver(entries => {
     const decimals = Number(el.dataset.decimals || 0);
     const prefix = el.dataset.prefix || '';
     const suffix = el.dataset.suffix || '';
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.textContent = `${prefix}${formatCounter(target, decimals)}${suffix}`;
+      counterObserver.unobserve(el);
+      return;
+    }
     const duration = 900;
     const start = performance.now();
 

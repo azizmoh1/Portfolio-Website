@@ -83,3 +83,28 @@ body:not(.portfolio-v2) .page-intro h1{font-size:clamp(2rem,4vw,3.2rem)}
 .detail-page .internship-visual-gallery .visual-card{min-height:0}
 @media(max-width:1000px){.detail-page .menu-toggle{display:block}.detail-page .nav-links{display:none;position:absolute;top:66px;left:0;right:0;padding:16px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column}.detail-page .nav-links.open{display:flex}.detail-page .nav-links a{display:block;padding:10px}}
 @media(max-width:760px){.detail-page .grid.two-col,.detail-page .hero-inner:has(>.project-image){grid-template-columns:1fr}.detail-page .hero-inner>.project-image{grid-column:1;grid-row:auto;max-height:300px}.detail-page .section{padding:1.5rem 0}.detail-page .internship-visual-gallery .visual-card img{height:220px}}
+
+/* A clear reading path, with technical evidence available on demand. */
+.supporting-detail{border:1px solid var(--line);border-radius:10px;padding:1rem 1.25rem;margin:1rem 0;background:var(--bg-card)}
+.supporting-detail>summary{cursor:pointer;font-weight:600;color:var(--ink);padding:.35rem 0;line-height:1.5}
+.supporting-detail[open]>summary{margin-bottom:1rem}
+.supporting-detail .section-heading{margin-top:1rem}
+.project-next{border-top:1px solid var(--line);margin:3rem auto 0;padding:2rem 0;display:flex;justify-content:space-between;gap:1.5rem;align-items:center;max-width:1140px}
+.project-next a{color:var(--accent);text-decoration:none;display:inline-block;padding:.4rem 0}
+.project-next a:hover{text-decoration:underline}
+.project-next>div:last-child{display:flex;gap:1.5rem;flex-wrap:wrap}
+.project-next .eyebrow{margin-bottom:.4rem}
+.detail-page main>section p,.detail-page .card p{line-height:1.75}
+.detail-page .intern-hero h1{font-size:clamp(2rem,4vw,3.25rem)}
+.detail-page .case-meta-inline{font-size:.8rem;line-height:1.6}
+.detail-page .case-video{max-width:100%}
+.portfolio-v2 .hero-description,.portfolio-v2 .about-grid p{font-size:.94rem}
+.portfolio-v2 .work-body p{font-size:.88rem}
+.portfolio-v2 .work-tools{font-size:.75rem}
+.portfolio-v2 .toolkit dd{font-size:.85rem}
+.portfolio-v2 .contact-line p{max-width:34rem;font-size:.9rem;margin-top:1rem}
+.detail-page .project-brief>div>span:empty{display:none}
+@media(max-width:760px){.project-next{flex-direction:column;align-items:flex-start;padding:1.5rem 0}.supporting-detail{padding:.8rem}.detail-page .project-brief{margin-left:auto;margin-right:auto;max-width:90vw}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
+.detail-page main.case-study-page:not(.container)>.project-brief,.detail-page main.case-study-page:not(.container)>.project-next{width:min(1140px,90vw);margin-left:auto;margin-right:auto}
+.detail-page .intern-hero,.detail-page .case-hero{margin-top:1.5rem}

@@ -20,8 +20,5 @@
   document.querySelector('#reset-projects').addEventListener('click',()=>{search.value='';type.value='all';discipline='all';update();search.focus();});
   const preview=document.querySelector('.resume-preview');
   preview.addEventListener('toggle',()=>{if(preview.open){const frame=preview.querySelector('iframe');if(!frame.getAttribute('src'))frame.src=frame.dataset.resumeSrc;}});
-  const menu=document.querySelector('.menu-toggle');
-  menu.addEventListener('click',()=>menu.setAttribute('aria-expanded',String(document.querySelector('.nav-links').classList.contains('open'))));
-  document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>menu.setAttribute('aria-expanded','false')));
   update();
 })();

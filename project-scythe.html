@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="home.css?v=final-review-20260930"></head>
-  <body class="detail-page">
+  <link rel="stylesheet" href="home.css?v=review-20261018"></head>
+  <body class="detail-page"><a class="skip-link" href="#main-content">Skip to project</a>
 
     <!-- ── Navigation ── -->
     <header class="site-header">
@@ -28,7 +28,7 @@
       </nav>
     </header>
 
-    <main class="case-study-page"><aside class="project-brief" aria-label="Project summary"><div><span class="project-kind kind-school">School Project</span> <span></span></div><p><strong>My contribution:</strong> Geometry iteration, structural load setup, safety factor and deformation evaluation.</p><p><strong>Tools:</strong> SolidWorks · ANSYS Static Structural</p></aside>
+    <main id="main-content" class="case-study-page"><aside class="project-brief" aria-label="Project summary"><div><span class="project-kind kind-school">School Project</span> <span></span></div><p><strong>My contribution:</strong> Geometry iteration, structural load setup, safety factor and deformation evaluation.</p><p><strong>Tools:</strong> SolidWorks · ANSYS Static Structural</p></aside>
       <div class="container">
 
         <a class="back-link" href="index.html#projects">← Back to Projects</a>
@@ -42,10 +42,10 @@
               Decorative Cantilever Traffic Signal Pole
             </p>
             <div class="case-meta-inline">
-              <span>📍 Chicago Intersection · 1933 World's Fair Centennial</span>
-              <span>🔧 SolidWorks · ANSYS Mechanical 2025 R1</span>
-              <span>📐 26 ft span · 3 luminaires · 3 traffic signs</span>
-              <span>🌬️ Design wind: 95.7 mph</span>
+              <span>Chicago Intersection · 1933 World's Fair Centennial</span>
+              <span>SolidWorks · ANSYS Mechanical 2025 R1</span>
+              <span>26 ft span · 3 luminaires · 3 traffic signs</span>
+              <span>Design wind: 95.7 mph</span>
             </div>
             <div class="tag-list" style="margin-bottom:1rem;">
               <span class="tag">SolidWorks</span>
@@ -149,15 +149,8 @@
           </div>
 
           <div class="card slide-up" style="max-width:860px; margin-bottom:1.5rem;">
-            <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.6rem;">Three Initial Concepts (4/6)</h3>
-            <p>
-              Three concepts were sketched on April 6th. <strong style="color:var(--ink);">Sketch 1</strong> was a symmetric
-              truss with hanging luminaires and a wide flared base — wind load complications and excess material
-              ruled it out. <strong style="color:var(--ink);">Sketch 3</strong> was efficient but too generic,
-              similar to standard municipal poles. <strong style="color:var(--ink);">Sketch 2</strong> —
-              a curved arch mast arm — was selected for its balance of structural promise and visual
-              distinctiveness fitting of the World's Fair context.
-            </p>
+            <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.6rem;">Compare the concepts</h3>
+            <p>I compared three concepts for the span and visual brief. A symmetric truss added material and wind-loading complexity; a conventional pole offered less visual distinction. I selected the curved mast arm as the best starting point for balancing structure and appearance.</p>
           </div>
 
           <!-- Sketch photos -->
@@ -168,26 +161,13 @@
           </div>
 
           <div class="card slide-up" style="max-width:860px; margin-top:1.5rem;">
-            <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.6rem;">Revision 1 (4/22) — Sketch 2 Improved</h3>
-            <p>
-              The first SolidWorks build proved overly complex and material-heavy. Peer review flagged excess
-              weight and wasted geometry. A revised version was developed with specific improvements: reduce
-              overall material, use more effective material placement, incorporate <strong style="color:var(--ink);">
-              four reinforcing plates</strong> at stress concentration zones, and add <strong style="color:var(--ink);">
-              two wiring cutouts</strong> in the pole for electrical access. Dimensions were formalized — pole
-              standing ~24 ft tall with a square base plate for four anchor bolts.
-            </p>
+            <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.6rem;">Use feedback to simplify the design</h3>
+            <p>Peer feedback on the first CAD model highlighted unnecessary weight and complexity. I revised the material placement, added four reinforcing plates near stress concentrations, and incorporated two wiring cutouts for electrical access.</p>
           </div>
 
           <div class="card slide-up" style="max-width:860px; margin-top:1rem;">
-            <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.6rem;">Revision 2 (4/23) — New Curve Geometry</h3>
-            <p>
-              The previous arch geometry couldn't be translated cleanly into SolidWorks without errors.
-              Rather than continuing to patch a flawed foundation, the geometry was scrapped entirely in
-              favor of a simpler single-curve form — a sweeping arc rising from the pole and curving outward
-              over the road. This became the scythe shape that carried through to the final design after
-              four additional CAD revisions refining the lattice members and resolving rebuild issues.
-            </p>
+            <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.6rem;">Rebuild the curve for easier iteration</h3>
+            <p>I simplified the arch into a single sweeping curve to make the CAD model easier to build and revise. Four further iterations refined the lattice members and resolved rebuild issues while retaining the intended appearance.</p>
           </div>
         </section>
 
@@ -248,12 +228,7 @@
 
           <div class="card slide-up" style="max-width:860px; margin-bottom:1.5rem;">
             <h3 style="font-size:1rem; color:var(--accent); margin-bottom:0.6rem;">Mesh</h3>
-            <p>
-              Tet10 tetrahedral elements with adaptive sizing, resolution 4, slow transition, fine span angle
-              center. Bounding box diagonal: 10.27 m. Min edge length: 5.68×10⁻⁵ m. Average surface area:
-              0.13457 m². Two warnings were noted (model length unit change, potential mesh object loss)
-              — these warnings should be reviewed alongside mesh quality and sensitivity before relying on the result.
-            </p>
+            <p>I used a tetrahedral mesh to evaluate the load path and locate stress concentrations. The mesh settings and model warnings are supporting analysis details; further refinement would be needed to quantify mesh sensitivity.</p>
             <div class="formula-block">
               Element Type: Tet10 · Adaptive Sizing: On · Resolution: 4<br>
               Mesh Quality: Element Quality · Min: 1.43×10⁻² · Majority range: 0.75–0.88
@@ -328,8 +303,7 @@
               <h3 style="font-size:1rem; color:var(--muted); margin-bottom:0.6rem;">Aluminum (Evaluated)</h3>
               <div class="formula-block">Cost: $17,026 · Weight: 3.090 metric tons</div>
               <p style="margin-top:0.6rem;">
-                ~65% lighter but $5,141 more expensive. Both materials produced an identical design metric
-                score of 2 — no clear structural advantage justified the cost premium.
+                Approximately 65% lighter but $5,141 more expensive in the material estimate. I compared this weight reduction with cost and corrosion considerations.
               </p>
             </article>
           </div>
@@ -342,25 +316,9 @@
             <h2>Challenges & Reflection</h2>
           </div>
           <div class="card slide-up lessons-callout" style="max-width:860px;">
-            <p>
-              The biggest challenge was CAD modeling — translating sketch concepts into clean, error-free
-              SolidWorks geometry took far more iteration than expected. The original arch design created
-              intersecting surfaces that couldn't be properly constrained. The right call was to simplify
-              the geometry entirely rather than keep patching a flawed foundation, which produced a cleaner,
-              lighter, and structurally superior final design.
-            </p>
-            <p style="margin-top:0.75rem;">
-              Balancing material reduction with structural performance was an ongoing challenge throughout.
-              Early iterations were heavier than necessary, but cutting too much risked dropping below the
-              safety factor threshold. This was managed through iterative FEA runs — trimming geometry where
-              safety factors were highest and preserving material where stresses were concentrated,
-              particularly at the base of the pole.
-            </p>
-            <p style="margin-top:0.75rem;">
-              The project reinforced a core engineering lesson: what looks simple on paper often requires
-              multiple complete restarts before arriving at something workable. The iterative nature of design
-              isn't a sign of failure — it's the process.
-            </p>
+            <p>The key design decision was simplifying the curve when the original geometry became difficult to constrain. That change made the model easier to revise and let me focus on material placement, bracing and access for wiring.</p>
+            <p style="margin-top:0.75rem;">I used the stress distribution to guide where material was most useful, especially near the base. This connected the CAD revisions to the structural response rather than relying on appearance alone.</p>
+            <p style="margin-top:0.75rem;">The project strengthened my ability to turn a visual concept into a constrained mechanical design, respond to feedback, and explain the reasoning behind each revision.</p>
           </div>
         </section>
 
@@ -369,7 +327,7 @@
         </div>
 
       </div>
-    </main>
+    <aside class="project-next" aria-label="Continue exploring"><div><p class="eyebrow">More of my work</p><a href="project-truss.html">Truss Design & Analysis →</a></div><div><a href="index.html#projects">All projects</a><a href="index.html#resume">Resume</a><a href="mailto:azizm0304@gmail.com">Contact me</a></div></aside></main>
 
     <!-- ── Image Modal ── -->
     <div class="image-modal" data-modal hidden>
@@ -383,7 +341,7 @@
       <p>&copy; <span id="year"></span> Aziz Mohammad</p>
     </footer>
 
-    <script src="script.js?v=final-review-20260930"></script>
+    <script src="script.js?v=review-20261018"></script>
   </body>
 </html>
 
